@@ -1,0 +1,8 @@
+/* TODO: For now Basic styling. Style more later */
+article{
+    border-bottom: 1px solid grey;
+}
+
+table td{
+    border-bottom: 1px solid grey;
+}

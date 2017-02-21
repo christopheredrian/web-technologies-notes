@@ -51,7 +51,7 @@
             <tr></tr>
         </table>
     </section>
-    <h2>HTTP(Hypertext Transfer protocol)</h2>
+    <h2>HTTP (Hypertext Transfer protocol)</h2>
      <section>
         <p>An application layer communications protocol used to access resources on the World Wide Web. 
             HTTP is invented by Sir Tim Berners-Lee and jointly developed by W3C and IETF.</p>
@@ -78,12 +78,144 @@
 		<ul>
 			<li><a href="#cache">Cache Control</a> - Local Storage</li>
 			<li>Content media type - <a href="#mime">Multipurpose Internet Mail Extensions(MIME)</a></li>
-			<li>Languge and Character set specification</li>
-			<li>Content/Transfer Codings</li>
+			<li>Language and Character set specification</li>
+			<li>Content/Transfer Coding</li>
 			<li>Content Negotiation</li>
 			<li>Client-Service Protocol Negotiations</li>
 		</ul>
-		</section>
+		<h3>Standard Methods</h3>
+		<ul>
+			<li>GET - transfer a current selected representation of the resource identified by the Request-URI</li>
+			<li>HEAD - used to retrieve metadata about the entity implied by the request without transferring the entity itself</li>
+			<li>POST - perform resource specific processing of the entities enclosed in the message</li>
+			<li>PUT - requests that the enclosed entity be stored under the supplied Request-URI</li>
+			<li>DELETE - requests that the origin server delete the resource indentified by the Request-URI</li>
+			<li>OPTIONS - describes the communication options for the target resource</li>
+			<li>TRACE - request a loop-back of request message (request the server to echo back to client)</li>
+			<li>CONNECT - establishes a tunnel to the server identified by the a given URL</li>
+		</ul>
+		<h3>Message Headers</h3>
+		<ul>
+			<li>General Header Fields</li>
+			<ul>
+				<li>Cache</li>
+				<li>Control</li>
+				<li>Connection</li>
+				<li>Delete</li>
+				<li>Program</li>
+				<li>Trailer</li>
+				<li>Transfer-Encoding</li>
+				<li>Upgrade</li>
+				<li>Via</li>
+				<li>Warning</li>
+			</ul>
+			<li>Request Header Fields</li>
+			<ul>
+				<li>Accept</li>
+				<li>Accept Charset</li>
+				<li>Accept Encoding</li>
+				<li>Accept Language</li>
+				<li>Authorization</li>
+				<li>Except</li>
+				<li>From</li>
+				<li>Since</li>
+				<li>If-Match</li>
+				<li>If-Modified-Since</li>
+				<li>If-None-Match</li>
+				<li>If-Range</li>
+				<li>If-Unmodified</li>
+				<li>Host</li>
+				<li>Range</li>
+				<li>Max-Forwards</li>
+				<li>Proxy Authorization</li>
+				<li>Referer</li>
+				<li>TE</li>
+				<li>User-Agent</li>	
+			</ul>
+			<li>Response Header Fields</li>
+			<ul>
+				<li>Accept-Ranges</li>
+				<li>Age</li>
+				<li>ETag</li>
+				<li>Location</li>
+				<li>Proxy-Authenticate</li>
+				<li>Retry-After</li>
+				<li>Server</li>
+				<li>Vary</li>
+				<li>www-Authenticate</li>
+			</ul>
+			<li>Entity Header Fields</li>
+			<ul>
+				<li>Allow</li>
+				<li>Content-Encoding</li>
+				<li>Content-Language</li>
+				<li>Content-Length</li>
+				<li>Content-Location</li>
+				<li>Content-MD5</li>
+				<li>Content-Range</li>
+			</ul>
+		</ul>
+		<h3>HTTP Status Codes</h3>
+		<ul>
+			<li>Information(1xx)</li>
+			<ul>
+				<li>100 Continue</li>
+				<li>101 Switching Protocols</li>
+			</ul>
+			<li>Success (2xx)</li>
+			<ul>
+				<li>200 Ok</li>
+				<li>201 Created</li>
+				<li>202 Accepted</li>
+				<li>203 Non-Authoritative Information</li>
+				<li>204 No Content</li>
+				<li>205 Reset Content</li>
+				<li>206 Partial Content</li>
+			</ul>
+			<li>Redirection (3xx)</li>
+			<ul>
+				<li>300 Multiple Choices</li>
+				<li>301 Moved Permanently</li>
+				<li>302 Found</li>
+				<li>303 See Other</li>
+				<li>304 Not Modified</li>
+				<li>305 Use Proxy</li>
+				<li>306 (unused)</li>
+				<li>307 Temporary Redirect</li>
+			</ul>
+			<li>Client Error (4xx)</li>
+			<ul>
+				<li>400 Bad Request</li>
+				<li>401 Unauthorized</li>
+				<li>402 Payment Required</li>
+				<li>403 Forbidden</li>
+				<li>404 Not Found</li>
+				<li>405 Method Not Allowed</li>
+				<li>406 Not Accepted</li>
+				<li>407 Proxy Authentication Required</li>
+				<li>408 Request Time-out</li>
+				<li>409 Conflict</li>
+				<li>410 Gone</li>
+				<li>411 Length Required</li>
+				<li>412 Precondition Failed</li>
+				<li>413 Request Entity Too Large</li>
+				<li>414 Request-URI Too Large</li>
+				<li>415 Unsupported Media Type</li>
+				<li>416 Requested Range Not Satisfiable</li>
+				<li>417 Expectation Failed</li>
+				<li>426 Upgrade Required</li>
+			</ul>
+			<li>Server Error (5xx)</li>
+			<ul>
+				<li>500 Internal Server Error</li>
+				<li>501 Not Implemented</li>
+				<li>502 Not Implemented</li>
+				<li>503 Service Unavailable</li>
+				<li>504 Gateway Time-out</li>
+				<li>505 HTP Version Not Supported</li>
+			</ul>
+		</ul>
+		</section> 
     <section>
         <h3>Terminologies</h3>
         <ul>

@@ -6,218 +6,310 @@
     <link rel="stylesheet" href="style/general.css">
 </head>
 <body>
-<!-- article-->
-<article id="internet">
-    <h2>Internet</h2>
-    <section>
-        <h3>Etymology</h3>
-        <p>The etymology of the word Internet can be rooted with these two words</p>
+<header>
+    <nav>
+        <p>Temporary Navigation</p>
         <ul>
-            <li><strong>Inter</strong> - something outside (as opposed to <em>intra</em> - inside/exclusive)</li>
-            <li><strong>Network</strong> - Network of networks and connection of devices</li>
+            <li><a href="#internet">Internet</a></li>
+            <li><a href="#http">HTTP</a>
+                <ul>
+                    <li><a href="#ht-ver">Version History</a></li>
+                    <li><a href="#ht-fun">HTTP Fundamentals</a></li>
+                    <li><a href="#ht-rr">HTTP Request/Response</a></li>
+                    <li><a href="#ht-sm">Standard Methods</a></li>
+                    <li><a href="#ht-head">Message Headers</a></li>
+                    <li><a href="#ht-status">Status Codes</a></li>
+                </ul>
+            </li>
+            <li><a href="#terms">Terminologies</a></li>
         </ul>
-        <p>The Internet is the interconnection of networks all around the world which uses the <a href="#tcpip">TCP/IP
-            protocol</a> as the medium of connection</p>
-    </section>
-    <section>
-        <h3>A Brief History of the Internet</h3>
-        <table>
-            <thead>
-            <tr>
-                <th>Year</th>
-                <th>Description</th>
-            </tr>
-            </thead>
+    </nav>
+</header>
+<!-- div For styling -->
+<div class="container">
 
-            <tbody>
-            <tr>
-                <td>1969</td>
-                <td><strong>ARPANET (by DARPA)</strong> with only four computers connected</td>
-            </tr>
-            <tr>
-                <td>1972</td>
-                <td><strong>Email</strong> was born. The killer application that at the time was widely used by
-                    scientists to communicate
-                </td>
-            </tr>
-            <tr>
-                <td>1989</td>
-                <td>While working at CERN <a href="#timberners">Sir Tim Berners-Lee</a> created the <a
-                        href="#www">WWW</a>, which included the <a href="#http">HTTP</a>, <a href="#html">HTML</a>,
-                    <a href="#uri">URI</a>, <a href="#wserver">Web Server</a> and the <a href="#wclient">Web client</a>.
-                </td>
-            </tr>
-            </tbody>
-            <tr></tr>
-        </table>
-    </section>
-    <h2>HTTP (Hypertext Transfer protocol)</h2>
-     <section>
-        <p>An application layer communications protocol used to access resources on the World Wide Web. 
+    <!-- article-->
+    <article id="internet">
+        <h2>Internet</h2>
+        <section>
+            <h3>Etymology</h3>
+            <p>The etymology of the word Internet can be rooted with these two words</p>
+            <ul>
+                <li><strong>Inter</strong> - something outside (as opposed to <em>intra</em> - inside/exclusive)</li>
+                <li><strong>Network</strong> - Network of networks and connection of devices</li>
+            </ul>
+            <p>The Internet is the interconnection of networks all around the world which uses the <a href="#tcpip">TCP/IP
+                protocol</a> as the medium of connection</p>
+        </section>
+        <section>
+            <h3>A Brief History of the Internet</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>1969</td>
+                    <td><strong>ARPANET (by DARPA)</strong> with only four computers connected</td>
+                </tr>
+                <tr>
+                    <td>1972</td>
+                    <td><strong>Email</strong> was born. The killer application that at the time was widely used by
+                        scientists to communicate
+                    </td>
+                </tr>
+                <tr>
+                    <td>1989</td>
+                    <td>While working at CERN <a href="#timberners">Sir Tim Berners-Lee</a> created the <a
+                            href="#www">WWW</a>, which included the <a href="#http">HTTP</a>, <a href="#html">HTML</a>,
+                        <a href="#uri">URI</a>, <a href="#wserver">Web Server</a> and the <a href="#wclient">Web
+                            client</a>.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </article>
+    <article id="http">
+        <h2>HTTP (Hypertext Transfer protocol)</h2>
+        <p>An application layer communications protocol used to access resources on the World Wide Web.
             HTTP is invented by Sir Tim Berners-Lee and jointly developed by W3C and IETF.</p>
-         <h3>Version History:</h3>
-        <ul>
-            <li>HTTP 0.9 (1991)</li>
-            <li>HTTP 1.0 (RFC 1945, May 1996)</li>
-            <li>HTTP 1.1 (RFC 2008, January 1997; RFC 2616, June 1999; RFC 7230-7235, June 2014)</li>
-            <li>HTTP 2 (RFC 7540 May 2015)</li>
-        </ul>
-		 <h3>HTTP Fundamentals</h3>
-		 <ul>
-			<li>HTTP runs on top of the TCP/IP using TCP port 80 by default, or TCP port 443 for <a href="#https">HTTPS(HTTP over SSL/TLS)</a></li>
-			<li>HTTP is based on a <a href="#architecture">client-server architecture</a></li>
-			<li>Clients aka. User Agents(UA)serves as header of requests</li>
-			<li><a href="#wbrowser">Web Browser</a>, <a href="#wcrawler">Web Crawlers/Spiders</a> are end user tools and applications</li> 
-		 </ul>
-		 <h3>HTTP Request-Response Standard Protocol</h3>
-		 <ul>
-			<li>The client sends an HTTP request message to the server</li>
-			<li> The server process the request and replies with an HTTP response message</li>
-		</ul>
-		<h3>Other Functionalities of HTTP</h3>
-		<ul>
-			<li><a href="#cache">Cache Control</a> - Local Storage</li>
-			<li>Content media type - <a href="#mime">Multipurpose Internet Mail Extensions(MIME)</a></li>
-			<li>Language and Character set specification</li>
-			<li>Content/Transfer Coding</li>
-			<li>Content Negotiation</li>
-			<li>Client-Service Protocol Negotiations</li>
-		</ul>
-		<h3>Standard Methods</h3>
-		<ul>
-			<li>GET - transfer a current selected representation of the resource identified by the Request-URI</li>
-			<li>HEAD - used to retrieve metadata about the entity implied by the request without transferring the entity itself</li>
-			<li>POST - perform resource specific processing of the entities enclosed in the message</li>
-			<li>PUT - requests that the enclosed entity be stored under the supplied Request-URI</li>
-			<li>DELETE - requests that the origin server delete the resource indentified by the Request-URI</li>
-			<li>OPTIONS - describes the communication options for the target resource</li>
-			<li>TRACE - request a loop-back of request message (request the server to echo back to client)</li>
-			<li>CONNECT - establishes a tunnel to the server identified by the a given URL</li>
-		</ul>
-		<h3>Message Headers</h3>
-		<ul>
-			<li>General Header Fields</li>
-			<ul>
-				<li>Cache</li>
-				<li>Control</li>
-				<li>Connection</li>
-				<li>Delete</li>
-				<li>Program</li>
-				<li>Trailer</li>
-				<li>Transfer-Encoding</li>
-				<li>Upgrade</li>
-				<li>Via</li>
-				<li>Warning</li>
-			</ul>
-			<li>Request Header Fields</li>
-			<ul>
-				<li>Accept</li>
-				<li>Accept Charset</li>
-				<li>Accept Encoding</li>
-				<li>Accept Language</li>
-				<li>Authorization</li>
-				<li>Except</li>
-				<li>From</li>
-				<li>Since</li>
-				<li>If-Match</li>
-				<li>If-Modified-Since</li>
-				<li>If-None-Match</li>
-				<li>If-Range</li>
-				<li>If-Unmodified</li>
-				<li>Host</li>
-				<li>Range</li>
-				<li>Max-Forwards</li>
-				<li>Proxy Authorization</li>
-				<li>Referer</li>
-				<li>TE</li>
-				<li>User-Agent</li>	
-			</ul>
-			<li>Response Header Fields</li>
-			<ul>
-				<li>Accept-Ranges</li>
-				<li>Age</li>
-				<li>ETag</li>
-				<li>Location</li>
-				<li>Proxy-Authenticate</li>
-				<li>Retry-After</li>
-				<li>Server</li>
-				<li>Vary</li>
-				<li>www-Authenticate</li>
-			</ul>
-			<li>Entity Header Fields</li>
-			<ul>
-				<li>Allow</li>
-				<li>Content-Encoding</li>
-				<li>Content-Language</li>
-				<li>Content-Length</li>
-				<li>Content-Location</li>
-				<li>Content-MD5</li>
-				<li>Content-Range</li>
-			</ul>
-		</ul>
-		<h3>HTTP Status Codes</h3>
-		<ul>
-			<li>Information(1xx)</li>
-			<ul>
-				<li>100 Continue</li>
-				<li>101 Switching Protocols</li>
-			</ul>
-			<li>Success (2xx)</li>
-			<ul>
-				<li>200 Ok</li>
-				<li>201 Created</li>
-				<li>202 Accepted</li>
-				<li>203 Non-Authoritative Information</li>
-				<li>204 No Content</li>
-				<li>205 Reset Content</li>
-				<li>206 Partial Content</li>
-			</ul>
-			<li>Redirection (3xx)</li>
-			<ul>
-				<li>300 Multiple Choices</li>
-				<li>301 Moved Permanently</li>
-				<li>302 Found</li>
-				<li>303 See Other</li>
-				<li>304 Not Modified</li>
-				<li>305 Use Proxy</li>
-				<li>306 (unused)</li>
-				<li>307 Temporary Redirect</li>
-			</ul>
-			<li>Client Error (4xx)</li>
-			<ul>
-				<li>400 Bad Request</li>
-				<li>401 Unauthorized</li>
-				<li>402 Payment Required</li>
-				<li>403 Forbidden</li>
-				<li>404 Not Found</li>
-				<li>405 Method Not Allowed</li>
-				<li>406 Not Accepted</li>
-				<li>407 Proxy Authentication Required</li>
-				<li>408 Request Time-out</li>
-				<li>409 Conflict</li>
-				<li>410 Gone</li>
-				<li>411 Length Required</li>
-				<li>412 Precondition Failed</li>
-				<li>413 Request Entity Too Large</li>
-				<li>414 Request-URI Too Large</li>
-				<li>415 Unsupported Media Type</li>
-				<li>416 Requested Range Not Satisfiable</li>
-				<li>417 Expectation Failed</li>
-				<li>426 Upgrade Required</li>
-			</ul>
-			<li>Server Error (5xx)</li>
-			<ul>
-				<li>500 Internal Server Error</li>
-				<li>501 Not Implemented</li>
-				<li>502 Not Implemented</li>
-				<li>503 Service Unavailable</li>
-				<li>504 Gateway Time-out</li>
-				<li>505 HTP Version Not Supported</li>
-			</ul>
-		</ul>
-		</section> 
+
+        <section>
+            <h3 id="ht-ver">Version History:</h3>
+            <ul>
+                <li>HTTP 0.9 (1991)</li>
+                <li>HTTP 1.0 (RFC 1945, May 1996)</li>
+                <li>HTTP 1.1 (RFC 2008, January 1997; RFC 2616, June 1999; RFC 7230-7235, June 2014)</li>
+                <li>HTTP 2 (RFC 7540 May 2015)</li>
+            </ul>
+        </section>
+        <section>
+            <h3 id="ht-fun">HTTP Fundamentals</h3>
+            <ul>
+                <li>HTTP runs on top of the TCP/IP using TCP port 80 by default, or TCP port 443 for <a href="#https">HTTPS(HTTP
+                    over SSL/TLS)</a></li>
+                <li>HTTP is based on a <a href="#architecture">client-server architecture</a></li>
+                <li>Clients aka. User Agents(UA)serves as header of requests</li>
+                <li><a href="#wbrowser">Web Browser</a>, <a href="#wcrawler">Web Crawlers/Spiders</a> are end user tools
+                    and
+                    applications
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3 id="ht-rr">HTTP Request-Response Standard Protocol</h3>
+            <ul>
+                <li>The client sends an HTTP request message to the server</li>
+                <li> The server process the request and replies with an HTTP response message</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Other Functionalities of HTTP</h3>
+            <ul>
+                <li><a href="#cache">Cache Control</a> - Local Storage</li>
+                <li>Content media type - <a href="#mime">Multipurpose Internet Mail Extensions(MIME)</a></li>
+                <li>Language and Character set specification</li>
+                <li>Content/Transfer Coding</li>
+                <li>Content Negotiation</li>
+                <li>Client-Service Protocol Negotiations</li>
+            </ul>
+        </section>
+        <section>
+            <h3 id="ht-sm">Standard Methods</h3>
+            <ul>
+                <li>GET - transfer a current selected representation of the resource identified by the Request-URI</li>
+                <li>HEAD - used to retrieve metadata about the entity implied by the request without transferring the
+                    entity
+                    itself
+                </li>
+                <li>POST - perform resource specific processing of the entities enclosed in the message</li>
+                <li>PUT - requests that the enclosed entity be stored under the supplied Request-URI</li>
+                <li>DELETE - requests that the origin server delete the resource indentified by the Request-URI</li>
+                <li>OPTIONS - describes the communication options for the target resource</li>
+                <li>TRACE - request a loop-back of request message (request the server to echo back to client)</li>
+                <li>CONNECT - establishes a tunnel to the server identified by the a given URL</li>
+            </ul>
+            <h4>Three Categories of Methods: </h4>
+            <ul>
+                <li>Safe methods - no changes on server resources
+                    <ul>
+                        <li>GET</li>
+                        <li>HEAD</li>
+                        <li>OPTIONS</li>
+                        <li>TRACE</li>
+                    </ul>
+                </li>
+                <li>Not safe methods
+                    <ul>
+                        <li>POST</li>
+                        <li>PUT</li>
+                        <li>DELETE</li>
+                    </ul>
+                </li>
+                <li>Idempotent methods - doing it repeatedly does not change the response
+                    <ul>
+                        <li>GET</li>
+                        <li>HEAD</li>
+                        <li>OPTIONS</li>
+                        <li>TRACE</li>
+                        <li>PUT</li>
+                        <li>DELETE</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3 id="ht-head">Message Headers</h3>
+            <ul>
+                <li>General Header Fields
+                    <ul>
+                        <li>Cache</li>
+                        <li>Control</li>
+                        <li>Connection</li>
+                        <li>Delete</li>
+                        <li>Program</li>
+                        <li>Trailer</li>
+                        <li>Transfer-Encoding</li>
+                        <li>Upgrade</li>
+                        <li>Via</li>
+                        <li>Warning</li>
+                    </ul>
+                </li>
+
+                <li>Request Header Fields
+                    <ul>
+                        <li>Accept</li>
+                        <li>Accept Charset</li>
+                        <li>Accept Encoding</li>
+                        <li>Accept Language</li>
+                        <li>Authorization</li>
+                        <li>Except</li>
+                        <li>From</li>
+                        <li>Since</li>
+                        <li>If-Match</li>
+                        <li>If-Modified-Since</li>
+                        <li>If-None-Match</li>
+                        <li>If-Range</li>
+                        <li>If-Unmodified</li>
+                        <li>Host</li>
+                        <li>Range</li>
+                        <li>Max-Forwards</li>
+                        <li>Proxy Authorization</li>
+                        <li>Referer</li>
+                        <li>TE</li>
+                        <li>User-Agent</li>
+                    </ul>
+                </li>
+
+                <li>Response Header Fields
+                    <ul>
+                        <li>Accept-Ranges</li>
+                        <li>Age</li>
+                        <li>ETag</li>
+                        <li>Location</li>
+                        <li>Proxy-Authenticate</li>
+                        <li>Retry-After</li>
+                        <li>Server</li>
+                        <li>Vary</li>
+                        <li>www-Authenticate</li>
+                    </ul>
+                </li>
+
+                <li>Entity Header Fields
+
+                    <ul>
+                        <li>Allow</li>
+                        <li>Content-Encoding</li>
+                        <li>Content-Language</li>
+                        <li>Content-Length</li>
+                        <li>Content-Location</li>
+                        <li>Content-MD5</li>
+                        <li>Content-Range</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </section>
+        <section>
+            <h3 id="ht-status">HTTP Status Codes</h3>
+            <ul>
+                <li>Information(1xx)
+                    <ul>
+                        <li>100 Continue</li>
+                        <li>101 Switching Protocols</li>
+                    </ul>
+                </li>
+
+                <li>Success (2xx)
+                    <ul>
+                        <li>200 Ok</li>
+                        <li>201 Created</li>
+                        <li>202 Accepted</li>
+                        <li>203 Non-Authoritative Information</li>
+                        <li>204 No Content</li>
+                        <li>205 Reset Content</li>
+                        <li>206 Partial Content</li>
+                    </ul>
+                </li>
+
+                <li>Redirection (3xx)
+                    <ul>
+                        <li>300 Multiple Choices</li>
+                        <li>301 Moved Permanently</li>
+                        <li>302 Found</li>
+                        <li>303 See Other</li>
+                        <li>304 Not Modified</li>
+                        <li>305 Use Proxy</li>
+                        <li>306 (unused)</li>
+                        <li>307 Temporary Redirect</li>
+                    </ul>
+                </li>
+
+                <li>Client Error (4xx)
+                    <ul>
+                        <li>400 Bad Request</li>
+                        <li>401 Unauthorized</li>
+                        <li>402 Payment Required</li>
+                        <li>403 Forbidden</li>
+                        <li>404 Not Found</li>
+                        <li>405 Method Not Allowed</li>
+                        <li>406 Not Accepted</li>
+                        <li>407 Proxy Authentication Required</li>
+                        <li>408 Request Time-out</li>
+                        <li>409 Conflict</li>
+                        <li>410 Gone</li>
+                        <li>411 Length Required</li>
+                        <li>412 Precondition Failed</li>
+                        <li>413 Request Entity Too Large</li>
+                        <li>414 Request-URI Too Large</li>
+                        <li>415 Unsupported Media Type</li>
+                        <li>416 Requested Range Not Satisfiable</li>
+                        <li>417 Expectation Failed</li>
+                        <li>426 Upgrade Required</li>
+                    </ul>
+                </li>
+
+                <li>Server Error (5xx)
+                    <ul>
+                        <li>500 Internal Server Error</li>
+                        <li>501 Not Implemented</li>
+                        <li>502 Not Implemented</li>
+                        <li>503 Service Unavailable</li>
+                        <li>504 Gateway Time-out</li>
+                        <li>505 HTP Version Not Supported</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </article>
+
     <section>
-        <h3>Terminologies</h3>
+        <h3 id="terms">Terminologies</h3>
         <ul>
             <li id="tcpip"><strong>TCP/IP(Transmission Control Protocol/Internet Protocol)</strong> - is a computer
                 protocol which supports all the operating systems currently being used, which in return is now being
@@ -233,15 +325,15 @@
             <li id="uri">URI(Uniform Resource Identifier)</li>
             <li id="wserver">Web Server</li>
             <li id="wclient">Web Client</li>
-			<li id="https">HTTPS(HTTP over SSL/TLS)</li>
-			<li id="architecture">Client-Server Architecture</li>
-			<li id="wbrowser">Web Browser</li>
-			<li id="wcrawler">Web Crawlers/Spiders</li>
-			<li id="cache">Cache Control</li>
-			<li id="mime">Multipurpose Internet Mail Extensions(MIME)</li>		
+            <li id="https">HTTPS(HTTP over SSL/TLS)</li>
+            <li id="architecture">Client-Server Architecture</li>
+            <li id="wbrowser">Web Browser</li>
+            <li id="wcrawler">Web Crawlers/Spiders</li>
+            <li id="cache">Cache Control</li>
+            <li id="mime">Multipurpose Internet Mail Extensions(MIME)</li>
         </ul>
     </section>
-</article>
 
+</div>
 </body>
 </html>

@@ -1,8 +1,22 @@
 /* TODO: For now Basic styling. Style more later */
 article{
     border-bottom: 1px solid grey;
+    padding-bottom: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 table td{
     border-bottom: 1px solid grey;
+}
+
+/* Temporary navigation */
+nav{
+    position: fixed;
+    right: 5%;
+    top: 20%;
+}
+
+.container{
+    width: 60%;
+    margin: 0 30% 0 10%;
 }

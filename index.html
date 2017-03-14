@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Web Notes</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css.map">
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css.map">-->
     <link rel="stylesheet" href="css/general.css">
     <style>
-        #method-categories{
+        #method-categories {
             width: 40%;
         }
     </style>
@@ -25,16 +25,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand" href="#">Web Technologies Notes</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.html">PRELIMS <span class="sr-only">(current)</span></a></li>
-                    <li><a href="midterms.html">MIDTERMS <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">MIDTERMS
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="midterms/midterms.html">Front End Development</a></li>
+                            <li><a href="midterms/html.html">HTML</a></li>
+                            <li><a href="midterms/css.html">CSS</a></li>
+                            <li><a href="midterms/javascript.html">JavaScript</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">FINALS<span class="sr-only">(current)</span></a></li>
-
                 </ul>
 
             </div><!-- /.navbar-collapse -->
@@ -409,7 +417,7 @@
     </section>
 </div>
 
-
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

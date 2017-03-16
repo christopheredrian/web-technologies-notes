@@ -186,6 +186,7 @@
         <section>
             <h3 id="ht-sm">Standard Methods</h3>
             <ul>
+
                 <li>GET - transfer a current selected representation of the resource identified by the Request-URI
 				<ul>
 					<li>Conditional GET - entity is transferred only under certain conditions specified in the conditional header fields.</li>
@@ -196,6 +197,7 @@
 				</li>
                 <li>HEAD - used to retrieve metadata about the entity implied by the request without transferring the message-body.
                 <li><strong>GET</strong> - transfer a current selected representation of the resource identified by the Request-URI.
+
                 </li>
                 <li><strong>HEAD</strong> - used to retrieve metadata about the entity implied by the request without transferring the entity itself.
                 </li>
@@ -248,39 +250,41 @@
             <ul>
                 <li>General Header Fields
                     <ul>
-                        <li>Cache-Control - specifies cache directives or instructions for caching.</li>
-                        <li>Connection - specifies connection options.</li>
-                        <li>Date - represents message origin date and time.</li>
-                        <li>Pragma - specifies implementation-specific directives that can be included.</li>
-                        <li>Trailer - indicates that the trailer of a message includes a set of header fields.</li>
-                        <li>Transfer-Encoding - is where the type of transformation applied to message body upon transfer is indicated.</li>
-                        <li>Upgrade - specifies supported protocols for switching protocol.</li>
-                        <li>Via - indicates protocols used by gateways and proxies between user and server upon request.</li>
-                        <li>Warning - message additional information on its status.</li>
+                        <li>Cache</li>
+                        <li>Control</li>
+                        <li>Connection</li>
+                        <li>Delete</li>
+                        <li>Program</li>
+                        <li>Trailer</li>
+                        <li>Transfer-Encoding</li>
+                        <li>Upgrade</li>
+                        <li>Via</li>
+                        <li>Warning</li>
                     </ul>
                 </li>
 
                 <li>Request Header Fields
                     <ul>
-                        <li>Accept - specifies response-acceptable media types.</li>
-                        <li>Accept-Charset - specifies response-acceptable character sets.</li>
-                        <li>Accept-Encoding - specifies response-acceptable content-codings with content-coding restrictions.</li>
-                        <li>Accept-Language - specifies response-acceptable languages with restrictions based on a set of natural languages.</li>
-                        <li>Authorization - allows authentication that may be used upon receiving 401 response.</li>
-                        <li>Expect - indicates client-required behavior of the server.</li>
-                        <li>From - contains user's internet e-mail address.</li>
-						<li>Host - is where the host and port number of requested resource is specified.</li>
-                        <li>If-Match - condition for conditional GET that verifies whether and enity is current.</li>
-                        <li>If-Modified-Since - condition for conditional GET that requested entity does not necessarily need to be transferred unless it was modified since a specified date.</li>
-                        <li>If-None-Match - condition for conditional GET that verifies if none of its enities is current to allow updates.</li>
-                        <li>If-Range - specifies a range of entities to be transferred for update purposes.</li>
-                        <li>If-Unmodified - condition for conditional GET that requested entity does not necessarily need to be transferred unless it was unmodified since a specified date.</li>
-						<li>Max-Forwards - limits number of forwards between proxies and gateways to a specified number.</li>
-                        <li>Proxy Authorization - requires authentication to allow client to identify itself.</li>
-						<li>Range - </li>
-                        <li>Referer - allows specification of URI where Request-URI was taken from to allow backlinks to some resources.</li>
-                        <li>TE - indicates accepted extension transfer-codings.</li>
-                        <li>User-Agent - contains requesting user agent's information.</li>
+                        <li>Accept</li>
+                        <li>Accept Charset</li>
+                        <li>Accept Encoding</li>
+                        <li>Accept Language</li>
+                        <li>Authorization</li>
+                        <li>Except</li>
+                        <li>From</li>
+                        <li>Since</li>
+                        <li>If-Match</li>
+                        <li>If-Modified-Since</li>
+                        <li>If-None-Match</li>
+                        <li>If-Range</li>
+                        <li>If-Unmodified</li>
+                        <li>Host</li>
+                        <li>Range</li>
+                        <li>Max-Forwards</li>
+                        <li>Proxy Authorization</li>
+                        <li>Referer</li>
+                        <li>TE</li>
+                        <li>User-Agent</li>
                     </ul>
                 </li>
 

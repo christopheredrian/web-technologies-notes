@@ -1,0 +1,18 @@
+/* Navigation */
+nav.navbar {
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+
+
+/* Contents */
+nav.well{
+    width: 40vw;
+}
+
+/* Media queries*/
+@media screen and (max-width:678px) {
+   nav.well{
+       width: 100%;
+   }
+}

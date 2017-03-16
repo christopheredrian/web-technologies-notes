@@ -1,0 +1,48 @@
+ 1xx (informational)
+	- 100 continue - to have a server check the request's headers
+	- 101 switching protocols – request for switching using
+	protocol negotiation
+- 2xx (success)
+	- 200 ok - successful http request
+	- 201 created - request has been fulfilled
+	- 202 accepted - accepted but the process has not been completed
+	-203 non authoritative information
+	- 204 no content - successfully processed the request and is not returning any content
+	- 205 reset content (submit data via POST) -  requires that the requester reset the document view
+	- 206 partial content
+- 3xx (redirection) (location: ) - the  server is delivering only part of the resource 
+	- 300 multiple choices – request with several versions
+	- 301 moved permanently – no longer there
+	- 302 found (redirection)
+	- 303 see other (redirection)
+	- 304 not modified – conditional but has missing
+	- 305 use proxy – don’t fetch it directly
+	- 306 (unused)
+	- 307 temporary redirect
+- 4xx (client error)
+	- 400 bad request - the server will not process the request due to an apparent client error 
+	- 401 unauthorized (protected) - used when authentication is required and has failed or has not yet been provided
+	- 402 payment required (commercial application) - reserved for future use
+	- 403 forbidden (not allowed to access) - the server is refusing action
+	- 404 not found (not correct request) - the requested resource could not be found
+	- 405 method not allowed - a request method is not supported for the requested resource
+	- 406 not acceptable - requested resource is capable of generating only content 
+	- 407 proxy authentication required - the client must first authenticate itself with the proxy
+	- 408 request timeout - server timed out waiting for the request
+	- 409 conflict - request could not be processed because of conflict in the request
+	- 410 gone - resource requested is no longer available and will not be available again
+	- 411 length required - request did not specify the length of its content
+	- 412 precondition failed - server does not meet one of the preconditions 
+	- 413 request entity too large - request is larger than the server is willing or able to process
+	- 414 request URI too large - URI provided was too long for the server to process
+	- 415 unsupported media type - request entity has a media type which the server or resource does not support
+	- 416 requested range not satisfiable - the client has asked for a portion of the file (byte serving), but the server cannot supply that portion
+	- 417 expectation failed
+- 426 upgrade required ( 3000 characters) - server cannot meet the requirements of the Expect request-header field
+- 5xx (server error)
+	- 500 internal server error - a generic error message
+	- 501 not implemented - implies future availability 
+	- 502 bad gateway (cot configure) - proxy received an invalid response from the upstream server
+	- 503 service unavailable - a temporary state 
+	- 504 gateway time-out - gateway and did not receive a timely response from the upstream server
+	- 505 http version not supported - server does not support the HTTP protocol version used in the request

@@ -3,19 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Notes</title>
-    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css.map">-->
+    <link rel="stylesheet" href="css/general.css">
+    <style>
+        #method-categories {
+            width: 40%;
+        }
+    </style>
 </head>
 <body>
 <header>
-    <nav>
-        <p>Temporary Navigation</p>
+    <nav class="container navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Web Technologies Notes</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">PRELIMS <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">MIDTERMS
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="midterms/midterms.html">Front End Development</a></li>
+                            <li><a href="midterms/html.html">HTML</a></li>
+                            <li><a href="midterms/css.html">CSS</a></li>
+                            <li><a href="midterms/javascript.html">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">FINALS<span class="sr-only">(current)</span></a></li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+<!-- div For styling -->
+<div class="container">
+    <nav class="well well-sm">
+        <h2 class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">Contents</h2>
         <ul>
             <li><a href="#internet">Internet</a></li>
+                <ul>
+		    <li><a href="#in-ety">Etymology</a></li>
+                    <li><a href="#in-bh">Brief History of Internet</a></li>
+		</ul>
             <li><a href="#http">HTTP</a>
                 <ul>
                     <li><a href="#ht-ver">Version History</a></li>
                     <li><a href="#ht-fun">HTTP Fundamentals</a></li>
                     <li><a href="#ht-rr">HTTP Request/Response</a></li>
+		    <li><a href="#ht-of">Other Functionalities of HTTP</a></li>	
                     <li><a href="#ht-sm">Standard Methods</a></li>
                     <li><a href="#ht-head">Message Headers</a></li>
                     <li><a href="#ht-status">Status Codes</a></li>
@@ -24,15 +73,11 @@
             <li><a href="#terms">Terminologies</a></li>
         </ul>
     </nav>
-</header>
-<!-- div For styling -->
-<div class="container">
-
     <!-- article-->
     <article id="internet">
-        <h2>Internet</h2>
+        <h2 class="page-header">Internet</h2>
         <section>
-            <h3>Etymology</h3>
+            <h3 id="in-ety">Etymology</h3>
             <p>The etymology of the word Internet can be rooted with these two words</p>
             <ul>
                 <li><strong>Inter</strong> - something outside (as opposed to <em>intra</em> - inside/exclusive)</li>
@@ -42,8 +87,8 @@
                 protocol</a> as the medium of connection</p>
         </section>
         <section>
-            <h3>A Brief History of the Internet</h3>
-            <table>
+            <h3 id="in-bh">A Brief History of the Internet</h3>
+            <table class="table table-responsive table-bordered">
                 <thead>
                 <tr>
                     <th>Year</th>
@@ -75,18 +120,37 @@
         </section>
     </article>
     <article id="http">
-        <h2>HTTP (Hypertext Transfer protocol)</h2>
+        <h2 class="page-header">HTTP (Hypertext Transfer protocol)</h2>
         <p>An application layer communications protocol used to access resources on the World Wide Web.
             HTTP is invented by Sir Tim Berners-Lee and jointly developed by W3C and IETF.</p>
 
         <section>
-            <h3 id="ht-ver">Version History:</h3>
-            <ul>
-                <li>HTTP 0.9 (1991)</li>
-                <li>HTTP 1.0 (RFC 1945, May 1996)</li>
-                <li>HTTP 1.1 (RFC 2008, January 1997; RFC 2616, June 1999; RFC 7230-7235, June 2014)</li>
-                <li>HTTP 2 (RFC 7540 May 2015)</li>
-            </ul>
+            <h3 id="ht-ver">Version History</h3>
+            <table class="table table-responsive table-bordered">
+                <thead>
+                <th>HTTP Version</th>
+                <th>Description</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>HTTP 0.9 (1991)</td>
+                    <td>Description here</td>
+                </tr>
+                <tr>
+                    <td>HTTP 1.0 (RFC 1945, May 1996)</td>
+                    <td>DESC</td>
+                </tr>
+                <tr>
+                    <td>HTTP 1.1 (RFC 2008, January 1997; RFC 2616, June 1999; RFC 7230-7235, June 2014)</td>
+                    <td>DESC</td>
+                </tr>
+                <tr>
+                    <td>HTTP 2 (RFC 7540 May 2015)</td>
+                    <td>DESC</td>
+                </tr>
+                </tbody>
+            </table>
+
         </section>
         <section>
             <h3 id="ht-fun">HTTP Fundamentals</h3>
@@ -109,7 +173,7 @@
             </ul>
         </section>
         <section>
-            <h3>Other Functionalities of HTTP</h3>
+            <h3 id="ht-of">Other Functionalities of HTTP</h3>
             <ul>
                 <li><a href="#cache">Cache Control</a> - Local Storage</li>
                 <li>Content media type - <a href="#mime">Multipurpose Internet Mail Extensions(MIME)</a></li>
@@ -130,45 +194,54 @@
 					</li>
 				</ul>
 				</li>
-                <li>HEAD - used to retrieve metadata about the entity implied by the request without transferring the
-                    entity
-                    itself
+                <li>HEAD - used to retrieve metadata about the entity implied by the request without transferring the message-body.
+                <li><strong>GET</strong> - transfer a current selected representation of the resource identified by the Request-URI.
                 </li>
-                <li>POST - perform resource specific processing of the entities enclosed in the message</li>
-                <li>PUT - requests that the enclosed entity be stored under the supplied Request-URI</li>
-                <li>DELETE - requests that the origin server delete the resource indentified by the Request-URI</li>
-                <li>OPTIONS - describes the communication options for the target resource</li>
-                <li>TRACE - request a loop-back of request message (request the server to echo back to client)</li>
-                <li>CONNECT - establishes a tunnel to the server identified by the a given URL</li>
+                <li><strong>HEAD</strong> - used to retrieve metadata about the entity implied by the request without transferring the entity itself.
+                </li>
+                <li><strong>POST</strong> - perform resource specific processing of the entities enclosed in the message
+                </li>
+                <li><strong>PUT</strong> - requests that the enclosed entity be stored under the supplied Request-URI
+                </li>
+                <li><strong>DELETE</strong> - requests that the origin server delete the resource indentified by the
+                    Request-URI
+                </li>
+                <li><strong>OPTIONS</strong> - describes the communication options for the target resource</li>
+                <li><strong>TRACE</strong> - request a loop-back of request message (request the server to echo back to
+                    client)
+                </li>
+                <li><strong>CONNECT</strong> - establishes a tunnel to the server identified by the a given URL</li>
             </ul>
-            <h4>Three Categories of Methods: </h4>
-            <ul>
-                <li>Safe methods - no changes on server resources
-                    <ul>
-                        <li>GET</li>
-                        <li>HEAD</li>
-                        <li>OPTIONS</li>
-                        <li>TRACE</li>
-                    </ul>
-                </li>
-                <li>Not safe methods
-                    <ul>
-                        <li>POST</li>
-                        <li>PUT</li>
-                        <li>DELETE</li>
-                    </ul>
-                </li>
-                <li>Idempotent methods - doing it repeatedly does not change the response
-                    <ul>
-                        <li>GET</li>
-                        <li>HEAD</li>
-                        <li>OPTIONS</li>
-                        <li>TRACE</li>
-                        <li>PUT</li>
-                        <li>DELETE</li>
-                    </ul>
-                </li>
-            </ul>
+            <div id="method-categories" class="well well-sm">
+                <h4>Three Categories of Methods: </h4>
+                <ul>
+                    <li><strong>Safe methods</strong> - no changes on server resources
+                        <ul>
+                            <li>GET</li>
+                            <li>HEAD</li>
+                            <li>OPTIONS</li>
+                            <li>TRACE</li>
+                        </ul>
+                    </li>
+                    <li><strong>Not safe methods</strong>
+                        <ul>
+                            <li>POST</li>
+                            <li>PUT</li>
+                            <li>DELETE</li>
+                        </ul>
+                    </li>
+                    <li><strong>Idempotent methods</strong> - doing it repeatedly does not change the response
+                        <ul>
+                            <li>GET</li>
+                            <li>HEAD</li>
+                            <li>OPTIONS</li>
+                            <li>TRACE</li>
+                            <li>PUT</li>
+                            <li>DELETE</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section>
             <h3 id="ht-head">Message Headers</h3>
@@ -311,10 +384,13 @@
                 </li>
             </ul>
         </section>
-    </article>
 
-    <section>
-        <h3 id="terms">Terminologies</h3>
+    </article>
+    <article>
+        <h2 class="page-header">References</h2>
+    </article>
+    <section style="text-decoration: line-through">
+        <h2 class="page-header" id="terms">Terminologies</h2>
         <ul>
             <li id="tcpip"><strong>TCP/IP(Transmission Control Protocol/Internet Protocol)</strong> - is a computer
                 protocol which supports all the operating systems currently being used, which in return is now being
@@ -325,7 +401,7 @@
             </li>
             <li id="timberners"><strong>Sir Tim Berners-Lee</strong></li>
             <li id="www"><strong>WWW (World Wide Web)</strong></li>
-            <li><a href="#http">HTTP(Hypertext Transfer Protocol)</a></li>
+            <li id="http">HTTP(Hypertext Transfer Protocol)</a></li>
             <li id="html">HTML(Hypertext Markup Language)</li>
             <li id="uri">URI(Uniform Resource Identifier)</li>
             <li id="wserver">Web Server</li>
@@ -336,42 +412,20 @@
             <li id="wcrawler">Web Crawlers/Spiders</li>
             <li id="cache">Cache Control</li>
             <li id="mime">Multipurpose Internet Mail Extensions(MIME)</li>
+            <li id="Lie">Håkon Wium Lie</li>
+            <li id="Bos">Bert Bos</li>
+            <li id="css1">CSS1</li>
+            <li id="css2">CSS2</li>
+            <li id="css3">CSS3</li>
+            <li id="authorstyle">Author Style</li>
+            <li id="userstyle">User Style</li>
+            <li id="useragent">User Agent Style</li>
+
         </ul>
     </section>
-	<section>
-		<h2>Website</h2>
-			<ul>	
-				<li><b>website</b> - a hosted collection of web resources.</li>
-				<li><b>webpage</b> - a document written on HTML.</li>
-				<ul>
-					<li><b>HTML</b> - used for structure and content.</li>
-					<li><b>CSS</b> - used for aesthetics and presentation.</li>
-					<li><b>JavaScript</b> - used for behavioral aspects of a website</li>
-				</ul>	
-			</ul>
-			<section>
-			<h3>HTML (Hypertext Markup Language)</h3>
-				<h4>History</h4>
-					<ul>
-						<li>HTML 1.0 - first version of HTML</li>
-						<li>HTML 2.0 - RFC 1866</li>
-						<li>HTML 3.0 - W3C Recommendation</li>
-						<li>3.2</li>
-						<li>4.0</li>
-						<li>4.01 -  W3C Recommendation (December 24 1999)</li>
-						<li>XHTML Extensible HTML - reformulation of HTML in XML (2000)</li>
-						<ul>
-							<li><b>strict</b></li>
-							<li><b>transitional</b></li>
-							<li><b>frameset</b></li>
-						</ul>
-						<li>Web Hypertext Technology Group (WHATWG) - Ian Hickson (2005-2006)</li>
-						<li>HTML 5.0 (2014) -  supports HTML flexible syntax and XHTML strict syntax</li>
-						<li>HTML 5.1 (2016)</li>
-					</ul>
-			</section>
-	</section>
-
 </div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

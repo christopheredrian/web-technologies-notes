@@ -458,97 +458,135 @@
             </div>
 
         </section>
-        <section>
+        <section class ="row">
             <h3 id="ht-status">HTTP Status Codes</h3>
-            <ul>
-                <li>Information(1xx)
-                    <ul>
-                        <li>100 Continue - to have a server check the request's headers.</li>
-                        <li>101 Switching Protocols - request for switching using protocol negotiation.</li>
-                    </ul>
-                </li>
-
-                <li>Success (2xx)
-                    <ul>
-                        <li>200 Ok - successful http request.</li>
-                        <li>201 Created - request has been fulfilled.</li>
-                        <li>202 Accepted - accepted but the process has not been completed.</li>
-                        <li>203 Non-Authoritative Information - it tells that the request was successful but the
-                            enclosed payload not been modified.
-                        </li>
-                        <li>204 No Content - successfully processed the request and is not returning any content.</li>
-                        <li>205 Reset Content - requires that the requester reset the document view.</li>
-                        <li>206 Partial Content - server is fulfilled the request for the target source.</li>
-                    </ul>
-                </li>
-
-                <li>Redirection (3xx)
-                    <ul>
-                        <li>300 Multiple Choices - request with several versions.</li>
-                        <li>301 Moved Permanently - no longer there.</li>
-                        <li>302 Found - page is temporarily moved.</li>
-                        <li>303 See Other - is a thing to redirect application website to a new url.</li>
-                        <li>304 Not Modified - conditional but has missing.</li>
-                        <li>305 Use Proxy - don’t fetch it directly.</li>
-                        <li>306 (unused)</li>
-                        <li>307 Temporary Redirect - the main resource is redirect to a different url.</li>
-                    </ul>
-                </li>
-
-                <li>Client Error (4xx)
-                    <ul>
-                        <li>400 Bad Request - the server will not process the request due to an apparent client error.
-                        </li>
-                        <li>401 Unauthorized - used when authentication is required and has failed or has not yet been
-                            provided.
-                        </li>
-                        <li>402 Payment Required - reserved for future use.</li>
-                        <li>403 Forbidden - the server is refusing action.</li>
-                        <li>404 Not Found - the requested resource could not be found.</li>
-                        <li>405 Method Not Allowed - a request method is not supported for the requested resource.</li>
-                        <li>406 Not Accepted - requested resource is capable of generating only content.</li>
-                        <li>407 Proxy Authentication Required - the client must first authenticate itself with the
-                            proxy.
-                        </li>
-                        <li>408 Request Time-out - server timed out waiting for the request.</li>
-                        <li>409 Conflict - request could not be processed because of conflict in the request.</li>
-                        <li>410 Gone - resource requested is no longer available and will not be available again.</li>
-                        <li>411 Length Required - request did not specify the length of its content.</li>
-                        <li>412 Precondition Failed - server does not meet one of the preconditions.</li>
-                        <li>413 Request Entity Too Large - request is larger than the server is willing or able to
-                            process.
-                        </li>
-                        <li>414 Request-URI Too Large - URI provided was too long for the server to process.</li>
-                        <li>415 Unsupported Media Type - request entity has a media type which the server or resource
-                            does not support.
-                        </li>
-                        <li>416 Requested Range Not Satisfiable - the client has asked for a portion of the file (byte
-                            serving), but the server cannot supply that portion.
-                        </li>
-                        <li>417 Expectation Failed - the server has not satified the expectation of request header
-                            field.
-                        </li>
-                        <li>426 Upgrade Required - server cannot meet the requirements of the expect request-header
-                            field.
-                        </li>
-                    </ul>
-                </li>
-
-                <li>Server Error (5xx)
-                    <ul>
-                        <li>500 Internal Server Error - a generic error message.</li>
-                        <li>501 Not Implemented - implies future availability.</li>
-                        <li>502 Bad Gateway - proxy received an invalid response from the upstream server.</li>
-                        <li>503 Service Unavailable - a temporary state.</li>
-                        <li>504 Gateway Time-out - gateway and did not receive a timely response from the upstream
-                            server.
-                        </li>
-                        <li>505 HTTP Version Not Supported - the server has not accept the version of http.</li>
-                    </ul>
-                </li>
+			<ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#scode-information">Information(1xx)</a></li>
+                <li><a data-toggle="tab" href="#scode-success">Success (2xx)</a></li>
+                <li><a data-toggle="tab" href="#scode-redirection">Redirection (3xx)</a></li>
+                <li><a data-toggle="tab" href="#scode-cerror">Client Error (4xx)</a></li>
+				<li><a data-toggle="tab" href="#scode-serror">Server Error (5xx)</a></li>
             </ul>
-        </section>
+			<div class="tab-content">
+				<div id="scode-information" class="tab-pane fade in active">
+					<dl>
+                        <dt>100 Continue</dt>
+						<dd>to have a server check the request's headers.</dd>
+                        <dt>101 Switching Protocols</dt>
+						<dd>request for switching using protocol negotiation.</dd>
+                    </dl>
+                </div>
+				<div id="scode-success" class="tab-pane fade">
+                    <dl>
+                        <dt>200 Ok</dt>
+						<dd>successful http request.</dd>
+                        <dt>201 Created</dt>
+						<dd>request has been fulfilled.</dd>
+                        <dt>202 Accepted</dt>
+						<dd>accepted but the process has not been completed.</dd>
+                        <dt>203 Non-Authoritative Information</dt>
+						<dd>it tells that the request was successful but the
+                            enclosed payload not been modified.</dd>
+                        <dt>204 No Content</dt>
+						<dd>successfully processed the request and is not returning any content.</dd>
+                        <dt>205 Reset Content</dt>
+						<dd>requires that the requester reset the document view.</dd>
+                        <dt>206 Partial Content</dt>
+						<dd>server is fulfilled the request for the target source.</dd>
+                    </dl>
+                </div>
+                <div id="scode-redirection"" class="tab-pane fade">
+                    <dl>
+                        <dt>300 Multiple Choices</dt>
+						<dd>request with several versions.</dd>
+                        <dt>301 Moved Permanently</dt>
+						<dd>no longer there.</dd>
+                        <dt>302 Found</dt>
+						<dd>page is temporarily moved.</dd>
+                        <dt>303 See Other</dt>
+						<dd>is a thing to redirect application website to a new url.</dd>
+                        <dt>304 Not Modified </dt> 
+						<dd>conditional but has missing.</dd>
+                        <dt>305 Use Proxy</dt> 
+						<dd>don’t fetch it directly.</dd>
+                        <dt>306 (unused)</dt>
+                        <dt>307 Temporary Redirect</dt> 
+						<dd>the main resource is redirect to a different url.</dd>
+                    </dl>
+                </div>
+				<div id="scode-cerror"" class="tab-pane fade">	
+                    <dl>
+                        <dt>400 Bad Request</dt>
+						<dd>the server will not process the request due to an apparent client error.</dd>
+                        <dt>401 Unauthorized</dt> 
+						<dd>used when authentication is required and has failed or has not yet been
+                            provided.</dd>
+                        <dt>402 Payment Required</dt> 
+						<dd>reserved for future use.</dd>
+                        <dt>403 Forbidden</dt> 
+						<dd>the server is refusing action.</dd>
+                        <dt>404 Not Found</dt> 
+						<dd>the requested resource could not be found.</dd>
+                        <dt>405 Method Not Allowed</dt> 
+						<dd>a request method is not supported for the requested resource.</dd>
+                        <dt>406 Not Accepted</dt> 
+						<dd>requested resource is capable of generating only content.</dd>
+                        <dt>407 Proxy Authentication Required<dt> 
+						<dd>the client must first authenticate itself with the proxy.</dd>
+                        <dt>408 Request Time-out</dt>
+						<dd>server timed out waiting for the request.</dd>
+                        <dt>409 Conflict</dt> 
+						<dd>request could not be processed because of conflict in the request.</dd>
+                        <dt>410 Gone<dt>
+						<dd>resource requested is no longer available and will not be available again.</dd>
+                        <dt>411 Length Required</dt> 
+						<dd>request did not specify the length of its content.</dd>
+                        <dt>412 Precondition Failed</dt>
+						<dd>server does not meet one of the preconditions.</dd>
+                        <dt>413 Request Entity Too Large</dt> 
+						<dd>request is larger than the server is willing or able to
+                            process.
+                        </dd>
+                        <dt>414 Request-URI Too Large</dt> 
+						<dd>URI provided was too long for the server to process.</dd>
+                        <dt>415 Unsupported Media Type </dt> 
+						<dd>request entity has a media type which the server or resource
+                            does not support.
+                        </dd>
+                        <dt>416 Requested Range Not Satisfiable</dt> 
+						<dd>the client has asked for a portion of the file (byte
+                            serving), but the server cannot supply that portion.
+                        </dd>
+                        <dt>417 Expectation Failed</dt> 
+						<dd>the server has not satified the expectation of request header
+                            field.
+                        </dd>
+                        <dt>426 Upgrade Required</dt>
+						</dd>server cannot meet the requirements of the expect request-header
+                            field.
+                        </dd>
+                    </dl>
+                </div>
 
+                <div id="scode-serror"" class="tab-pane fade">	
+                    <dl>
+                        <dt>500 Internal Server Error</dt> 
+						<dd>a generic error message.</dd>
+                        <dt>501 Not Implemented</dt> 
+						<dd>implies future availability.</dd>
+                        <dt>502 Bad Gateway<dt>
+						<dd>proxy received an invalid response from the upstream server.</dd>
+                        <dt>503 Service Unavailable </dt>
+						<dd>a temporary state.</dd>
+                        <dt>504 Gateway Time-out</dt> 
+						<dd>gateway and did not receive a timely response from the upstream
+                            server.
+                        </dd>
+                        <dt>505 HTTP Version Not Supported</dt>
+						<dd>the server has not accept the version of http.</dd>
+                    </dl>
+				</div>
+        </section>
     </article>
     <article>
         <h2 class="page-header">References</h2>
@@ -574,8 +612,6 @@
             <li>HTTP Status Codes. (n.d.). Retrieved March 20, 2017, from https://httpstatuses.com/</li>
         </ul>
     </article>
-
-
 </div>
 
 <script src="js/jquery.min.js"></script>

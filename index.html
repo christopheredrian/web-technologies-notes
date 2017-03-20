@@ -60,6 +60,11 @@
                     <li><a href="#in-bh">Brief History of Internet</a></li>
                 </ul>
             </li>
+			<li><a href="#wwweb">World Wide Web</a>
+                <ul>
+                    <li><a href="#tbl">Sir Tim Berners-Lee</a></li>
+                </ul>
+            </li>
             <li><a href="#http">HTTP</a>
                 <ul>
                     <li><a href="#ht-ver">Version History</a></li>
@@ -71,6 +76,7 @@
                     <li><a href="#ht-status">Status Codes</a></li>
                 </ul>
             </li>
+			<li><a href="#ref">References</a></li>
             <li><a href="#terms">Terminologies</a></li>
         </ul>
     </nav>
@@ -123,10 +129,10 @@
             </table>
         </section>
     </article>
-    <article>
+    <article id="wwweb">
         <h2 class="page-header">World Wide Web</h2>
         <section>
-			<figure>
+			<figure id="tbl">
 				<img src ="/resource/TBL.jpg" alt="Sir Tim Berners-Lee" width="40%">
 			</figure>
 				<ul>
@@ -134,8 +140,8 @@
 						Internet.
 					</li>
 					<li>Invented by Sir Tim Berners-Lee.</li>
-					<li>In September 1994, Berners-Lee founded the World Wide Web Consortium (W3C) at the Massachusetts
-						Institute of Technology with support from the Defense Advanced Research Projects Agency(DARPA) and
+					<li>In September 1994, Berners-Lee founded the <a href="#w3c">World Wide Web Consortium (W3C)</a> at the Massachusetts
+						Institute of Technology with support from the <a href="#darpa">Defense Advanced Research Projects Agency(DARPA)</a> and
 						the European Commission.
 						It comprised various companies that were willing to create standards and recommendations to improve
 						the quality of the Web.
@@ -143,7 +149,7 @@
 				</ul>
         </section>
     </article>
-    <article>
+    <article id="http">
         <h2 class="page-header">HTTP (Hypertext Transfer protocol)</h2>
 			<figure>
 				<img src ="/resource/https.jpg" alt="HTTP" width="40%" height="20%">
@@ -198,7 +204,20 @@
                     and
                     applications
                 </li>
+				<li>HTTP resources are identified using URIs (specifically, HTTP <a href="#url">URLs</a>)</li>
+					<ul>
+						<li>Scheme (http: or https:) </li>
+						<li>(optional) authentication information</li>
+						<li>Host and (optional) port number</li>
+						<li>Path (resolved to the document root on the server) to the resource</li>
+						<li>(optional) scheme-specific parameters</li>
+						<li>(optional) URL-encoded query</li>
+						<li>optional) bookmark (or fragment identifier)</li>
+					</ul>
             </ul>
+			<figure>
+				<img src ="/resource/http.jpg" width="55%">
+			</figure>
         </section>
         <section>
             <h3 id="ht-rr">HTTP Request-Response Standard Protocol</h3>
@@ -596,7 +615,7 @@
 				</div>
         </section>
     </article>
-    <article>
+    <article id="ref">
         <h2 class="page-header">References</h2>
         <ul>
             <li>The Original HTTP as defined in 1991. (n.d.). Retrieved March 16, 2017, from
@@ -620,6 +639,32 @@
             <li>HTTP Status Codes. (n.d.). Retrieved March 20, 2017, from https://httpstatuses.com/</li>
         </ul>
     </article>
+	<article id="terms">
+        <h2 class="page-header">Terminologies</h2>
+        <ul>
+            <li id="cache"><strong>Cache Control</strong> - Local storage.</li>
+			<li id="architecture"><strong>Client-Server Architecture</strong> - A network architecture in which each computer or process on the network is either a client or a server.</li>
+			<li id="darpa"><strong>DARPA (Defense Advanced Research Projects Agency)</strong> - An agency of the U.S. Department of Defense responsible for the development of emerging technologies for use by the military.</li>
+			<li id="html"><strong>HTML (Hypertext Markup Language)</strong> - An application layer communications protocol used to access resources on the World Wide Web.</li>
+			<li id="httprotocol"><strong>HTTP (Hypertext Transfer Protocol)</strong> - An Application layer used primarily to retrieve hypertext documents and resources on the World Wide Web.</li>
+			<li id="https"><strong>HTTPS (HTTP over SSL/TLS)</strong> - A connection encrypted by TLS/SSL.</li>
+			<li id="mime"><strong>MIME (Multipurpose Internet Mail Extensions)</strong> - An Internet standard that extends the format of email to support: Text in character sets other than ASCII.</li>
+			<li id="wserver"><strong>Protocol</strong> - Set of rules need to be followed.</li>
+			<li id="timberners"><strong>Sir Tim Berners-Lee</strong> - He is the father of World Wide Web.</li>
+			<li id="tcpip"><strong>TCP/IP (Transmission Control Protocol/Internet Protocol)</strong> - The language a computer uses to access the Internet.</li>
+			<li id="uri"><strong>URI (Uniform Resource Identifier)</strong> - A string of characters used to identify a resource.</li>
+			<li id="url"><strong>URL (Uniform Resource Locator)</strong> - It is used to specify addresses on the WWW.</li>
+			<li id="wbrowser"><strong>Web Browser</strong> - A software application for retrieving, presenting and traversing information resources on the WWW.</li>
+			<li id="wcrawler"><strong>Web Crawlers/Spiders</strong> - A program or automated script which browses the World Wide Web in a methodical, automated manner.</li>
+			<li id="wclient"><strong>Web Client</strong> - An application that communicates with a web server, using HTTP.</li>
+			<li id="wserver"><strong>Web Server</strong> - The basic network protocol used to distribute information on the WWW.</li>
+			<li id="www"><strong>WWW (World Wide Web)</strong> - A medium which users can read and write via computers connected to the Internet.</li>
+			<li id="w3c"><strong>W3C (World Wide Web Consortium )</strong> - It is the main international standards organization for the World Wide Web.</li>
+			
+        </ul>
+    </article>
+	
+	
 </div>
 
 <script src="js/jquery.min.js"></script>

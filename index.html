@@ -463,68 +463,87 @@
             <ul>
                 <li>Information(1xx)
                     <ul>
-                        <li>100 Continue</li>
-                        <li>101 Switching Protocols</li>
+                        <li>100 Continue - to have a server check the request's headers.</li>
+                        <li>101 Switching Protocols - request for switching using protocol negotiation.</li>
                     </ul>
                 </li>
 
                 <li>Success (2xx)
                     <ul>
-                        <li>200 Ok</li>
-                        <li>201 Created</li>
-                        <li>202 Accepted</li>
-                        <li>203 Non-Authoritative Information</li>
-                        <li>204 No Content</li>
-                        <li>205 Reset Content</li>
-                        <li>206 Partial Content</li>
+                        <li>200 Ok - successful http request.</li>
+                        <li>201 Created - request has been fulfilled.</li>
+                        <li>202 Accepted - accepted but the process has not been completed.</li>
+                        <li>203 Non-Authoritative Information - it tells that the request was successful but the
+                            enclosed payload not been modified.
+                        </li>
+                        <li>204 No Content - successfully processed the request and is not returning any content.</li>
+                        <li>205 Reset Content - requires that the requester reset the document view.</li>
+                        <li>206 Partial Content - server is fulfilled the request for the target source.</li>
                     </ul>
                 </li>
 
                 <li>Redirection (3xx)
                     <ul>
-                        <li>300 Multiple Choices</li>
-                        <li>301 Moved Permanently</li>
-                        <li>302 Found</li>
-                        <li>303 See Other</li>
-                        <li>304 Not Modified</li>
-                        <li>305 Use Proxy</li>
+                        <li>300 Multiple Choices - request with several versions.</li>
+                        <li>301 Moved Permanently - no longer there.</li>
+                        <li>302 Found - page is temporarily moved.</li>
+                        <li>303 See Other - is a thing to redirect application website to a new url.</li>
+                        <li>304 Not Modified - conditional but has missing.</li>
+                        <li>305 Use Proxy - don’t fetch it directly.</li>
                         <li>306 (unused)</li>
-                        <li>307 Temporary Redirect</li>
+                        <li>307 Temporary Redirect - the main resource is redirect to a different url.</li>
                     </ul>
                 </li>
 
                 <li>Client Error (4xx)
                     <ul>
-                        <li>400 Bad Request</li>
-                        <li>401 Unauthorized</li>
-                        <li>402 Payment Required</li>
-                        <li>403 Forbidden</li>
-                        <li>404 Not Found</li>
-                        <li>405 Method Not Allowed</li>
-                        <li>406 Not Accepted</li>
-                        <li>407 Proxy Authentication Required</li>
-                        <li>408 Request Time-out</li>
-                        <li>409 Conflict</li>
-                        <li>410 Gone</li>
-                        <li>411 Length Required</li>
-                        <li>412 Precondition Failed</li>
-                        <li>413 Request Entity Too Large</li>
-                        <li>414 Request-URI Too Large</li>
-                        <li>415 Unsupported Media Type</li>
-                        <li>416 Requested Range Not Satisfiable</li>
-                        <li>417 Expectation Failed</li>
-                        <li>426 Upgrade Required</li>
+                        <li>400 Bad Request - the server will not process the request due to an apparent client error.
+                        </li>
+                        <li>401 Unauthorized - used when authentication is required and has failed or has not yet been
+                            provided.
+                        </li>
+                        <li>402 Payment Required - reserved for future use.</li>
+                        <li>403 Forbidden - the server is refusing action.</li>
+                        <li>404 Not Found - the requested resource could not be found.</li>
+                        <li>405 Method Not Allowed - a request method is not supported for the requested resource.</li>
+                        <li>406 Not Accepted - requested resource is capable of generating only content.</li>
+                        <li>407 Proxy Authentication Required - the client must first authenticate itself with the
+                            proxy.
+                        </li>
+                        <li>408 Request Time-out - server timed out waiting for the request.</li>
+                        <li>409 Conflict - request could not be processed because of conflict in the request.</li>
+                        <li>410 Gone - resource requested is no longer available and will not be available again.</li>
+                        <li>411 Length Required - request did not specify the length of its content.</li>
+                        <li>412 Precondition Failed - server does not meet one of the preconditions.</li>
+                        <li>413 Request Entity Too Large - request is larger than the server is willing or able to
+                            process.
+                        </li>
+                        <li>414 Request-URI Too Large - URI provided was too long for the server to process.</li>
+                        <li>415 Unsupported Media Type - request entity has a media type which the server or resource
+                            does not support.
+                        </li>
+                        <li>416 Requested Range Not Satisfiable - the client has asked for a portion of the file (byte
+                            serving), but the server cannot supply that portion.
+                        </li>
+                        <li>417 Expectation Failed - the server has not satified the expectation of request header
+                            field.
+                        </li>
+                        <li>426 Upgrade Required - server cannot meet the requirements of the expect request-header
+                            field.
+                        </li>
                     </ul>
                 </li>
 
                 <li>Server Error (5xx)
                     <ul>
-                        <li>500 Internal Server Error</li>
-                        <li>501 Not Implemented</li>
-                        <li>502 Not Implemented</li>
-                        <li>503 Service Unavailable</li>
-                        <li>504 Gateway Time-out</li>
-                        <li>505 HTP Version Not Supported</li>
+                        <li>500 Internal Server Error - a generic error message.</li>
+                        <li>501 Not Implemented - implies future availability.</li>
+                        <li>502 Bad Gateway - proxy received an invalid response from the upstream server.</li>
+                        <li>503 Service Unavailable - a temporary state.</li>
+                        <li>504 Gateway Time-out - gateway and did not receive a timely response from the upstream
+                            server.
+                        </li>
+                        <li>505 HTTP Version Not Supported - the server has not accept the version of http.</li>
                     </ul>
                 </li>
             </ul>
@@ -549,8 +568,13 @@
             <li>HTTP/1.1: Header Field Definitions. (n.d.). Retrieved March 16, 2017, from
                 https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.10
             </li>
+            <li>List of HTTP status codes. (2017, March 19). Retrieved March 20, 2017, from
+                https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+            </li>
+            <li>HTTP Status Codes. (n.d.). Retrieved March 20, 2017, from https://httpstatuses.com/</li>
         </ul>
     </article>
+
 
 </div>
 

@@ -14,7 +14,7 @@ nav.well {
 }
 
 body {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -48,9 +48,31 @@ dd {
     margin-left: 1.5em;
 }
 
+/* Images */
+
+img {
+    margin: 2% 0;
+}
+
+.img-sm {
+    width: 40%;
+}
+
+.img-md {
+    width: 60%;
+}
+
 /* Media queries*/
 @media screen and (max-width: 678px) {
     nav.well {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .img-sm, .img-md {
         width: 100%;
     }
 }
@@ -65,7 +87,7 @@ body {
     padding: 1em 1em 1em 2em;
     border-radius: 3px 3px 3px 3px;
     border: 3px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 3px 5px;
 
 }
 

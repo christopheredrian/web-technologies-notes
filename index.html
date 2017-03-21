@@ -6,10 +6,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css.map">-->
     <link rel="stylesheet" href="css/general.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">
     <style>
-        #method-categories {
-            width: 40%;
-        }
+
     </style>
 </head>
 <body>
@@ -43,6 +42,7 @@
                         </ul>
                     </li>
                     <li><a href="#">FINALS<span class="sr-only">(current)</span></a></li>
+                    <li><a href="about.html">ABOUT</a></li>
                 </ul>
 
             </div><!-- /.navbar-collapse -->
@@ -52,24 +52,31 @@
 <!-- div For styling -->
 <div class="container">
     <nav class="well well-sm">
-        <h2 class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">Contents</h2>
+        <h2 class="page-header">Contents</h2>
         <ul>
-            <li><a href="#internet">Internet</a></li>
+            <li><a href="#internet">Internet</a>
                 <ul>
-		    <li><a href="#in-ety">Etymology</a></li>
+                    <li><a href="#in-ety">Etymology</a></li>
                     <li><a href="#in-bh">Brief History of Internet</a></li>
-		</ul>
+                </ul>
+            </li>
+			<li><a href="#wwweb">World Wide Web</a>
+                <ul>
+                    <li><a href="#tbl">Sir Tim Berners-Lee</a></li>
+                </ul>
+            </li>
             <li><a href="#http">HTTP</a>
                 <ul>
                     <li><a href="#ht-ver">Version History</a></li>
                     <li><a href="#ht-fun">HTTP Fundamentals</a></li>
                     <li><a href="#ht-rr">HTTP Request/Response</a></li>
-		    <li><a href="#ht-of">Other Functionalities of HTTP</a></li>	
+                    <li><a href="#ht-of">Other Functionalities of HTTP</a></li>
                     <li><a href="#ht-sm">Standard Methods</a></li>
                     <li><a href="#ht-head">Message Headers</a></li>
                     <li><a href="#ht-status">Status Codes</a></li>
                 </ul>
             </li>
+			<li><a href="#ref">References</a></li>
             <li><a href="#terms">Terminologies</a></li>
         </ul>
     </nav>
@@ -77,14 +84,17 @@
     <article id="internet">
         <h2 class="page-header">Internet</h2>
         <section>
-            <h3 id="in-ety">Etymology</h3>
-            <p>The etymology of the word Internet can be rooted with these two words</p>
-            <ul>
-                <li><strong>Inter</strong> - something outside (as opposed to <em>intra</em> - inside/exclusive)</li>
-                <li><strong>Network</strong> - Network of networks and connection of devices</li>
-            </ul>
-            <p>The Internet is the interconnection of networks all around the world which uses the <a href="#tcpip">TCP/IP
-                protocol</a> as the medium of connection</p>
+			<figure>
+				<img src="/resource/internet-2017.jpg" alt="Internet" width ="40%">
+			</figure>
+				<h3 id="in-ety">Etymology</h3>
+					<p>The etymology of the word Internet can be rooted with these two words</p>
+						<ul>
+							<li><strong>Inter</strong> - something outside (as opposed to <em>intra</em> - inside/exclusive)</li>
+							<li><strong>Network</strong> - Network of networks and connection of devices</li>
+						</ul>
+					<p>The Internet is the interconnection of networks all around the world which uses the <a href="#tcpip">TCP/IP
+					protocol</a> as the medium of connection</p>
         </section>
         <section>
             <h3 id="in-bh">A Brief History of the Internet</h3>
@@ -119,51 +129,70 @@
             </table>
         </section>
     </article>
-	<article id="www">
+    <article id="wwweb">
         <h2 class="page-header">World Wide Web</h2>
         <section>
-			<ul>
-                <li>A global information medium which users can read and write via computers connected to the Internet.</li>
-                <li>In September 1994, Berners-Lee founded the World Wide Web Consortium (W3C) at the Massachusetts 
-					Institute of Technology with support from the Defense Advanced Research Projects Agency(DARPA) and the European Commission. 
-					It comprised various companies that were willing to create standards and recommendations to improve the quality of the Web.  
-				</li>
-            </ul>
+			<figure id="tbl">
+				<img src ="/resource/TBL.jpg" alt="Sir Tim Berners-Lee" width="40%">
+			</figure>
+				<ul>
+					<li>A global information medium which users can read and write via computers connected to the
+						Internet.
+					</li>
+					<li>Invented by Sir Tim Berners-Lee.</li>
+					<li>In September 1994, Berners-Lee founded the <a href="#w3c">World Wide Web Consortium (W3C)</a> at the Massachusetts
+						Institute of Technology with support from the <a href="#darpa">Defense Advanced Research Projects Agency(DARPA)</a> and
+						the European Commission.
+						It comprised various companies that were willing to create standards and recommendations to improve
+						the quality of the Web.
+					</li>
+				</ul>
         </section>
     </article>
     <article id="http">
         <h2 class="page-header">HTTP (Hypertext Transfer protocol)</h2>
-        <p>An application layer communications protocol used to access resources on the World Wide Web.
-            HTTP is invented by Sir Tim Berners-Lee and jointly developed by W3C and IETF.</p>
-
-          <section>
-            <h3 id="ht-ver">Version History</h3>
-            <table class="table table-responsive table-bordered">
-                <thead>
-                <th>HTTP Version</th>
-                <th>Description</th>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>HTTP 0.9 (1991)</td>
-                    <td>This was originally implemented by the World Wide Web initaitive software in the prototype released. This is a subset of the full HTTP protocol.</td>
-                </tr>
-                <tr>
-                    <td>HTTP 1.0 (RFC 1945, May 1996)</td>
-                    <td> An application-level protocol with the lightness and speed necessary for distributed, collaborative, hypermedia information systems</td>
-                </tr>
-                <tr>
-                    <td>HTTP 1.1 (RFC 2008, January 1997; RFC 2616, June 1999; RFC 7230-7235, June 2014)</td>
-                    <td>An application-level protocol for distributed, collaborative, hypermedia information systems.</td>
-                </tr>
-                <tr>
-                    <td>HTTP 2 (RFC 7540 May 2015)</td>
-                    <td>Enables a more efficient use of network resources and a reduced perception of latency by introducing header field compression and allowing multiple concurrent exchanges on thesame connection.</td>
-                </tr>
-                </tbody>
-            </table>
-
-        </section>
+			<figure>
+				<img src ="/resource/https.jpg" alt="HTTP" width="40%" height="20%">
+			</figure>
+				<p>An application layer communications protocol used to access resources on the World Wide Web.
+				HTTP is invented by Sir Tim Berners-Lee and jointly developed by W3C and IETF.</p>
+				<section>
+					<h3 id="ht-ver">Version History</h3>
+					<table class="table table-responsive table-bordered">
+						<thead>
+						<tr>
+							<th>HTTP Version</th>
+							<th>Description</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>HTTP 0.9 (1991)</td>
+							<td>This was originally implemented by the World Wide Web initaitive software in the prototype
+								released. This is a subset of the full HTTP protocol.
+							</td>
+						</tr>
+						<tr>
+							<td>HTTP 1.0 (RFC 1945, May 1996)</td>
+							<td> An application-level protocol with the lightness and speed necessary for distributed,
+								collaborative, hypermedia information systems
+							</td>
+						</tr>
+						<tr>
+							<td>HTTP 1.1 (RFC 2008, January 1997; RFC 2616, June 1999; RFC 7230-7235, June 2014)</td>
+							<td>An application-level protocol for distributed, collaborative, hypermedia information systems.
+							</td>
+						</tr>
+						<tr>
+							<td>HTTP 2 (RFC 7540 May 2015)</td>
+							<td>Enables a more efficient use of network resources and a reduced perception of latency by
+								introducing header field compression and allowing multiple concurrent exchanges on thesame
+								connection.
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
         <section>
             <h3 id="ht-fun">HTTP Fundamentals</h3>
             <ul>
@@ -175,7 +204,20 @@
                     and
                     applications
                 </li>
+				<li>HTTP resources are identified using URIs (specifically, HTTP <a href="#url">URLs</a>)</li>
+					<ul>
+						<li>Scheme (http: or https:) </li>
+						<li>(optional) authentication information</li>
+						<li>Host and (optional) port number</li>
+						<li>Path (resolved to the document root on the server) to the resource</li>
+						<li>(optional) scheme-specific parameters</li>
+						<li>(optional) URL-encoded query</li>
+						<li>optional) bookmark (or fragment identifier)</li>
+					</ul>
             </ul>
+			<figure>
+				<img src ="/resource/http.jpg" width="55%">
+			</figure>
         </section>
         <section>
             <h3 id="ht-rr">HTTP Request-Response Standard Protocol</h3>
@@ -197,35 +239,63 @@
         </section>
         <section>
             <h3 id="ht-sm">Standard Methods</h3>
-            <ul>
-
-                <li><strong>GET</strong> - transfer a current selected representation of the resource identified by the Request-URI
-				<ul>
-					<li>Conditional GET - entity is transferred only under certain conditions specified in the conditional header fields.</li>
-					</li>
-					<li>Partial GET - only parts covered by the range in Range header field will be transferred upon request.
-					</li>
-				</ul>
-				</li>
-                <li><strong>HEAD</strong> - used to retrieve metadata about the entity implied by the request without transferring the message-body.
-                <li><strong>GET</strong> - transfer a current selected representation of the resource identified by the Request-URI.
-
-                </li>
-                <li><strong>HEAD</strong> - used to retrieve metadata about the entity implied by the request without transferring the entity itself.
-                </li>
-                <li><strong>POST</strong> - perform resource specific processing of the entities enclosed in the message
-                </li>
-                <li><strong>PUT</strong> - requests that the enclosed entity be stored under the supplied Request-URI
-                </li>
-                <li><strong>DELETE</strong> - requests that the origin server delete the resource indentified by the
+            <dl>
+                <dt>GET</dt>
+                <dd>
+                    Transfer a current selected representation of the resource identified by the
                     Request-URI
-                </li>
-                <li><strong>OPTIONS</strong> - describes the communication options for the target resource</li>
-                <li><strong>TRACE</strong> - request a loop-back of request message (request the server to echo back to
+                    <dl>
+                        <dt>Conditional GET
+                        </dt>
+                        <dd>Entity is transferred only under certain conditions specified in the
+                            conditional header fields.
+                        </dd>
+                        <dt>Partial GET
+                        </dt>
+                        <dd>Only parts covered by the range in Range header field will be transferred upon
+                            request.
+                        </dd>
+                    </dl>
+                </dd>
+                <dt>HEAD</dt>
+
+                <dd>
+                    Used to retrieve metadata about the entity implied by the request without
+                    transferring the message-body.
+                </dd>
+                <dt>GET</dt>
+
+                <dd>
+                    Transfer a current selected representation of the resource identified by the
+                    Request-URI.
+
+                </dd>
+                <dt>HEAD</dt>
+                <dd>
+                    Used to retrieve metadata about the entity implied by the request without
+                    transferring the entity itself.
+                </dd>
+
+                <dt>POST</dt>
+                <dd>Perform resource specific processing of the entities enclosed in the message
+                </dd>
+                <dt>PUT</dt>
+                <dd>
+                    Requests that the enclosed entity be stored under the supplied Request-URI
+                </dd>
+                <dt>DELETE</dt>
+                <dd>Requests that the origin server delete the resource indentified by the
+                    Request-URI
+                </dd>
+                <dt>OPTIONS</dt>
+                <dd>describes the communication options for the target resource</dd>
+                <dt>TRACE</dt>
+                <dd>Request a loop-back of request message (request the server to echo back to
                     client)
-                </li>
-                <li><strong>CONNECT</strong> - establishes a tunnel to the server identified by the a given URL</li>
-            </ul>
+                </dd>
+                <dt>CONNECT</dt>
+                <dd>Establishes a tunnel to the server identified by the a given URL</dd>
+            </dl>
             <div id="method-categories" class="well well-sm">
                 <h4>Three Categories of Methods: </h4>
                 <ul>
@@ -257,193 +327,344 @@
                 </ul>
             </div>
         </section>
-        <section>
-            <h3 id="ht-head">Message Headers</h3>
-            <ul>
-                <li>General Header Fields
-                    <ul>
-                        <li>Cache-Control - specifies cache directives or instructions for caching.</li>
-                        <li>Connection - specifies connection options.</li>
-                        <li>Date - represents message origin date and time.</li>
-                        <li>Pragma - specifies implementation-specific directives that can be included.</li>
-                        <li>Trailer - indicates that the trailer of a message includes a set of header fields.</li>
-                        <li>Transfer-Encoding - is where the type of transformation applied to message body upon transfer is indicated.</li>
-                        <li>Upgrade - specifies supported protocols for switching protocol.</li>
-                        <li>Via - indicates protocols used by gateways and proxies between user and server upon request.</li>
-                        <li>Warning - message additional information on its status.</li>
-                    </ul>
-                </li>
-
-                <li>Request Header Fields
-                    <ul>
-                        <li>Accept - specifies response-acceptable media types.</li>
-                        <li>Accept-Charset - specifies response-acceptable character sets.</li>
-                        <li>Accept-Encoding - specifies response-acceptable content-codings with content-coding restrictions.</li>
-                        <li>Accept-Language - specifies response-acceptable languages with restrictions based on a set of natural languages.</li>
-                        <li>Authorization - allows authentication that may be used upon receiving 401 response.</li>
-                        <li>Expect - indicates client-required behavior of the server.</li>
-                        <li>From - contains user's internet e-mail address.</li>
-						<li>Host - is where the host and port number of requested resource is specified.</li>
-                        <li>If-Match - condition for conditional GET that verifies whether and enity is current.</li>
-                        <li>If-Modified-Since - condition for conditional GET that requested entity does not necessarily need to be transferred unless it was modified since a specified date.</li>
-                        <li>If-None-Match - condition for conditional GET that verifies if none of its enities is current to allow updates.</li>
-                        <li>If-Range - specifies a range of entities to be transferred for update purposes.</li>
-                        <li>If-Unmodified - condition for conditional GET that requested entity does not necessarily need to be transferred unless it was unmodified since a specified date.</li>
-						<li>Max-Forwards - limits number of forwards between proxies and gateways to a specified number.</li>
-                        <li>Proxy Authorization - requires authentication to allow client to identify itself.</li>
-						<li>Range - </li>
-                        <li>Referer - allows specification of URI where Request-URI was taken from to allow backlinks to some resources.</li>
-                        <li>TE - indicates accepted extension transfer-codings.</li>
-                        <li>User-Agent - contains requesting user agent's information.</li>
-                    </ul>
-                </li>
-
-                <li>Response Header Fields
-                    <ul>
-                        <li>Accept-Ranges - allows indication of range for acceptance range of requests for a particular resource.</li>
-                        <li>Age - indicates estimate time since the origin generated the response.</li>
-                        <li>ETag - current value for a particular entity tag of the requested variant is provided. </li>
-                        <li>Location - used for redirection from the the Request-URI to another location for completion or identifying new resources.</li>
-                        <li>Proxy-Authenticate - indicates proxy authentication scheme and parameters of a Request-URI. </li>
-                        <li>Retry-After - can be used with 503 to indicate expected time for a service to be unavailable. </li>
-                        <li>Server - contains information on the software being used used by the origin server in handling a request.</li>
-                        <li>Vary - determines whether cache is permitted while the response is fresh with a set of request-header fields. Criteria is advised for uncacheabe responses.</li>
-                        <li>www-Authenticate - consists parameters and schemes of authentication to Request-URI that MUST be included in 401(Unauthorized) response message.</li>
-                    </ul>
-                </li>
-
-                <li>Entity Header Fields
-
-                    <ul>
-                        <li>Allow - Request-URI identified list supported set of methods.</li>
-                        <li>Content-Encoding - indicates applied additional content codings and the apprpriate decoding mechanisms necessary in obtaining a particular media-type.</li>
-                        <li>Content-Language - indicates natural languages available for an enclosed entity.</li>
-                        <li>Content-Length - indicates a decimal number of OCTETs which indicates the size of the entity-body sent to the recipient.</li>
-                        <li>Content-Location - may be used to indicate the location of a resource which is accessible from a location different from the URI of the requested resource</li>
-                        <li>Content-MD5 - entity-body MD5 digest for its message integrity check(MIC).</li>
-                        <li>Content-Range - specifies the part in the entity-body where the partial body is to be applied.</li>
-                    </ul>
-                </li>
+        <section class="row">
+            <h3 id="ht-head">Message Header Fields</h3>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#hfields-general">General Header Fields</a></li>
+                <li><a data-toggle="tab" href="#hfields-request">Request Header Fields</a></li>
+                <li><a data-toggle="tab" href="#hfields-response">Response Header Fields</a></li>
+                <li><a data-toggle="tab" href="#hfields-entity">Entity Header Fields</a></li>
 
             </ul>
+
+            <div class="tab-content">
+                <div id="hfields-general" class="tab-pane fade in active">
+
+                    <dl>
+                        <dt>Cache-Control</dt>
+                        <dd>Specifies cache directives or instructions for caching.</dd>
+                        <dt>Connection</dt>
+                        <dd>Specifies connection options.</dd>
+                        <dt>Date</dt>
+                        <dd>Represents message origin date and time.</dd>
+                        <dt>Pragma</dt>
+                        <dd>Specifies implementation-specific directives that can be included.</dd>
+                        <dt>Trailer</dt>
+                        <dd> Indicates that the trailer of a message includes a set of header fields.</dd>
+                        <dt>Transfer-Encoding</dt>
+                        <dd>This is where the type of transformation applied to message body upon
+                            transfer is indicated.
+                        </dd>
+                        <dt>Upgrade</dt>
+                        <dd>Specifies supported protocols for switching protocol.</dd>
+                        <dt>Via</dt>
+                        <dd>Indicates protocols used by gateways and proxies between user and server upon
+                            request.
+                        </dd>
+                        <dt>Warning</dt>
+                        <dd>Message additional information on its status.</dd>
+                    </dl>
+                </div>
+                <div id="hfields-request" class="tab-pane fade">
+                    <dl>
+                        <dt>Accept</dt>
+                        <dd>Specifies response-acceptable media types.</dd>
+                        <dt>Accept-Charset</dt>
+                        <dd>Specifies response-acceptable character sets.</dd>
+                        <dt>Accept-Encoding
+                        </dt>
+                        <dd>Specifies response-acceptable content-codings with content-coding
+                            restrictions.
+                        </dd>
+                        <dt>Accept-Language
+                        </dt>
+                        <dd>Specifies response-acceptable languages with restrictions based on a set
+                            of natural languages.
+                        </dd>
+                        <dt>Authorization</dt>
+                        <dd>Allows authentication that may be used upon receiving 401 response.</dd>
+                        <dt>Expect</dt>
+                        <dd>Indicates client-required behavior of the server.</dd>
+                        <dt>From</dt>
+                        <dd>Contains user's internet e-mail address.</dd>
+                        <dt>Host</dt>
+                        <dd>Is where the host and port number of requested resource is specified.</dd>
+                        <dt>If-Match</dt>
+                        <dd>Condition for conditional GET that verifies whether and enity is current.</dd>
+                        <dt>If-Modified
+                        </dt>
+                        <dd>Since Condition for conditional GET that requested entity does not necessarily
+                            need to be transferred unless it was modified since a specified date.
+                        </dd>
+                        <dt>If-None-Match
+                        </dt>
+                        <dd>Condition for conditional GET that verifies if none of its enities is
+                            current to allow updates.
+                        </dd>
+                        <dt>If-Range</dt>
+                        <dd>Specifies a range of entities to be transferred for update purposes.</dd>
+                        <dt>If-Unmodified
+                        </dt>
+                        <dd>Condition for conditional GET that requested entity does not necessarily
+                            need to be transferred unless it was unmodified since a specified date.
+                        </dd>
+                        <dt>Max-Forwards
+                        </dt>
+                        <dd>Limits number of forwards between proxies and gateways to a specified
+                            number.
+                        </dd>
+                        <dt>Proxy Authorization</dt>
+                        <dd>Requires authentication to allow client to identify itself.</dd>
+                        <dt>Range</dt>
+                        <dt>Referer
+                        </dt>
+                        <dd>Allows specification of URI where Request-URI was taken from to allow backlinks to
+                            some resources.
+                        </dd>
+                        <dt>TE</dt>
+                        <dd>Indicates accepted extension transfer-codings.</dd>
+                        <dt>User-Agent</dt>
+                        <dd>Contains requesting user agent's information.</dd>
+                    </dl>
+                </div>
+                <div id="hfields-response" class="tab-pane fade">
+                    <dl>
+                        <dt>Accept-Ranges
+                        </dt>
+                        <dd>Allows indication of range for acceptance range of requests for a particular
+                            resource.
+                        </dd>
+                        <dt>Age</dt>
+                        <dd>Indicates estimate time since the origin generated the response.</dd>
+                        <dt>ETag</dt>
+                        <dd>Current value for a particular entity tag of the requested variant is provided.</dd>
+                        <dt>Location
+                        </dt>
+                        <dd>Used for redirection from the the Request-URI to another location for completion
+                            or identifying new resources.
+                        </dd>
+                        <dt>Proxy-Authenticate
+                        </dt>
+                        <dd>Indicates proxy authentication scheme and parameters of a
+                            Request-URI.
+                        </dd>
+                        <dt>Retry-After
+                        </dt>
+                        <dd>Can be used with 503 to indicate expected time for a service to be
+                            unavailable.
+                        </dd>
+                        <dt>Server
+                        </dt>
+                        <dd>Contains information on the software being used used by the origin server in
+                            handling a request.
+                        </dd>
+                        <dt>Vary
+                        </dt>
+                        <dd>Determines whether cache is permitted while the response is fresh with a set of
+                            request-header fields. Criteria is advised for uncacheabe responses.
+                        </dd>
+                        <dt>www-Authenticate
+                        </dt>
+                        <dd>Consists parameters and schemes of authentication to Request-URI that
+                            MUST be included in 401(Unauthorized) response message.
+                        </dd>
+                    </dl>
+                </div>
+
+                <div id="hfields-entity" class="tab-pane fade">
+                    <dl>
+                        <dt>Allow - Request-URI identified list supported set of methods.</dt>
+                        <dt>Content-Encoding - indicates applied additional content codings and the apprpriate decoding mechanisms necessary in obtaining a particular media-type.</dt>
+                        <dt>Content-Language - indicates natural languages available for an enclosed entity.</dt>
+                        <dt>Content-Length - indicates a decimal number of OCTETs which indicates the size of the entity-body sent to the recipient.</dt>
+                        <dt>Content-Location - may be used to indicate the location of a resource which is accessible from a location different from the URI of the requested resource</dt>
+                        <dt>Content-MD5 - entity-body MD5 digest for its message integrity check(MIC).</dt>
+                        <dt>Content-Range - specifies the part in the entity-body where the partial body is to be applied.</dt>
+                    </dl>
+                </div>
+            </div>
+
         </section>
-        <section>
+        <section class ="row">
             <h3 id="ht-status">HTTP Status Codes</h3>
-            <ul>
-                <li>Information(1xx)
-                    <ul>
-                        <li>100 Continue</li>
-                        <li>101 Switching Protocols</li>
-                    </ul>
-                </li>
-
-                <li>Success (2xx)
-                    <ul>
-                        <li>200 Ok</li>
-                        <li>201 Created</li>
-                        <li>202 Accepted</li>
-                        <li>203 Non-Authoritative Information</li>
-                        <li>204 No Content</li>
-                        <li>205 Reset Content</li>
-                        <li>206 Partial Content</li>
-                    </ul>
-                </li>
-
-                <li>Redirection (3xx)
-                    <ul>
-                        <li>300 Multiple Choices</li>
-                        <li>301 Moved Permanently</li>
-                        <li>302 Found</li>
-                        <li>303 See Other</li>
-                        <li>304 Not Modified</li>
-                        <li>305 Use Proxy</li>
-                        <li>306 (unused)</li>
-                        <li>307 Temporary Redirect</li>
-                    </ul>
-                </li>
-
-                <li>Client Error (4xx)
-                    <ul>
-                        <li>400 Bad Request</li>
-                        <li>401 Unauthorized</li>
-                        <li>402 Payment Required</li>
-                        <li>403 Forbidden</li>
-                        <li>404 Not Found</li>
-                        <li>405 Method Not Allowed</li>
-                        <li>406 Not Accepted</li>
-                        <li>407 Proxy Authentication Required</li>
-                        <li>408 Request Time-out</li>
-                        <li>409 Conflict</li>
-                        <li>410 Gone</li>
-                        <li>411 Length Required</li>
-                        <li>412 Precondition Failed</li>
-                        <li>413 Request Entity Too Large</li>
-                        <li>414 Request-URI Too Large</li>
-                        <li>415 Unsupported Media Type</li>
-                        <li>416 Requested Range Not Satisfiable</li>
-                        <li>417 Expectation Failed</li>
-                        <li>426 Upgrade Required</li>
-                    </ul>
-                </li>
-
-                <li>Server Error (5xx)
-                    <ul>
-                        <li>500 Internal Server Error</li>
-                        <li>501 Not Implemented</li>
-                        <li>502 Not Implemented</li>
-                        <li>503 Service Unavailable</li>
-                        <li>504 Gateway Time-out</li>
-                        <li>505 HTP Version Not Supported</li>
-                    </ul>
-                </li>
+			<ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#scode-information">Information(1xx)</a></li>
+                <li><a data-toggle="tab" href="#scode-success">Success (2xx)</a></li>
+                <li><a data-toggle="tab" href="#scode-redirection">Redirection (3xx)</a></li>
+                <li><a data-toggle="tab" href="#scode-cerror">Client Error (4xx)</a></li>
+				<li><a data-toggle="tab" href="#scode-serror">Server Error (5xx)</a></li>
             </ul>
+			<div class="tab-content">
+				<div id="scode-information" class="tab-pane fade in active">
+					<dl>
+                        <dt>100 Continue</dt>
+						<dd>to have a server check the request's headers.</dd>
+                        <dt>101 Switching Protocols</dt>
+						<dd>request for switching using protocol negotiation.</dd>
+                    </dl>
+                </div>
+				<div id="scode-success" class="tab-pane fade">
+                    <dl>
+                        <dt>200 Ok</dt>
+						<dd>successful http request.</dd>
+                        <dt>201 Created</dt>
+						<dd>request has been fulfilled.</dd>
+                        <dt>202 Accepted</dt>
+						<dd>accepted but the process has not been completed.</dd>
+                        <dt>203 Non-Authoritative Information</dt>
+						<dd>it tells that the request was successful but the
+                            enclosed payload not been modified.</dd>
+                        <dt>204 No Content</dt>
+						<dd>successfully processed the request and is not returning any content.</dd>
+                        <dt>205 Reset Content</dt>
+						<dd>requires that the requester reset the document view.</dd>
+                        <dt>206 Partial Content</dt>
+						<dd>server is fulfilled the request for the target source.</dd>
+                    </dl>
+                </div>
+                <div id="scode-redirection"" class="tab-pane fade">
+                    <dl>
+                        <dt>300 Multiple Choices</dt>
+						<dd>request with several versions.</dd>
+                        <dt>301 Moved Permanently</dt>
+						<dd>no longer there.</dd>
+                        <dt>302 Found</dt>
+						<dd>page is temporarily moved.</dd>
+                        <dt>303 See Other</dt>
+						<dd>is a thing to redirect application website to a new url.</dd>
+                        <dt>304 Not Modified </dt> 
+						<dd>conditional but has missing.</dd>
+                        <dt>305 Use Proxy</dt> 
+						<dd>don’t fetch it directly.</dd>
+                        <dt>306 (unused)</dt>
+                        <dt>307 Temporary Redirect</dt> 
+						<dd>the main resource is redirect to a different url.</dd>
+                    </dl>
+                </div>
+				<div id="scode-cerror"" class="tab-pane fade">	
+                    <dl>
+                        <dt>400 Bad Request</dt>
+						<dd>the server will not process the request due to an apparent client error.</dd>
+                        <dt>401 Unauthorized</dt> 
+						<dd>used when authentication is required and has failed or has not yet been
+                            provided.</dd>
+                        <dt>402 Payment Required</dt> 
+						<dd>reserved for future use.</dd>
+                        <dt>403 Forbidden</dt> 
+						<dd>the server is refusing action.</dd>
+                        <dt>404 Not Found</dt> 
+						<dd>the requested resource could not be found.</dd>
+                        <dt>405 Method Not Allowed</dt> 
+						<dd>a request method is not supported for the requested resource.</dd>
+                        <dt>406 Not Accepted</dt> 
+						<dd>requested resource is capable of generating only content.</dd>
+                        <dt>407 Proxy Authentication Required<dt> 
+						<dd>the client must first authenticate itself with the proxy.</dd>
+                        <dt>408 Request Time-out</dt>
+						<dd>server timed out waiting for the request.</dd>
+                        <dt>409 Conflict</dt> 
+						<dd>request could not be processed because of conflict in the request.</dd>
+                        <dt>410 Gone<dt>
+						<dd>resource requested is no longer available and will not be available again.</dd>
+                        <dt>411 Length Required</dt> 
+						<dd>request did not specify the length of its content.</dd>
+                        <dt>412 Precondition Failed</dt>
+						<dd>server does not meet one of the preconditions.</dd>
+                        <dt>413 Request Entity Too Large</dt> 
+						<dd>request is larger than the server is willing or able to
+                            process.
+                        </dd>
+                        <dt>414 Request-URI Too Large</dt> 
+						<dd>URI provided was too long for the server to process.</dd>
+                        <dt>415 Unsupported Media Type </dt> 
+						<dd>request entity has a media type which the server or resource
+                            does not support.
+                        </dd>
+                        <dt>416 Requested Range Not Satisfiable</dt> 
+						<dd>the client has asked for a portion of the file (byte
+                            serving), but the server cannot supply that portion.
+                        </dd>
+                        <dt>417 Expectation Failed</dt> 
+						<dd>the server has not satified the expectation of request header
+                            field.
+                        </dd>
+                        <dt>426 Upgrade Required</dt>
+						</dd>server cannot meet the requirements of the expect request-header
+                            field.
+                        </dd>
+                    </dl>
+                </div>
+
+                <div id="scode-serror"" class="tab-pane fade">	
+                    <dl>
+                        <dt>500 Internal Server Error</dt> 
+						<dd>a generic error message.</dd>
+                        <dt>501 Not Implemented</dt> 
+						<dd>implies future availability.</dd>
+                        <dt>502 Bad Gateway<dt>
+						<dd>proxy received an invalid response from the upstream server.</dd>
+                        <dt>503 Service Unavailable </dt>
+						<dd>a temporary state.</dd>
+                        <dt>504 Gateway Time-out</dt> 
+						<dd>gateway and did not receive a timely response from the upstream
+                            server.
+                        </dd>
+                        <dt>505 HTTP Version Not Supported</dt>
+						<dd>the server has not accept the version of http.</dd>
+                    </dl>
+				</div>
         </section>
-
     </article>
-    <article>
+    <article id="ref">
         <h2 class="page-header">References</h2>
-		<ul>
-			<li>The Original HTTP as defined in 1991. (n.d.). Retrieved March 16, 2017, from https://www.w3.org/Protocols/HTTP/AsImplemented.html</li>
-			<li>RFC 1945 - Hypertext Transfer Protocol -- HTTP/1.0. (n.d.). Retrieved March 16, 2017, from https://tools.ietf.org/html/rfc1945</li>
-			<li>Hypertext Transfer Protocol -- HTTP/1.1. (n.d.). Retrieved March 16, 2017, from https://www.w3.org/Protocols/rfc2616/rfc2616.html</li>
-			<li>RFC 7540 - Hypertext Transfer Protocol Version 2 (HTTP/2). (n.d.). Retrieved March 16, 2017, from https://tools.ietf.org/html/rfc7540</li>
-			<li>HTTP/1.1: Header Field Definitions. (n.d.). Retrieved March 16, 2017, from https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.10</li>
-		</ul>
-    </article>
-    <section style="text-decoration:">
-        <h2 class="page-header" id="terms">Terminologies</h2>
         <ul>
-            <li id="tcpip"><strong>TCP/IP(Transmission Control Protocol/Internet Protocol)</strong> - is a computer
-                protocol which supports all the operating systems currently being used, which in return is now being
-                used by the Internet to communicate computers to one another.
+            <li>The Original HTTP as defined in 1991. (n.d.). Retrieved March 16, 2017, from
+                https://www.w3.org/Protocols/HTTP/AsImplemented.html
             </li>
-            <li><strong>nodes</strong> - in networking these are devices, routers etc. which can communicate with one
-                another
+            <li>RFC 1945 - Hypertext Transfer Protocol -- HTTP/1.0. (n.d.). Retrieved March 16, 2017, from
+                https://tools.ietf.org/html/rfc1945
             </li>
-            <li id="timberners"><strong>Sir Tim Berners-Lee</strong> - He is the father of World Wide Web.</li>
-            <li id="www"><strong>WWW (World Wide Web)</strong> - A medium which users can read and write via computers connected to the Internet.</li>
-            <li id="http"><strong>HTTP (Hypertext Transfer Protocol)</strong> - An Application layer used primarily to retrieve hypertext documents and resources on the World Wide Web.</li>
-            <li id="html"><strong>HTML (Hypertext Markup Language)</strong> - An application layer communications protocol used to access resources on the World Wide Web.</li>
-            <li id="uri"><strong>URI (Uniform Resource Identifier)</strong></li>
-            <li id="wserver">Web Server</li>
-            <li id="wclient">Web Client</li>
-            <li id="https">HTTPS (HTTP over SSL/TLS)</li>
-            <li id="architecture">Client-Server Architecture</li>
-            <li id="wbrowser">Web Browser</li>
-            <li id="wcrawler">Web Crawlers/Spiders</li>
-            <li id="cache">Cache Control</li>
-            <li id="mime">Multipurpose Internet Mail Extensions(MIME)</li>
-            <li id="Lie">Håkon Wium Lie</li>
-            <li id="Bos">Bert Bos</li>
-            <li id="css1">CSS1</li>
-            <li id="css2">CSS2</li>
-            <li id="css3">CSS3</li>
-            <li id="authorstyle">Author Style</li>
-            <li id="userstyle">User Style</li>
-            <li id="useragent">User Agent Style</li>
-
+            <li>Hypertext Transfer Protocol -- HTTP/1.1. (n.d.). Retrieved March 16, 2017, from
+                https://www.w3.org/Protocols/rfc2616/rfc2616.html
+            </li>
+            <li>RFC 7540 - Hypertext Transfer Protocol Version 2 (HTTP/2). (n.d.). Retrieved March 16, 2017, from
+                https://tools.ietf.org/html/rfc7540
+            </li>
+            <li>HTTP/1.1: Header Field Definitions. (n.d.). Retrieved March 16, 2017, from
+                https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.10
+            </li>
+            <li>List of HTTP status codes. (2017, March 19). Retrieved March 20, 2017, from
+                https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+            </li>
+            <li>HTTP Status Codes. (n.d.). Retrieved March 20, 2017, from https://httpstatuses.com/</li>
         </ul>
-    </section>
+    </article>
+	<article id="terms">
+        <h2 class="page-header">Terminologies</h2>
+        <ul>
+            <li id="cache"><strong>Cache Control</strong> - Local storage.</li>
+			<li id="architecture"><strong>Client-Server Architecture</strong> - A network architecture in which each computer or process on the network is either a client or a server.</li>
+			<li id="darpa"><strong>DARPA (Defense Advanced Research Projects Agency)</strong> - An agency of the U.S. Department of Defense responsible for the development of emerging technologies for use by the military.</li>
+			<li id="html"><strong>HTML (Hypertext Markup Language)</strong> - An application layer communications protocol used to access resources on the World Wide Web.</li>
+			<li id="httprotocol"><strong>HTTP (Hypertext Transfer Protocol)</strong> - An Application layer used primarily to retrieve hypertext documents and resources on the World Wide Web.</li>
+			<li id="https"><strong>HTTPS (HTTP over SSL/TLS)</strong> - A connection encrypted by TLS/SSL.</li>
+			<li id="mime"><strong>MIME (Multipurpose Internet Mail Extensions)</strong> - An Internet standard that extends the format of email to support: Text in character sets other than ASCII.</li>
+			<li id="wserver"><strong>Protocol</strong> - Set of rules need to be followed.</li>
+			<li id="timberners"><strong>Sir Tim Berners-Lee</strong> - He is the father of World Wide Web.</li>
+			<li id="tcpip"><strong>TCP/IP (Transmission Control Protocol/Internet Protocol)</strong> - The language a computer uses to access the Internet.</li>
+			<li id="uri"><strong>URI (Uniform Resource Identifier)</strong> - A string of characters used to identify a resource.</li>
+			<li id="url"><strong>URL (Uniform Resource Locator)</strong> - It is used to specify addresses on the WWW.</li>
+			<li id="wbrowser"><strong>Web Browser</strong> - A software application for retrieving, presenting and traversing information resources on the WWW.</li>
+			<li id="wcrawler"><strong>Web Crawlers/Spiders</strong> - A program or automated script which browses the World Wide Web in a methodical, automated manner.</li>
+			<li id="wclient"><strong>Web Client</strong> - An application that communicates with a web server, using HTTP.</li>
+			<li id="wserver"><strong>Web Server</strong> - The basic network protocol used to distribute information on the WWW.</li>
+			<li id="www"><strong>WWW (World Wide Web)</strong> - A medium which users can read and write via computers connected to the Internet.</li>
+			<li id="w3c"><strong>W3C (World Wide Web Consortium )</strong> - It is the main international standards organization for the World Wide Web.</li>
+			
+        </ul>
+    </article>
+	
+	
 </div>
 
 <script src="js/jquery.min.js"></script>

@@ -168,6 +168,59 @@
 						<li>::after<sup>CSS3</sup>, :after</li>
 					</ul>
 			</ul>
+			<h3>CSS Rule Precedence</h3>
+				<ul>
+					<li>By origin and importance</li>
+						<ul>
+							<li>user agent important declarations</li>
+							<li>user important declarations</li>
+							<li>author important declarations</li>
+							<li>author normal declarations</li>
+							<li>user normal declarations</li>
+							<li>user agent normal declarations</li>
+						</ul>
+					<li>By specificity</li>
+						<ul>
+							<li>inline style</li>
+							<li>number of ID selectors</li>
+							<li>number of class selectors, attribute selectors and pseudo classes</li>
+							<li>number of type selectors and pseudo classes</li>
+							<li>number of type selectors and pseudo-elements</li>
+						</ul>
+					<li>By order</li>
+				</ul>
+			<h3>CSS Declarations</h3>
+				<ul>
+					<li>properties</li>
+						<ul>
+							<li>shorthand properties</li>
+							<li>vendor-specific extensions</li>
+						</ul>
+					<li>values</li>
+						<ul>
+							<li>keywords</li>
+							<li>numbers(integers and reals in decimal notation)</li>
+							<li>dimensions</li>
+								<ul>
+									<li>length, angle, duration, frequency, resolution<li>
+									<li>length units:</li>
+										<ul>
+											<li>font-relative: em, ex, cn, rem</li>
+											<li>viewport-percentage: vw, vh, vmin, vmax</li>
+											<li>absolute length: cm, mm, q, in, pt, pc, px</li>
+										</ul>
+									<li>angle units: deg, grad, rad, turn</li>
+									<li>duration units: s, ms</li>
+									<li>frequency units: h2, kh2</li>
+									<li>resolution units: dpi, dpcm, dppx</li>
+								</ul>
+							<li>percentage</li>
+							<li>URLs and URIs<li>
+							<li>colors</li>
+							<li>strings</li>
+							<li>functions: calc(), attr(), counter(), counters()</li>
+						</ul>
+				</ul>
     </article>
 
 </div>

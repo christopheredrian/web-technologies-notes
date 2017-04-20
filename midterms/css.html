@@ -78,94 +78,120 @@
             <li><a href="#userstyle">User Style</a></li>
             <li><a href="#useragent">User Agent Style</a></li>
         </ul>
+		<h3>Declarations</h3>
+		<ul>
+			<li>normal - styles that are defined normally</li>
+			<li>important - overrides normal styles which provides a way to give more emphasis to a css value</li>
+		</ul>
         <h3>CSS Statements (At-Rules)</h3>
         <ul>
-            <li>@charset</li>
-            <li>@import</li>
-            <li>@document</li>
-            <li>@font face</li>
-            <li>@keyframes</li>
-            <li>@media</li>
-            <li>@page</li>
-            <li>@supports</li>
+            <li>@charset - referes to the character set that the style sheet used.</li>
+            <li>@import - used when css engine includes an external style sheet.</li>
+			<li>@namespace - lets the css engine consider its contents to be prefixed with XML namespace.</li>
+            <li>@document - conditional group rule that applies contents if document that uses the style sheet meets defined conditions</li>
+            <li>@font face - describes external font aspect.</li>
+            <li>@keyframes - describes css animation sequence aspect.</li>
+            <li>@media (CSS Conditionals Level 3) - conditional group rule at which contents are applied only if device meets media query defined conditions.</li>
+            <li>@page - describes changes in layout aspect to be applied upon document printing.</li>
+            <li>@supports (CSS Conditionals Level 3) - conditional group rule that applies contents if browser meets defined conditions.</li>
         </ul>
+		<p>*conditional group rule - may be considered to be something like property values that can be categorized based on common syntax.</p>
 		<h3>Simple Selector</h3>
 			<ul>
-				<li>Type Selector</li>
-				<li>Universal Selector</li>
-				<li>Attribute Selector</li>
+				<li>Type Selector - selects elements of the document by node names.</li>
+				<li>Universal Selector - uses an asterisk (*) to refer to any type of a particular element.</li>
+				<li>Attribute Selector - selects elements based on attributes or its values.</li>
 					<ul>
-						<li>[attr]</li>
-						<li>[attr=value]</li>
-						<li>[attr|=value]</li>
-						<li>[attr^=value]</li>
-						<li>[attr$=value]</li>
-						<li>[attr*=value]</li>
+						<li>[attr] - represents an element having attr as attribute name.</li>
+						<li>[attr=value] - represent an elements having "value" as the value of attr.</li>
+						<li>[attr|=value] - represent an elements with attr attribute having value equal to or begins with "value" followed by "-" (U+002D) for language subcode matches.</li>
+						<li>[attr~=value] - represent an element with attr attribute having set of words separated by whitespaces at which one of such words is "value" as its value.</li>
+						<li>[attr^=value] - represents an element with attribute attr having a value that begins with "value".</li>
+						<li>[attr$=value] - represents an element with attribute attr having a value that ends with "value".</li>
+						<li>[attr*=value] - represents an element with attribute attr having a value that contains "value".</li>
+						<li>[attr operator value i] - adding "I" or "i" (for characters within the ASCII range) causes case-insensitive comparison of attribute values.</li>
 					</ul>
-				<li>Class Selector</li>
-				<li>ID Selector</li>
+				<li>Class Selector - selects elements that match based on class attribute.</li>
+				<li>ID Selector - selects elements that match based on id attribute.</li>
 				<li>Pseudo Selector<li>
 					<ul>
 						<li>Dynamic Pseudo Class</li>
 							<ul>
 								<li>link pseudo</li>
 									<ul>
-										<li>:link</li>
-										<li>:visited</li>
+										<li>:link - selects hyperlink elements that have href attribute. </li>
+										<li>:visited - links already visited are selected.</li>
 									</ul>
 							</ul>
 						<li>User Action Pseudo Class</li>
 							<ul>
-								<li>:hover</li>
-								<li>:active</li>
-								<li>:focus</li>
+								<li>:hover - selected as mouse hovers an element.</li>
+								<li>:active - selects elements usually links as they are activated.</li>
+								<li>:focus - select as an element is focused by keyboard.</li>
 							</ul>
 						<li>Target Pseudo-class</li>
 							<ul>
-								<li>:target<sup>CSS3</sup></li>
+								<li>:target<sup>CSS3</sup> - used with ID and matches if #value in the current URL matches ID.</li>
 							</ul>
 						<li>Language Pseudo-class</li>
 							<ul>
-								<li>:lang()</li>
+								<li>:lang() - elements having lang attribute or are within some other elements that may have included the lang attribute are selected.</li>
 							</ul>
 						<li>UI Elements States Pseudo-class</li>
 							<ul>
-								<li>:enable</li>
-								<li>:disabled</li>
-								<li>:checked</li>
-								<li>:indeterminate</li>
+								<li>:enable - inputs in default state enabled at are selected.</li>
+								<li>:disabled - inputs having disabled attribute are selected.</li>
+								<li>:checked - selects checked checkboxes.</li>
+								<li>:indeterminate - selects radio buttons that are neither chosen or unchosen.</li>
 							</ul>
 						<li>Structural Pseudo Class</li>
 							<ul>
-								<li>:root<sup>CSS3</sup></li>
-								<li>:firstchild</li>
-								<li>:last-child<sup>CSS3</sup></li>
-								<li>:only-child<sup>CSS3</sup></li>
-								<li>:nth-child()<sup>CSS3</sup></li>
-								<li>:first-of-type<sup>CSS3</sup></li>
-								<li>:last-of-type</li>
-								<li>:only-of-type</li>
-								<li>:nth-of-type()</li>
-								<li>:nth-last-of-type()</li>
-								<li>:empty</li>
+								<li>:root<sup>CSS3</sup> - selects elements at root document.</li>
+								<li>:firstchild - selects first element within its parent.</li>
+								<li>:last-child<sup>CSS3</sup> - selects last element within its parent.</li>
+								<li>:only-child<sup>CSS3</sup> - selects only element of its parent.</li>
+								<li>:nth-child()<sup>CSS3</sup> - selects nth element within its parent.</li>
+								<li>:first-of-type<sup>CSS3</sup> - selects first element of its type.</li>
+								<li>:last-of-type - selects last element of its type.</li>
+								<li>:only-of-type - selects element if it is the only element of its type.</li>
+								<li>:nth-of-type() - similar to nth-child but refers to nth element of a particular type.</li>
+								<li>:nth-last-of-type() - similar to nth-of-type() but counts from the bottom.</li>
+								<li>:empty - selects elements with no text.</li>
+								<li>:not() - selects elements that do not match what is specified in the parenthesis.</li>
 							</ul>
 					</ul>
 				<li>Combinators</li>
 					<ul>
-						<li>Descendant Combinators (whitespace)</li>
-						<li>Child Combinators (>)</li>
+						<li>Descendant Combinators (whitespace)
+							<ul>
+								<li>nodes that are children or children of children and so on of specified element are selected.</li>
+							</ul>
+						</li>
+						<li>Child Combinators (>)
+							<ul>
+								<li>nodes that are children of element specified are selected.</li>
+							</ul>
+						</li>
 						<li>Sibling Combinators</li>
 							<ul>
-								<li>Adjacent Sibling Combinators (+)</li>
-								<li>General Sibling Combinators (~)</li>
+								<li>Adjacent Sibling Combinators (+)
+									<ul>
+										<li>nodes that immediately follows element specified are selected.</li>
+									</ul>
+								</li>
+								<li>General Sibling Combinators (~)
+									<ul>
+										<li>nodes that follows element specified are selected.</li>
+									</ul>
+								</li>
 							</ul>
 					</ul>
 				<li>Pseudo-elements</li>
 					<ul>
-						<li>::first-letter<sup>CSS3</sup>, :first-letter</li>
-						<li>::first-line<sup>CSS3</sup>, :first-line</li>
-						<li>::before<sup>(CSS3)</sup>, :before</li>
-						<li>::after<sup>CSS3</sup>, :after</li>
+						<li>::first-letter<sup>CSS3</sup>, :first-letter - selects first letter of text in an element.</li>
+						<li>::first-line<sup>CSS3</sup>, :first-line - selects first line of text in an element,</li>
+						<li>::before<sup>(CSS3)</sup>, :before - may be used to add contents before a particular element.</li>
+						<li>::after<sup>CSS3</sup>, :after - may be used to add contents before a particular element.</li>
 					</ul>
 			</ul>
 			<h3>CSS Rule Precedence</h3>
@@ -187,7 +213,7 @@
 							<li>number of type selectors and pseudo classes</li>
 							<li>number of type selectors and pseudo-elements</li>
 						</ul>
-					<li>By order</li>
+					<li>By order - when the CSS file is read from top to bottom, a style for a particular element or class overrides the style before it that applies to the same element or class.</li>
 				</ul>
 			<h3>CSS Declarations</h3>
 				<ul>

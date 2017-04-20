@@ -81,47 +81,135 @@
 		<h3>Declarations</h3>
 		<ul>
 			<li>normal - styles that are defined normally</li>
-			<li>important - overrides normal styles which provides a way to give more emphasis to a css value</li>
+			<li>important - overrides normal styles which allows more emphasis to a css value</li>
 		</ul>
         <h3>CSS Statements (At-Rules)</h3>
         <ul>
-            <li>@charset - referes to the character set that the style sheet used.</li>
-            <li>@import - used when css engine includes an external style sheet.</li>
-			<li>@namespace - lets the css engine consider its contents to be prefixed with XML namespace.</li>
-            <li>@document - conditional group rule that applies contents if document that uses the style sheet meets defined conditions</li>
-            <li>@font face - describes external font aspect.</li>
-            <li>@keyframes - describes css animation sequence aspect.</li>
-            <li>@media (CSS Conditionals Level 3) - conditional group rule at which contents are applied only if device meets media query defined conditions.</li>
-            <li>@page - describes changes in layout aspect to be applied upon document printing.</li>
-            <li>@supports (CSS Conditionals Level 3) - conditional group rule that applies contents if browser meets defined conditions.</li>
+            <li>@charset
+				<ul>
+					<li>referes to the character set that the style sheet used.</li>
+				</ul>
+			</li>
+            <li>@import
+				<ul>
+					<li>used when css engine includes an external style sheet.</li>
+				</ul>
+			</li>
+			<li>@namespace
+				<ul>
+					<li>lets the css engine consider its contents to be prefixed with XML namespace.</li>
+				</ul>
+			</li>
+            <li>@document
+				<ul>
+					<li>conditional group rule that applies contents if document that uses the style sheet meets defined conditions</li>
+				</ul>
+			</li>
+            <li>@font face
+				<ul>
+					<li>describes external font aspect.</li>
+				</ul>
+			</li>
+            <li>@keyframes
+				<ul>
+					<li>describes css animation sequence aspect.</li>
+				</ul>
+			</li>
+            <li>@media (CSS Conditionals Level 3)
+				<ul>
+					<li>conditional group rule at which contents are applied only if device meets media query defined conditions.</li>
+				</ul>
+			</li>
+            <li>@page
+				<ul>
+					<li>describes changes in layout aspect to be applied upon document printing.</li>
+				</ul>
+			</li>
+            <li>@supports (CSS Conditionals Level 3)
+				<ul>
+					<li>conditional group rule that applies contents if browser meets defined conditions.</li>
+				</ul>
+			</li>
         </ul>
 		<p>*conditional group rule - may be considered to be something like property values that can be categorized based on common syntax.</p>
 		<h3>Simple Selector</h3>
 			<ul>
-				<li>Type Selector - selects elements of the document by node names.</li>
-				<li>Universal Selector - uses an asterisk (*) to refer to any type of a particular element.</li>
-				<li>Attribute Selector - selects elements based on attributes or its values.</li>
+				<li>Type Selector
 					<ul>
-						<li>[attr] - represents an element having attr as attribute name.</li>
-						<li>[attr=value] - represent an elements having "value" as the value of attr.</li>
-						<li>[attr|=value] - represent an elements with attr attribute having value equal to or begins with "value" followed by "-" (U+002D) for language subcode matches.</li>
-						<li>[attr~=value] - represent an element with attr attribute having set of words separated by whitespaces at which one of such words is "value" as its value.</li>
-						<li>[attr^=value] - represents an element with attribute attr having a value that begins with "value".</li>
-						<li>[attr$=value] - represents an element with attribute attr having a value that ends with "value".</li>
-						<li>[attr*=value] - represents an element with attribute attr having a value that contains "value".</li>
-						<li>[attr operator value i] - adding "I" or "i" (for characters within the ASCII range) causes case-insensitive comparison of attribute values.</li>
+						<li>selects elements of the document by node names.</li>
 					</ul>
-				<li>Class Selector - selects elements that match based on class attribute.</li>
-				<li>ID Selector - selects elements that match based on id attribute.</li>
-				<li>Pseudo Selector<li>
+				</li>
+				<li>Universal Selector
+					<ul>
+						<li>uses an asterisk (*) to refer to any type of a particular element.</li>
+					</ul>
+				</li>		
+				<li>Attribute Selector
+					<ul>
+						<li>selects elements based on attributes or its values.</li>
+						<ul>
+							<li>[attr]
+								<ul>
+									<li>represents an element having attr as attribute name.</li>
+								</ul>
+							</li>	
+							<li>[attr=value]
+								<ul>
+									<li>represent an elements having "value" as the value of attr.</li>
+								</ul>
+							</li>
+							<li>[attr|=value]
+								<ul>
+									<li>represent an elements with attr attribute having value equal to or begins with "value" followed by "-" (U+002D) for language subcode matches.</li>
+								</ul>
+							</li>	
+							<li>[attr~=value]
+								<ul>
+									<li>represent an element with attr attribute having set of words separated by whitespaces at which one of such words is "value" as its value.</li>
+								</ul>
+							</li>	
+							<li>[attr^=value]
+								<ul>
+									<li>represents an element with attribute attr having a value that begins with "value".</li>
+								</ul>
+							</li>	
+							<li>[attr$=value]
+								<ul>
+									<li>represents an element with attribute attr having a value that ends with "value".</li>
+								</ul>
+							</li>	
+							<li>[attr*=value]
+								<ul>
+									<li>represents an element with attribute attr having a value that contains "value".</li>
+								</ul>
+							</li>	
+							<li>[attr operator value i]
+								<ul>
+									<li>adding "I" or "i" (for characters within the ASCII range) causes case-insensitive comparison of attribute values.</li>
+								</ul>
+							</li>	
+						</ul>
+					</ul>
+				</li>
+				<li>Class Selector
+					<ul>
+						<li>selects elements that match based on class attribute.</li>
+					</ul>
+				</li>	
+				<li>ID Selector
+					<ul>
+						<li>selects elements that match based on id attribute.</li>
+					</ul>
+				</li>	
+				<li>Pseudo Selector
 					<ul>
 						<li>Dynamic Pseudo Class</li>
 							<ul>
 								<li>link pseudo</li>
-									<ul>
-										<li>:link - selects hyperlink elements that have href attribute. </li>
-										<li>:visited - links already visited are selected.</li>
-									</ul>
+								<ul>
+									<li>:link - selects hyperlink elements that have href attribute. </li>
+									<li>:visited - links already visited are selected.</li>
+								</ul>
 							</ul>
 						<li>User Action Pseudo Class</li>
 							<ul>
@@ -160,7 +248,8 @@
 								<li>:not() - selects elements that do not match what is specified in the parenthesis.</li>
 							</ul>
 					</ul>
-				<li>Combinators</li>
+				</li>	
+				<li>Combinators
 					<ul>
 						<li>Descendant Combinators (whitespace)
 							<ul>
@@ -186,13 +275,31 @@
 								</li>
 							</ul>
 					</ul>
-				<li>Pseudo-elements</li>
+				</li>	
+				<li>Pseudo-elements
 					<ul>
-						<li>::first-letter<sup>CSS3</sup>, :first-letter - selects first letter of text in an element.</li>
-						<li>::first-line<sup>CSS3</sup>, :first-line - selects first line of text in an element,</li>
-						<li>::before<sup>(CSS3)</sup>, :before - may be used to add contents before a particular element.</li>
-						<li>::after<sup>CSS3</sup>, :after - may be used to add contents before a particular element.</li>
+						<li>::first-letter<sup>CSS3</sup>, :first-letter
+							<ul>
+								<li>selects first letter of text in an element.</li>
+							</ul>
+						</li>	
+						<li>::first-line<sup>CSS3</sup>, :first-line
+							<ul>
+								<li>selects first line of text in an element,</li>
+							</ul>
+						</li>
+						<li>::before<sup>(CSS3)</sup>, :before
+							<ul>
+								<li>may be used to add contents before a particular element.</li>
+							</ul>
+						</li>	
+						<li>::after<sup>CSS3</sup>, :after
+							<ul>
+								<li>may be used to add contents before a particular element.</li>
+							</ul>
+						</li>		
 					</ul>
+				</li>	
 			</ul>
 			<h3>CSS Rule Precedence</h3>
 				<ul>

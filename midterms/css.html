@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css.map">-->
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/css.css">
 
 </head>
 <body>
@@ -39,7 +40,7 @@
                         </ul>
                     </li>
                     <li><a href="#">FINALS<span class="sr-only">(current)</span></a></li>
-					<li><a href="../about.html">ABOUT</a></li>
+                    <li><a href="../about.html">ABOUT</a></li>
                 </ul>
 
             </div><!-- /.navbar-collapse -->
@@ -78,285 +79,376 @@
             <li><a href="#userstyle">User Style</a></li>
             <li><a href="#useragent">User Agent Style</a></li>
         </ul>
-		<h3>Declarations</h3>
-		<ul>
-			<li>normal - styles that are defined normally</li>
-			<li>important - overrides normal styles which allows more emphasis to a css value</li>
-		</ul>
+        <h3>Declarations</h3>
+        <ul>
+            <li>normal - styles that are defined normally</li>
+            <li>important - overrides normal styles which allows more emphasis to a css value</li>
+        </ul>
         <h3>CSS Statements (At-Rules)</h3>
         <ul>
             <li>@charset
-				<ul>
-					<li>referes to the character set that the style sheet used.</li>
-				</ul>
-			</li>
+                <ul>
+                    <li>referes to the character set that the style sheet used.</li>
+                </ul>
+            </li>
             <li>@import
-				<ul>
-					<li>used when css engine includes an external style sheet.</li>
-				</ul>
-			</li>
-			<li>@namespace
-				<ul>
-					<li>lets the css engine consider its contents to be prefixed with XML namespace.</li>
-				</ul>
-			</li>
+                <ul>
+                    <li>used when css engine includes an external style sheet.</li>
+                </ul>
+            </li>
+            <li>@namespace
+                <ul>
+                    <li>lets the css engine consider its contents to be prefixed with XML namespace.</li>
+                </ul>
+            </li>
             <li>@document
-				<ul>
-					<li>conditional group rule that applies contents if document that uses the style sheet meets defined conditions</li>
-				</ul>
-			</li>
+                <ul>
+                    <li>conditional group rule that applies contents if document that uses the style sheet meets defined
+                        conditions
+                    </li>
+                </ul>
+            </li>
             <li>@font face
-				<ul>
-					<li>describes external font aspect.</li>
-				</ul>
-			</li>
+                <ul>
+                    <li>describes external font aspect.</li>
+                </ul>
+            </li>
             <li>@keyframes
-				<ul>
-					<li>describes css animation sequence aspect.</li>
-				</ul>
-			</li>
+                <ul>
+                    <li>describes css animation sequence aspect.</li>
+                </ul>
+            </li>
             <li>@media (CSS Conditionals Level 3)
-				<ul>
-					<li>conditional group rule at which contents are applied only if device meets media query defined conditions.</li>
-				</ul>
-			</li>
+                <ul>
+                    <li>conditional group rule at which contents are applied only if device meets media query defined
+                        conditions.
+                    </li>
+                </ul>
+            </li>
             <li>@page
-				<ul>
-					<li>describes changes in layout aspect to be applied upon document printing.</li>
-				</ul>
-			</li>
+                <ul>
+                    <li>describes changes in layout aspect to be applied upon document printing.</li>
+                </ul>
+            </li>
             <li>@supports (CSS Conditionals Level 3)
-				<ul>
-					<li>conditional group rule that applies contents if browser meets defined conditions.</li>
-				</ul>
-			</li>
+                <ul>
+                    <li>conditional group rule that applies contents if browser meets defined conditions.</li>
+                </ul>
+            </li>
         </ul>
-		<p>*conditional group rule - may be considered to be something like property values that can be categorized based on common syntax.</p>
-		<h3>Simple Selector</h3>
-			<ul>
-				<li>Type Selector
-					<ul>
-						<li>selects elements of the document by node names.</li>
-					</ul>
-				</li>
-				<li>Universal Selector
-					<ul>
-						<li>uses an asterisk (*) to refer to any type of a particular element.</li>
-					</ul>
-				</li>		
-				<li>Attribute Selector
-					<ul>
-						<li>selects elements based on attributes or its values.</li>
-						<ul>
-							<li>[attr]
-								<ul>
-									<li>represents an element having attr as attribute name.</li>
-								</ul>
-							</li>	
-							<li>[attr=value]
-								<ul>
-									<li>represent an elements having "value" as the value of attr.</li>
-								</ul>
-							</li>
-							<li>[attr|=value]
-								<ul>
-									<li>represent an elements with attr attribute having value equal to or begins with "value" followed by "-" (U+002D) for language subcode matches.</li>
-								</ul>
-							</li>	
-							<li>[attr~=value]
-								<ul>
-									<li>represent an element with attr attribute having set of words separated by whitespaces at which one of such words is "value" as its value.</li>
-								</ul>
-							</li>	
-							<li>[attr^=value]
-								<ul>
-									<li>represents an element with attribute attr having a value that begins with "value".</li>
-								</ul>
-							</li>	
-							<li>[attr$=value]
-								<ul>
-									<li>represents an element with attribute attr having a value that ends with "value".</li>
-								</ul>
-							</li>	
-							<li>[attr*=value]
-								<ul>
-									<li>represents an element with attribute attr having a value that contains "value".</li>
-								</ul>
-							</li>	
-							<li>[attr operator value i]
-								<ul>
-									<li>adding "I" or "i" (for characters within the ASCII range) causes case-insensitive comparison of attribute values.</li>
-								</ul>
-							</li>	
-						</ul>
-					</ul>
-				</li>
-				<li>Class Selector
-					<ul>
-						<li>selects elements that match based on class attribute.</li>
-					</ul>
-				</li>	
-				<li>ID Selector
-					<ul>
-						<li>selects elements that match based on id attribute.</li>
-					</ul>
-				</li>	
-				<li>Pseudo Selector
-					<ul>
-						<li>Dynamic Pseudo Class</li>
-							<ul>
-								<li>link pseudo</li>
-								<ul>
-									<li>:link - selects hyperlink elements that have href attribute. </li>
-									<li>:visited - links already visited are selected.</li>
-								</ul>
-							</ul>
-						<li>User Action Pseudo Class</li>
-							<ul>
-								<li>:hover - selected as mouse hovers an element.</li>
-								<li>:active - selects elements usually links as they are activated.</li>
-								<li>:focus - select as an element is focused by keyboard.</li>
-							</ul>
-						<li>Target Pseudo-class</li>
-							<ul>
-								<li>:target<sup>CSS3</sup> - used with ID and matches if #value in the current URL matches ID.</li>
-							</ul>
-						<li>Language Pseudo-class</li>
-							<ul>
-								<li>:lang() - elements having lang attribute or are within some other elements that may have included the lang attribute are selected.</li>
-							</ul>
-						<li>UI Elements States Pseudo-class</li>
-							<ul>
-								<li>:enable - inputs in default state enabled at are selected.</li>
-								<li>:disabled - inputs having disabled attribute are selected.</li>
-								<li>:checked - selects checked checkboxes.</li>
-								<li>:indeterminate - selects radio buttons that are neither chosen or unchosen.</li>
-							</ul>
-						<li>Structural Pseudo Class</li>
-							<ul>
-								<li>:root<sup>CSS3</sup> - selects elements at root document.</li>
-								<li>:firstchild - selects first element within its parent.</li>
-								<li>:last-child<sup>CSS3</sup> - selects last element within its parent.</li>
-								<li>:only-child<sup>CSS3</sup> - selects only element of its parent.</li>
-								<li>:nth-child()<sup>CSS3</sup> - selects nth element within its parent.</li>
-								<li>:first-of-type<sup>CSS3</sup> - selects first element of its type.</li>
-								<li>:last-of-type - selects last element of its type.</li>
-								<li>:only-of-type - selects element if it is the only element of its type.</li>
-								<li>:nth-of-type() - similar to nth-child but refers to nth element of a particular type.</li>
-								<li>:nth-last-of-type() - similar to nth-of-type() but counts from the bottom.</li>
-								<li>:empty - selects elements with no text.</li>
-								<li>:not() - selects elements that do not match what is specified in the parenthesis.</li>
-							</ul>
-					</ul>
-				</li>	
-				<li>Combinators
-					<ul>
-						<li>Descendant Combinators (whitespace)
-							<ul>
-								<li>nodes that are children or children of children and so on of specified element are selected.</li>
-							</ul>
-						</li>
-						<li>Child Combinators (>)
-							<ul>
-								<li>nodes that are children of element specified are selected.</li>
-							</ul>
-						</li>
-						<li>Sibling Combinators</li>
-							<ul>
-								<li>Adjacent Sibling Combinators (+)
-									<ul>
-										<li>nodes that immediately follows element specified are selected.</li>
-									</ul>
-								</li>
-								<li>General Sibling Combinators (~)
-									<ul>
-										<li>nodes that follows element specified are selected.</li>
-									</ul>
-								</li>
-							</ul>
-					</ul>
-				</li>	
-				<li>Pseudo-elements
-					<ul>
-						<li>::first-letter<sup>CSS3</sup>, :first-letter
-							<ul>
-								<li>selects first letter of text in an element.</li>
-							</ul>
-						</li>	
-						<li>::first-line<sup>CSS3</sup>, :first-line
-							<ul>
-								<li>selects first line of text in an element,</li>
-							</ul>
-						</li>
-						<li>::before<sup>(CSS3)</sup>, :before
-							<ul>
-								<li>may be used to add contents before a particular element.</li>
-							</ul>
-						</li>	
-						<li>::after<sup>CSS3</sup>, :after
-							<ul>
-								<li>may be used to add contents before a particular element.</li>
-							</ul>
-						</li>		
-					</ul>
-				</li>	
-			</ul>
-			<h3>CSS Rule Precedence</h3>
-				<ul>
-					<li>By origin and importance</li>
-						<ul>
-							<li>user agent important declarations</li>
-							<li>user important declarations</li>
-							<li>author important declarations</li>
-							<li>author normal declarations</li>
-							<li>user normal declarations</li>
-							<li>user agent normal declarations</li>
-						</ul>
-					<li>By specificity</li>
-						<ul>
-							<li>inline style</li>
-							<li>number of ID selectors</li>
-							<li>number of class selectors, attribute selectors and pseudo classes</li>
-							<li>number of type selectors and pseudo classes</li>
-							<li>number of type selectors and pseudo-elements</li>
-						</ul>
-					<li>By order - when the CSS file is read from top to bottom, a style for a particular element or class overrides the style before it that applies to the same element or class.</li>
-				</ul>
-			<h3>CSS Declarations</h3>
-				<ul>
-					<li>properties</li>
-						<ul>
-							<li>shorthand properties</li>
-							<li>vendor-specific extensions</li>
-						</ul>
-					<li>values</li>
-						<ul>
-							<li>keywords</li>
-							<li>numbers(integers and reals in decimal notation)</li>
-							<li>dimensions</li>
-								<ul>
-									<li>length, angle, duration, frequency, resolution</li>
-									<li>length units:</li>
-										<ul>
-											<li>font-relative: em, ex, cn, rem</li>
-											<li>viewport-percentage: vw, vh, vmin, vmax</li>
-											<li>absolute length: cm, mm, q, in, pt, pc, px</li>
-										</ul>
-									<li>angle units: deg, grad, rad, turn</li>
-									<li>duration units: s, ms</li>
-									<li>frequency units: h2, kh2</li>
-									<li>resolution units: dpi, dpcm, dppx</li>
-								</ul>
-							<li>percentage</li>
-							<li>URLs and URIs</li>
-							<li>colors</li>
-							<li>strings</li>
-							<li>counters</li>
-							<li>functions: calc(), attr(), counter(), counters()</li>
-						</ul>
-				</ul>
+        <p>*conditional group rule - may be considered to be something like property values that can be categorized
+            based on common syntax.</p>
+        <h3>Simple Selector</h3>
+        <ul>
+            <li>Type Selector
+                <ul>
+                    <li>selects elements of the document by node names.</li>
+                </ul>
+            </li>
+            <li>Universal Selector
+                <ul>
+                    <li>uses an asterisk (*) to refer to any type of a particular element.</li>
+                </ul>
+            </li>
+            <li>Attribute Selector
+                <ul>
+                    <li>selects elements based on attributes or its values.</li>
+                    <ul>
+                        <li>[attr]
+                            <ul>
+                                <li>represents an element having attr as attribute name.</li>
+                            </ul>
+                        </li>
+                        <li>[attr=value]
+                            <ul>
+                                <li>represent an elements having "value" as the value of attr.</li>
+                            </ul>
+                        </li>
+                        <li>[attr|=value]
+                            <ul>
+                                <li>represent an elements with attr attribute having value equal to or begins with
+                                    "value" followed by "-" (U+002D) for language subcode matches.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>[attr~=value]
+                            <ul>
+                                <li>represent an element with attr attribute having set of words separated by
+                                    whitespaces at which one of such words is "value" as its value.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>[attr^=value]
+                            <ul>
+                                <li>represents an element with attribute attr having a value that begins with "value".
+                                </li>
+                            </ul>
+                        </li>
+                        <li>[attr$=value]
+                            <ul>
+                                <li>represents an element with attribute attr having a value that ends with "value".
+                                </li>
+                            </ul>
+                        </li>
+                        <li>[attr*=value]
+                            <ul>
+                                <li>represents an element with attribute attr having a value that contains "value".</li>
+                            </ul>
+                        </li>
+                        <li>[attr operator value i]
+                            <ul>
+                                <li>adding "I" or "i" (for characters within the ASCII range) causes case-insensitive
+                                    comparison of attribute values.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+            </li>
+            <li>Class Selector
+                <ul>
+                    <li>selects elements that match based on class attribute.</li>
+                </ul>
+            </li>
+            <li>ID Selector
+                <ul>
+                    <li>selects elements that match based on id attribute.</li>
+                </ul>
+            </li>
+            <li>Pseudo Selector
+                <ul>
+                    <li>Dynamic Pseudo Class</li>
+                    <ul>
+                        <li>link pseudo</li>
+                        <ul>
+                            <li>:link - selects hyperlink elements that have href attribute.</li>
+                            <li>:visited - links already visited are selected.</li>
+                        </ul>
+                    </ul>
+                    <li>User Action Pseudo Class</li>
+                    <ul>
+                        <li>:hover - selected as mouse hovers an element.</li>
+                        <li>:active - selects elements usually links as they are activated.</li>
+                        <li>:focus - select as an element is focused by keyboard.</li>
+                    </ul>
+                    <li>Target Pseudo-class</li>
+                    <ul>
+                        <li>:target<sup>CSS3</sup> - used with ID and matches if #value in the current URL matches ID.
+                        </li>
+                    </ul>
+                    <li>Language Pseudo-class</li>
+                    <ul>
+                        <li>:lang() - elements having lang attribute or are within some other elements that may have
+                            included the lang attribute are selected.
+                        </li>
+                    </ul>
+                    <li>UI Elements States Pseudo-class</li>
+                    <ul>
+                        <li>:enable - inputs in default state enabled at are selected.</li>
+                        <li>:disabled - inputs having disabled attribute are selected.</li>
+                        <li>:checked - selects checked checkboxes.</li>
+                        <li>:indeterminate - selects radio buttons that are neither chosen or unchosen.</li>
+                    </ul>
+                    <li>Structural Pseudo Class</li>
+                    <ul>
+                        <li>:root<sup>CSS3</sup> - selects elements at root document.</li>
+                        <li>:firstchild - selects first element within its parent.</li>
+                        <li>:last-child<sup>CSS3</sup> - selects last element within its parent.</li>
+                        <li>:only-child<sup>CSS3</sup> - selects only element of its parent.</li>
+                        <li>:nth-child()<sup>CSS3</sup> - selects nth element within its parent.</li>
+                        <li>:first-of-type<sup>CSS3</sup> - selects first element of its type.</li>
+                        <li>:last-of-type - selects last element of its type.</li>
+                        <li>:only-of-type - selects element if it is the only element of its type.</li>
+                        <li>:nth-of-type() - similar to nth-child but refers to nth element of a particular type.</li>
+                        <li>:nth-last-of-type() - similar to nth-of-type() but counts from the bottom.</li>
+                        <li>:empty - selects elements with no text.</li>
+                        <li>:not() - selects elements that do not match what is specified in the parenthesis.</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>Combinators
+                <ul>
+                    <li>Descendant Combinators (whitespace)
+                        <ul>
+                            <li>nodes that are children or children of children and so on of specified element are
+                                selected.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Child Combinators (>)
+                        <ul>
+                            <li>nodes that are children of element specified are selected.</li>
+                        </ul>
+                    </li>
+                    <li>Sibling Combinators</li>
+                    <ul>
+                        <li>Adjacent Sibling Combinators (+)
+                            <ul>
+                                <li>nodes that immediately follows element specified are selected.</li>
+                            </ul>
+                        </li>
+                        <li>General Sibling Combinators (~)
+                            <ul>
+                                <li>nodes that follows element specified are selected.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+            </li>
+            <li>Pseudo-elements
+                <ul>
+                    <li>::first-letter<sup>CSS3</sup>, :first-letter
+                        <ul>
+                            <li>selects first letter of text in an element.</li>
+                        </ul>
+                    </li>
+                    <li>::first-line<sup>CSS3</sup>, :first-line
+                        <ul>
+                            <li>selects first line of text in an element,</li>
+                        </ul>
+                    </li>
+                    <li>::before<sup>(CSS3)</sup>, :before
+                        <ul>
+                            <li>may be used to add contents before a particular element.</li>
+                        </ul>
+                    </li>
+                    <li>::after<sup>CSS3</sup>, :after
+                        <ul>
+                            <li>may be used to add contents before a particular element.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>CSS Rule Precedence</h3>
+        <ul>
+            <li>By origin and importance</li>
+            <ul>
+                <li>user agent important declarations</li>
+                <li>user important declarations</li>
+                <li>author important declarations</li>
+                <li>author normal declarations</li>
+                <li>user normal declarations</li>
+                <li>user agent normal declarations</li>
+            </ul>
+            <li>By specificity</li>
+            <ul>
+                <li>inline style</li>
+                <li>number of ID selectors</li>
+                <li>number of class selectors, attribute selectors and pseudo classes</li>
+                <li>number of type selectors and pseudo classes</li>
+                <li>number of type selectors and pseudo-elements</li>
+            </ul>
+            <li>By order - when the CSS file is read from top to bottom, a style for a particular element or class
+                overrides the style before it that applies to the same element or class.
+            </li>
+        </ul>
+        <h3>CSS Declarations</h3>
+        <ul>
+            <li>properties</li>
+            <ul>
+                <li>shorthand properties</li>
+                <li>vendor-specific extensions</li>
+            </ul>
+            <li>values</li>
+            <ul>
+                <li>keywords</li>
+                <li>numbers(integers and reals in decimal notation)</li>
+                <li>dimensions</li>
+                <ul>
+                    <li>length, angle, duration, frequency, resolution</li>
+                    <li>length units:</li>
+                    <ul>
+                        <li>font-relative: em, ex, cn, rem</li>
+                        <li>viewport-percentage: vw, vh, vmin, vmax</li>
+                        <li>absolute length: cm, mm, q, in, pt, pc, px</li>
+                    </ul>
+                    <li>angle units: deg, grad, rad, turn</li>
+                    <li>duration units: s, ms</li>
+                    <li>frequency units: h2, kh2</li>
+                    <li>resolution units: dpi, dpcm, dppx</li>
+                </ul>
+                <li>percentage</li>
+                <li>URLs and URIs</li>
+                <li>colors</li>
+                <li>strings</li>
+                <li>counters</li>
+                <li>functions: calc(), attr(), counter(), counters()</li>
+            </ul>
+        </ul>
     </article>
+    <article>
+        <h2>CSS Frameworks</h2>
+        <p>There are a lot of css frameworks avaiable today and one of the most prominent of them all is Twitter
+            Bootstrap. In using such frameworks you don't have to do any kind of programming/coding to have a default
+            look and feel for your site.</p>
+        <p>Since this site uses Bootstrap we can demostrate it using the examples below</p>
+        <h4>Tables</h4>
+        <p>Here is an example of how tables can be styled by just using the class table(<code>class="table"</code>)</p>
+        <table class="table">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Course</th>
+            </tr>
+            <tr>
+                <td>Christopher</td>
+                <td>Espiritu</td>
+                <td>BSIT</td>
+            </tr>
+            <tr>
+                <td>Maureen</td>
+                <td>Calpito</td>
+                <td>BSIT</td>
+            </tr>
+            <tr>
+                <td>Christopher</td>
+                <td>Santos</td>
+                <td>BSIT</td>
+            </tr>
+            <tr>
+                <td>Danielle</td>
+                <td>Estrellado</td>
+                <td>BSIT</td>
+            </tr>
+            <tr>
+                <td>Faye</td>
+                <td>Cabalse</td>
+                <td>BSIT</td>
+            </tr>
+        </table>
+        <h4>Buttons</h4>
+        <p>Bootstrap has its buttons class built in</p>
+        <button class="btn btn-danger">class="btn btn-danger"</button>
+        <button class="btn btn-info">class="btn btn-info"</button>
+        <button class="btn btn-success">class="btn btn-success"</button>
+        <h4>Images</h4>
+        <p>Here we can see the three img- class available for us: rounded | circle | thumbnail</p>
+        <div class="">
+            <div class="col-xs-4">
+                <code>class="img-rounded img-responsive"</code>
+                <img class="img-rounded img-responsive" src="../images/https.jpg" alt="https">
 
+            </div>
+            <div class="col-xs-4">
+                <code>class="img-circle img-responsive"</code>
+                <img class="img-circle img-responsive" src="../images/https.jpg" alt="https">
+
+            </div>
+            <div class="col-xs-4">
+                <code>class="img-thumbnail img-responsive"</code>
+                <img class="img-thumbnail img-responsive" src="../images/https.jpg" alt="https">
+
+            </div>
+        </div>
+        <h4>Text Colors</h4>
+        <p class="text-danger">class="text-danger"</p>
+        <p class="text-info">class="text-info"</p>
+        <p class="text-success">class="text-success"</p>
+    </article>
+    <article>
+        <h2>CSS Preprocessors</h2>
+    </article>
 </div>
 
 <script src="../js/jquery.min.js"></script>

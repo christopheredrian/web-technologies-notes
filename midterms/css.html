@@ -236,12 +236,37 @@
         <ul>
             <li id="css-ts">Type Selector
                 <ul>
-                    <li>selects elements of the document by node names.</li>
+                    <li>This selects elements of the document by node names.</li>
+					<p>Sample Code:</p>
+					<p>Syntax</p>
+					<pre><code class="css">
+	element { style properties }
+					</code></pre>
+					<p>CSS Code</p>
+					<pre><code class="css">
+	span {
+	background-color: DodgerBlue;
+	color: #ffffff;
+	}
+					</code></pre>
+					<p>HTML Code<p>
+					<pre><code class="css"><xmp>
+	<span>Here's a span with some text.</span>
+	<p>Here's a p with some text.</p>
+	<span>Here's a span with more text.</span></xmp>
+					</code></pre>
                 </ul>
             </li>
             <li id="css-us">Universal Selector
                 <ul>
-                    <li>uses an asterisk (*) to refer to any type of a particular element.</li>
+                    <li>This uses an asterisk (*) to refer to any type of a particular element.The universal selector matches any element type.</li>
+					<p>Sample Code:<p>
+					 <pre><code class="css">
+	* {
+	margin: 0;
+	padding: 0;	
+	}
+					 </code></pre>
                 </ul>
             </li>
             <li id="css-as">Attribute Selector
@@ -297,16 +322,34 @@
                             </ul>
                         </li>
                     </ul>
+					<p>Sample Code:<p>
+					 <pre><code class="css">
+	a[target] {
+	background-color: #F5F5F5;
+	}	
+					 </code></pre>
                 </ul>
             </li>
             <li id="css-cs">Class Selector
                 <ul>
-                    <li>selects elements that match based on class attribute.</li>
+                    <li>This selects elements that match based on class attribute.</li>
+					<p>Sample Code:<p>
+					 <pre><code class="css">
+	.intro { 
+	background-color: #FFFFFF;
+	}	
+					 </code></pre>
                 </ul>
             </li>
             <li id="css-ids">ID Selector
                 <ul>
-                    <li>selects elements that match based on id attribute.</li>
+                    <li>This selects elements that match based on id attribute.</li>
+					<p>Sample Code:<p>
+					 <pre><code class="css">
+	#firstname { 
+	background-color: #F0F8FF;
+	}	
+					 </code></pre>
                 </ul>
             </li>
             <li id="css-ps">Pseudo Selector
@@ -365,60 +408,133 @@
                         <li>:not() - selects elements that do not match what is specified in the parenthesis.</li>
                     </ul>
 					</li>
+					<p>Syntax</p>
+					<pre><code class="css">
+	selector:pseudo-class {
+	property:value;
+	}
+					</code></pre>
+					<p>CSS Code</p>
+					<pre><code class="css">
+	/* unvisited link */
+	a:link {
+	color: #FF0000;
+	}
+
+	/* visited link */
+	a:visited {
+	color: #00FF00;
+	}
+
+	/* mouse over link */
+	a:hover {
+	color: #FF00FF;
+	}
+
+	/* selected link */
+	a:active {
+	color: #0000FF;
+	}
+		</code></pre>
                 </ul>
             </li>
             <li id="css-com">Combinators
                 <ul>
                     <li>Descendant Combinators (whitespace)
                         <ul>
-                            <li>nodes that are children or children of children and so on of specified element are
+                            <li>These are nodes that are children or children of children and so on of specified element are
                                 selected.
                             </li>
                         </ul>
                     </li>
                     <li>Child Combinators (>)
                         <ul>
-                            <li>nodes that are children of element specified are selected.</li>
+                            <li>These are nodes that are children of element specified are selected.</li>
                         </ul>
                     </li>
                     <li>Sibling Combinators</li>
                     <ul>
                         <li>Adjacent Sibling Combinators (+)
                             <ul>
-                                <li>nodes that immediately follows element specified are selected.</li>
+                                <li>These are nodes that immediately follows element specified are selected.</li>
                             </ul>
                         </li>
                         <li>General Sibling Combinators (~)
                             <ul>
-                                <li>nodes that follows element specified are selected.</li>
+                                <li>These are nodes that follows element specified are selected.</li>
                             </ul>
                         </li>
                     </ul>
+					<p>Sample Codes:</p>
+					<pre><code class="css">
+	div > p {
+	background-color: #00FF7F;
+	}	
+					 </code></pre>
+					 <pre><code class="css">
+	div + p {
+	background-color: #FFFFF0;
+	}	
+					 </code></pre>
+					 <pre><code class="css">
+	div ~ p {
+	background-color: #000000;
+	}	
+					 </code></pre>
                 </ul>
             </li>
             <li id="css-pe">Pseudo-elements
                 <ul>
                     <li>::first-letter<sup>CSS3</sup>, :first-letter
                         <ul>
-                            <li>selects first letter of text in an element.</li>
+                            <li>This selects first letter of text in an element.</li>
+							<pre><code class="css">
+	p::first-letter {
+	color: #ff0000;
+	font-size: xx-large;
+	}
+		</code></pre>
                         </ul>
                     </li>
                     <li>::first-line<sup>CSS3</sup>, :first-line
                         <ul>
-                            <li>selects first line of text in an element,</li>
+                            <li>This selects first line of text in an element,</li>
+							<pre><code class="css">
+	p::first-line {
+	color: #ff0000;
+	font-variant: small-caps;
+	}
+		</code></pre>
                         </ul>
                     </li>
                     <li>::before<sup>(CSS3)</sup>, :before
                         <ul>
-                            <li>may be used to add contents before a particular element.</li>
+                            <li>This may be used to add contents before a particular element.</li>
+										<pre><code class="css">
+	h1::before {
+	content: url(smiley.gif);
+	}
+		</code></pre>
                         </ul>
                     </li>
                     <li>::after<sup>CSS3</sup>, :after
                         <ul>
-                            <li>may be used to add contents before a particular element.</li>
+                            <li>This may be used to add contents before a particular element.</li>
+									<pre><code class="css">
+	h1::after {
+	content: url(smiley.gif);
+	}
+		</code></pre>
                         </ul>
                     </li>
                 </ul>
+				<p>Sample Code:</p>
+				<p>Syntax</p>
+					<pre><code class="css">
+	selector::pseudo-element {
+	property:value;
+	}
+		</code></pre>
             </li>
         </ul>
 		</article>
@@ -609,6 +725,9 @@
 			<li>Giraudel, H. (2014, April 28). What's the Difference Between Sass and SCSS? Retrieved April 23, 2017, from https://www.sitepoint.com/whats-difference-sass-scss/</li>
 			<li>Bader, J. (2007, December 31). Bert Bos. Retrieved April 23, 2017, from https://www.flickr.com/photos/jpbader/2150861734</li>
 			<li>Main Page. (n.d.). Retrieved April 23, 2017, from https://commons.wikimedia.org/wiki/File:H%C3%A5kon_Wium_Lie.jpg</li>
+			</li>(n.d.). Retrieved April 23, 2017, from https://www.w3schools.com/css/</li>
+			<li>Type selectors. (n.d.). Retrieved April 23, 2017, from https://developer.mozilla.org/en/docs/Web/CSS/Type_selectors</li>
+			</li>Roberts, A. (2004, February 01). Universal Selector (CSS Selector) — SitePoint. Retrieved April 23, 2017, from https://www.sitepoint.com/web-foundations/universal-selector-css-selector/</li>
 		</ul>
 	</article>
 </div>

@@ -63,6 +63,11 @@
             in 1995 by Brendan Eich at Netscape Communications as the scripting language for the Netscape Navigator
             Browser.
             It has been standardized by ECMA International as ECMAScript.</p>
+     	<p>JavaScript + DOM/BOM + CSS + (X)HTML = DHTML.</p>	
+		<p>JavaScript code in (X)HTML pages can be executed "on the fly" as the document is rendered
+		(i.e. code outside of functions executes as the &#x3C;script&#x3E; element is encountered);
+		in most cases though, JavaScript code is executed in response to document events
+		(e.g. clicking a page element).</p>
 
         <h3>Versions</h3>
         <ul>
@@ -82,45 +87,37 @@
             <li><a href="#"></a>Dojo Toolkit</li>
             <li><a href="#"></a>etc</li>
         </ul>
-
-        <!--		<p>JavaScript can be linked or embedded in web pages using the <script> element.</p>
-
-                <ul>
-                    <li>Linked</li>
-                        <ul>
-                            <li>< script type = ”text / javascript” src = ”scripts.js” /> </ script></li>
-                        </ul>
-
-                    <li>Embedded</li>
-                        <ul>
-                            <li> < script type = ” text / javascript ” >
-                            < ! -- hide script from non-JavaScript browsers…
-                            /* script code goes here */
-                            // end of script hiding … -- > < / script >
-                            < noscript >  … content to show when scripting not available < / noscript >
-                            </li>
-                        </ul>
-                </ul>
-        -->
-        <p>JavaScript code in (X)HTML pages can be executed “on the fly” as the document is rendered
-            (i.e. code outside of functions executes as the < s c r i p t > element is encountered);
-            in most cases though, JavaScript code is executed in response to document events
-            (e.g. clicking a page element).</p>
-
-        <ul>JavaScript + DOM/BOM + CSS + (X)HTML = DHTML</ul>
+        
+        <p>JavaScript can be linked or embedded in web pages using the &#x3C;script&#x3E; element.</p>
+		<ul>
+			<li>Linked</li>
+				 <pre><code class="html">
+					 &#x3C;script type="text/javascript" src="scripts.js"/&#x3E;&#x3C;/script&#x3E;
+				</code></pre>
+			<li>Embedded</li>
+				 <pre><code class="html">
+				 &#x3C;script type="text/javascript"&#x3E; 
+				 &#x3C;!-- hide script from non-JavaScript browsers ..
+				 /* script code here */
+				 // end of script .. --&#x3E;
+				 &#x3C;/script&#x3E;
+				</code></pre>
+		</ul>
 
         <h3>Basic Language Features</h3>
         <ul>
             <li>Paradigm</li>
-            <ul>
-                <li>Object-oriented (prototype-based), functional, imperative scripting language.</li>
-            </ul>
-            <li>Java-/C-like syntax</li>
-            <ul>
-                <li>Implicit semicolon insertion for statement termination</li>
-                <li>Identifiers are alphanumeric, _, and $ characters</li>
-                <li>Single-line (//) or block (/**/) comments</li>
-            </ul>
+            	<ul>
+					<li>Object-oriented (prototype-based)</li>
+					<li>Functional</li>
+					<li>Imperative Scripting Language</li>
+				</ul>
+            <li>Java/C like Syntax</li>
+                <ul>
+                    <li>Implicit semicolon insertion for statement termination</li>
+                    <li>Identifiers are alphanumeric, _, and $ characters</li>
+                    <li>Single-line (//) or block (/**/) comments</li>
+                </ul>
             <li>Type system and variable scoping rules
                 <ul>
                     <li>Dynamic (aka loose or weak) typing</li>
@@ -136,12 +133,21 @@
                             </ul>
 
                             <li>Composite(object)types</li>
-                            <ul>
-                                <li>Core Javascript Object</li>
-                            </ul>
-                            <ul>
-                                <li>Object, Number, Boolean, String, Date, Math, Global, RegExp, Error</li>
-                                <li>Arrays</li>
+                               <ul>
+                                    <li>Core Javascript Object</li>
+                                </ul>
+								<ul>
+									<li>Object, Number, Boolean, String, Date, Math, Global, RegExp, Error</li>
+									<li>Arrays</li>
+									<li>Functions (Functions, Argument)</li>
+								</ul>
+						    <li>DOM Objects</li>
+                                <ul>
+                                    <li>Anchor, Applet, Attr, Comment, DOMException, 
+                                    DOMImplementation, DocumentFragment, Element, 
+                                    Event, Form, Image, Input, Layer, Link, Node, 
+                                    Option, Select, Style, Text, TextArea</li>
+                                </ul>
                                 <pre><code class="javascript">
                     // array creation
                     var myArr = [];

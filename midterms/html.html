@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css.map">-->
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/github.css">
 
 </head>
 <body>
@@ -39,7 +40,7 @@
                         </ul>
                     </li>
                     <li><a href="#">FINALS<span class="sr-only">(current)</span></a></li>
-					<li><a href="../about.html">ABOUT</a></li>
+                    <li><a href="../about.html">ABOUT</a></li>
                 </ul>
 
             </div><!-- /.navbar-collapse -->
@@ -51,36 +52,36 @@
     <nav class="well well-sm">
         <h2 class="page-header" class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">
             Contents</h2>
-	    <ul>
-            <li><a href="#ht-html">HTML</a>
         <ul>
-            <li><a href="#ht-hist">History</a></li>
-            <li><a href="#ht-head">Head</a></li>
-            <li><a href="#ht-body">Body</a></li>
+            <li><a href="#ht-html">HTML</a>
+                <ul>
+                    <li><a href="#ht-hist">History</a></li>
+                    <li><a href="#ht-head">Head</a></li>
+                    <li><a href="#ht-body">Body</a></li>
                 </ul>
             </li>
         </ul>
-        
+
         <ul>
             <li><a href="#ht-xhtml">XHTML</a>
-        <ul>
-            <li><a href="#ht-ver">Versions</a></li>
-            <li><a href="#ht-doccomp">Document component of XHTML</a></li>
-            <li><a href="#ht-elem">XHTML Elements</a></li>
-	    <li><a href="#ht-ss">XHTML/HTML Style Sheet</a></li>
-            <ul>
-            <li><a href="#ht-aut">Author Styles</a></li>
-            <li><a href="#ht-user">User Style</a></li>
-            <li><a href="#ht-usea">User Agent Style</a></li>
+                <ul>
+                    <li><a href="#ht-ver">Versions</a></li>
+                    <li><a href="#ht-doccomp">Document component of XHTML</a></li>
+                    <li><a href="#ht-elem">XHTML Elements</a></li>
+                    <li><a href="#ht-ss">XHTML/HTML Style Sheet</a></li>
+                    <ul>
+                        <li><a href="#ht-aut">Author Styles</a></li>
+                        <li><a href="#ht-user">User Style</a></li>
+                        <li><a href="#ht-usea">User Agent Style</a></li>
+                    </ul>
                 </ul>
-		    </ul>
             </li>
-	   <li><a href="#ht-ref">References</a></li>
+            <li><a href="#ht-ref">References</a></li>
         </ul>
     </nav>
     <article>
         <h3 id="ht-html">HTML (Hypertext Markup Language)</h3>
-        <h4 id = "ht-hist">History</h4>
+        <h4 id="ht-hist">History</h4>
         <ul>
             <li>HTML 1.0 - first version of HTML</li>
             <li>HTML 2.0 - RFC 1866</li>
@@ -98,7 +99,7 @@
             <li>HTML 5.0 (2014) - supports HTML flexible syntax and XHTML strict syntax</li>
             <li>HTML 5.1 (2016)</li>
         </ul>
-        <h4 id = "ht-head">Head</h4>
+        <h4 id="ht-head">Head</h4>
         <ul>
             <li> title - Defines the title of the document.</li>
             <li> base - Used to know or specify the URL or URI of the webpage.</li>
@@ -106,27 +107,27 @@
             <li> meta - Used to specify a webpage description.</li>
             <li> style - Used for the design of the webpage.</li>
             <li> script - Used to define client-side scripting.</li>
-		  <ul>
-        <li>Sample Code:</li>
+            <ul>
+                <li>Sample Code:</li>
             </ul>
-            <pre><code class="html"><xmp>
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">    
+            <pre><code class="html">
 
-          <title>The HTML5 </title>
-          <meta name="description" content="The HTML5 head element code">
-          <meta name="author" content="John Doe">
+        &#x3C;!doctype html&#x3E;
+        &#x3C;html lang=&#x22;en&#x22;&#x3E;
+        &#x3C;head&#x3E;
+          &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
 
-          <link rel="stylesheet" href="css/styles.css">
-        </head>
-        </html>
-           </xmp>
+          &#x3C;title&#x3E;The HTML5 &#x3C;/title&#x3E;
+          &#x3C;meta name=&#x22;description&#x22; content=&#x22;The HTML5 head element code&#x22;&#x3E;
+          &#x3C;meta name=&#x22;author&#x22; content=&#x22;John Doe&#x22;&#x3E;
+
+          &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/styles.css&#x22;&#x3E;
+        &#x3C;/head&#x3E;
+        &#x3C;/html&#x3E;
 </code>
 </pre>
         </ul>
-        <h4 id= "ht-body">Body</h4>
+        <h4 id="ht-body">Body</h4>
         <ul>
             <li>Grouping element (div, span)</li>
             <li>Headings (h1 – h6)</li>
@@ -148,142 +149,142 @@
             <li>Miscellaneous (address, bdo)</li>
             <li>Frames, noframes, iframe</li>
             <li>Frameset (for frameset DTD)</li>
-		       <ul>
-        <li>Sample Code:</li>
+            <ul>
+                <li>Sample Code:</li>
             </ul>
-        <pre><code class="html"><xmp>
-<html>
-<body>
-    <h3> Use of a Tag</h3>
-    <a href="https://webtek.com">Webtech</a>
-    
-    <p>This is a Sample code</p>
-    <div class="container">
-    <h3>Use of p, ul, li, h1-h6 Tag</h3>
-        <ul>
-        <li><h1>Header1</h1></li>
-            <li><h2>Header2</h2></li>
-            <li><h3>Header3</h3></li>
-            <li><h4>Header4</h4></li>
-            <li><h5>Header5</h5></li>
-            <li><h6>Header6</h6></li>
-        </ul>
-        
-        <h3>Use of ol, li, hr Tag</h3>
-        <ol>
-            <li>H</li>
-            <li>I</li>
-        </ol>
-        
-        <hr>
-        <h3>Use of dl, dt, dd Tag</h3>
-        <dl>
-        <dt>H</dt>
-            <dd>I</dd>
-        </dl>
-        
-        <hr>
-        <h3>Use of table, tr, th, td Tag</h3>
-        <table>
-      <tr>
-        <th>Sample1</th>
-        <th>Sample2</th>
-        <th>Sample3</th>
-      </tr>
-      <tr>
-        <td>Black</td>
-        <td>Red</td>
-        <td>Green</td>
-      </tr>
-        </table>
-        
-        <hr>
-        <h3>Use of thead, tbody and tfoot Tag</h3>
-        <table>
-      <thead>
-        <tr>
-          <th>1</th>
-            <th>2</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <td>Hello</td>
-            <td>Hi</td>
-        </tr>
-      </tfoot>
-      <tbody>
-        <tr>
-          <td>Hi</td>
-            <td>Hello</td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-            <td>HI</td>
-        </tr>
-      </tbody>
-    </table>
-        
-        <hr>
-        <h3>Use of em, strong, dfn, code, samp, kbd, cite, acronym Tag</h3>
-        <p>it should be <em>emphasized</em>.</p>
-        <p>We are <strong>strong</strong>.</p>
-        <p>I need a <dfn>Definition</dfn>.</p>
-        <p>Program <code>code</code>.</p>
-        <p><samp>Sample</samp> code.</p>
-        <p>Hi <kbd>This is inside kbd element</kbd>.</p>
-        <p>This is a quote  <cite>Don't cry because it's over, smile because it happened.</cite></p>
-        <p>Creating a webpage using <accronym>html </accronym>is great.</p>
-        
-        <hr>
-        <h3>Use of sub and sup Tag</h3>
-        <p>This is a <sub>subscript</sub>.</p>
-        <p>This is a <sup>superscript</sup>.</p>
-        
-        <hr>
-        <h3>Use of pre Tag</h3>
-        <pre>She loves me
+            <pre><code class="html">
+&#x3C;html&#x3E;
+&#x3C;body&#x3E;
+    &#x3C;h3&#x3E; Use of a Tag&#x3C;/h3&#x3E;
+    &#x3C;a href=&#x22;https://webtek.com&#x22;&#x3E;Webtech&#x3C;/a&#x3E;
+
+    &#x3C;p&#x3E;This is a Sample code&#x3C;/p&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+    &#x3C;h3&#x3E;Use of p, ul, li, h1-h6 Tag&#x3C;/h3&#x3E;
+        &#x3C;ul&#x3E;
+        &#x3C;li&#x3E;&#x3C;h1&#x3E;Header1&#x3C;/h1&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;h2&#x3E;Header2&#x3C;/h2&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;h3&#x3E;Header3&#x3C;/h3&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;h4&#x3E;Header4&#x3C;/h4&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;h5&#x3E;Header5&#x3C;/h5&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;h6&#x3E;Header6&#x3C;/h6&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+
+        &#x3C;h3&#x3E;Use of ol, li, hr Tag&#x3C;/h3&#x3E;
+        &#x3C;ol&#x3E;
+            &#x3C;li&#x3E;H&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;I&#x3C;/li&#x3E;
+        &#x3C;/ol&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of dl, dt, dd Tag&#x3C;/h3&#x3E;
+        &#x3C;dl&#x3E;
+        &#x3C;dt&#x3E;H&#x3C;/dt&#x3E;
+            &#x3C;dd&#x3E;I&#x3C;/dd&#x3E;
+        &#x3C;/dl&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of table, tr, th, td Tag&#x3C;/h3&#x3E;
+        &#x3C;table&#x3E;
+      &#x3C;tr&#x3E;
+        &#x3C;th&#x3E;Sample1&#x3C;/th&#x3E;
+        &#x3C;th&#x3E;Sample2&#x3C;/th&#x3E;
+        &#x3C;th&#x3E;Sample3&#x3C;/th&#x3E;
+      &#x3C;/tr&#x3E;
+      &#x3C;tr&#x3E;
+        &#x3C;td&#x3E;Black&#x3C;/td&#x3E;
+        &#x3C;td&#x3E;Red&#x3C;/td&#x3E;
+        &#x3C;td&#x3E;Green&#x3C;/td&#x3E;
+      &#x3C;/tr&#x3E;
+        &#x3C;/table&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of thead, tbody and tfoot Tag&#x3C;/h3&#x3E;
+        &#x3C;table&#x3E;
+      &#x3C;thead&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;th&#x3E;1&#x3C;/th&#x3E;
+            &#x3C;th&#x3E;2&#x3C;/th&#x3E;
+        &#x3C;/tr&#x3E;
+      &#x3C;/thead&#x3E;
+      &#x3C;tfoot&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;td&#x3E;Hello&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;Hi&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+      &#x3C;/tfoot&#x3E;
+      &#x3C;tbody&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;td&#x3E;Hi&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;Hello&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;td&#x3E;Hello&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;HI&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+      &#x3C;/tbody&#x3E;
+    &#x3C;/table&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of em, strong, dfn, code, samp, kbd, cite, acronym Tag&#x3C;/h3&#x3E;
+        &#x3C;p&#x3E;it should be &#x3C;em&#x3E;emphasized&#x3C;/em&#x3E;.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;We are &#x3C;strong&#x3E;strong&#x3C;/strong&#x3E;.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;I need a &#x3C;dfn&#x3E;Definition&#x3C;/dfn&#x3E;.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;Program &#x3C;code&#x3E;code&#x3C;/code&#x3E;.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;&#x3C;samp&#x3E;Sample&#x3C;/samp&#x3E; code.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;Hi &#x3C;kbd&#x3E;This is inside kbd element&#x3C;/kbd&#x3E;.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;This is a quote  &#x3C;cite&#x3E;Don&#x27;t cry because it&#x27;s over, smile because it happened.&#x3C;/cite&#x3E;&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;Creating a webpage using &#x3C;accronym&#x3E;html &#x3C;/accronym&#x3E;is great.&#x3C;/p&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of sub and sup Tag&#x3C;/h3&#x3E;
+        &#x3C;p&#x3E;This is a &#x3C;sub&#x3E;subscript&#x3C;/sub&#x3E;.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;This is a &#x3C;sup&#x3E;superscript&#x3C;/sup&#x3E;.&#x3C;/p&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of pre Tag&#x3C;/h3&#x3E;
+        &#x3C;pre&#x3E;She loves me
             She loves me not
         She loves me
                 She loves me not
-            </pre>
-        
-        <hr>
-        <h3>Use of i, b, u, small Tag</h3>
-        <p> He is good at <i>programming</i></p>
-        <p> This is a <b>bold</b> text.</p>
-        <p> This is a <u>sentence</u></p>
-        <p> This is a <small>small</small> text. </p>
-        
-        <hr>
-        <h3>Use of ins, del Tag</h3>
-        <p> I like to <ins>become</ins> a <del>professional</del> programmer</p>
-        
-        <hr>
-        <h3>Use of object, img Tag</h3>
-        <object width="520" height="520" data="object.swf"></object>
-        <img src="web.png" alt="page" height="30" width="30">
-        
-        <hr>
-        <h3>Use of script, noscript</h3>
-        <script>
-            document.getElementById("sample").innerHTML = "Sample!";
-        </script> 
-        <noscript>The browser you use not support JS</noscript>
-        
-        <hr>
-        <h3>Use of bdo</h3>  
-        <p><bdo dir="rtl">HELLOWORLD.</bdo></p>  
-        
-    </div>
-    
-    </body>
-</html>
-</xmp>
+            &#x3C;/pre&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of i, b, u, small Tag&#x3C;/h3&#x3E;
+        &#x3C;p&#x3E; He is good at &#x3C;i&#x3E;programming&#x3C;/i&#x3E;&#x3C;/p&#x3E;
+        &#x3C;p&#x3E; This is a &#x3C;b&#x3E;bold&#x3C;/b&#x3E; text.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E; This is a &#x3C;u&#x3E;sentence&#x3C;/u&#x3E;&#x3C;/p&#x3E;
+        &#x3C;p&#x3E; This is a &#x3C;small&#x3E;small&#x3C;/small&#x3E; text. &#x3C;/p&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of ins, del Tag&#x3C;/h3&#x3E;
+        &#x3C;p&#x3E; I like to &#x3C;ins&#x3E;become&#x3C;/ins&#x3E; a &#x3C;del&#x3E;professional&#x3C;/del&#x3E; programmer&#x3C;/p&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of object, img Tag&#x3C;/h3&#x3E;
+        &#x3C;object width=&#x22;520&#x22; height=&#x22;520&#x22; data=&#x22;object.swf&#x22;&#x3E;&#x3C;/object&#x3E;
+        &#x3C;img src=&#x22;web.png&#x22; alt=&#x22;page&#x22; height=&#x22;30&#x22; width=&#x22;30&#x22;&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of script, noscript&#x3C;/h3&#x3E;
+        &#x3C;script&#x3E;
+            document.getElementById(&#x22;sample&#x22;).innerHTML = &#x22;Sample!&#x22;;
+        &#x3C;/script&#x3E;
+        &#x3C;noscript&#x3E;The browser you use not support JS&#x3C;/noscript&#x3E;
+
+        &#x3C;hr&#x3E;
+        &#x3C;h3&#x3E;Use of bdo&#x3C;/h3&#x3E;
+        &#x3C;p&#x3E;&#x3C;bdo dir=&#x22;rtl&#x22;&#x3E;HELLOWORLD.&#x3C;/bdo&#x3E;&#x3C;/p&#x3E;
+
+    &#x3C;/div&#x3E;
+
+    &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
+
 </code>
 </pre>
         </ul>
-	       <h3 id="ht-xhtml">XHTML (Extensible Hypertext Markup Language) </h3>
+        <h3 id="ht-xhtml">XHTML (Extensible Hypertext Markup Language) </h3>
         <h4 id="ht-ver"> Versions </h4>
         <ul>
             <li>XHTML 1.0 - W3C Recommendation and first version of XHTML</li>
@@ -293,88 +294,97 @@
             <li>XHTML 5 - Current version of XHTML</li>
         </ul>
         <h4 id="ht-doccomp"> Document Component of XHTML</h4>
-	    <ul>
-        <li>Document Type Declaration(DOCTYPES)
-                <ul>
-                <li> HTML 4.01 Doctypes</li>
-                <li> XHTML 1.0 Doctypes</li>
-                </ul>
-        </li>
-	    </ul>
-	    <ul>
-        <li>Elements - units for document structure
-                <ul>
-                <li> Tags</li>
-                <li> Content</li>
-                <li> Attribute - element parameter delcared document type definition</li>
-                <li> Character Entity References</li>
-            </ul>
-        </li>
-	    </ul>
-           <h4 id="ht-elem"> XHTML Elements </h4>
-                <ul>
-                    <li> Block-level and inline elements</li>
-                </ul>
-		<h4 id="ht-doccomp"> Some XHTML rules to consider</h4>
-	    <ul>
-			<li>Document Structure
-                <ul>
-                <li> requires XHTML DOCTYPE</li>
-                <li> requires xmlns attribute in &lthtml&gt </li>
-				<li> requires &lthtml&gt, &lthead&gt, &lttitle&gt, and &ltbody&gt that are necessarilly closed</li>
-                </ul>
-			</li>
-	    </ul>
-	    <ul>
-        <li>Elements
-                <ul>
-                <li> must be nested properly</li>
-                <li> must be closed always</li>
-                <li> must be in lowercase</li>
-                <li> must have one root element</li>
-            </ul>
-        </li>
-		<li>Attributes
-                <ul>
-                <li> names are required to be in lowercase</li>
-                <li> values are required to be enclosed in quotation marks</li>
-                <li> minimization is not allowed</li>
-            </ul>
-        </li>
-	    </ul>		
-	    <h4 id ="ht-ss"> HTML/XHTML Style Sheets</h4>
         <ul>
-             <h4 id="ht-aut"> Author Styles </h4>
+            <li>Document Type Declaration(DOCTYPES)
                 <ul>
-                    <li> External style sheets</li>
-                    <li> Embedded styles</li>
-                    <li> Inline styles</li>
+                    <li> HTML 4.01 Doctypes</li>
+                    <li> XHTML 1.0 Doctypes</li>
                 </ul>
-	    </ul>
-	    <ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Elements - units for document structure
+                <ul>
+                    <li> Tags</li>
+                    <li> Content</li>
+                    <li> Attribute - element parameter delcared document type definition</li>
+                    <li> Character Entity References</li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="ht-elem"> XHTML Elements </h4>
+        <ul>
+            <li> Block-level and inline elements</li>
+        </ul>
+        <h4 id="ht-doccomp"> Some XHTML rules to consider</h4>
+        <ul>
+            <li>Document Structure
+                <ul>
+                    <li> requires XHTML DOCTYPE</li>
+                    <li> requires xmlns attribute in &lthtml&gt</li>
+                    <li> requires &lthtml&gt, &lthead&gt, &lttitle&gt, and &ltbody&gt that are necessarilly closed</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Elements
+                <ul>
+                    <li> must be nested properly</li>
+                    <li> must be closed always</li>
+                    <li> must be in lowercase</li>
+                    <li> must have one root element</li>
+                </ul>
+            </li>
+            <li>Attributes
+                <ul>
+                    <li> names are required to be in lowercase</li>
+                    <li> values are required to be enclosed in quotation marks</li>
+                    <li> minimization is not allowed</li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="ht-ss"> HTML/XHTML Style Sheets</h4>
+        <ul>
+            <h4 id="ht-aut"> Author Styles </h4>
+            <ul>
+                <li> External style sheets</li>
+                <li> Embedded styles</li>
+                <li> Inline styles</li>
+            </ul>
+        </ul>
+        <ul>
             <h4 id="ht-user"> User Style</h4>
-	    </ul>
-	    <ul>
+        </ul>
+        <ul>
             <h4 id="ht-usea"> User Agent Style</h4>
-	    </ul>
+        </ul>
 
     </article>
-	<article>
-		<h2 id = "ht-ref">References</h2>
-		<ul>
-			<li>20. XHTML Style Sheet Module. (n.d.). Retrieved April 22, 2017, from https://www.w3.org/TR/2002/WD-xhtml2-20020805/mod-styleSheet.html</li>
-			<li>Lazaris, L. (2017, February 01). A Basic HTML5 Template For Any Project — SitePoint. Retrieved April 22, 2017, from https://www.sitepoint.com/a-basic-html5-template/</li>
-			<li>XHTML. (2017, April 19). Retrieved April 22, 2017, from https://en.wikipedia.org/wiki/XHTML</li>
-			<li>HTML Element Reference. (n.d.). Retrieved April 22, 2017, from https://www.w3schools.com/tags/</li>
-			<li>(n.d.). Retrieved April 22, 2017, from https://www.w3schools.com/html/html_xhtml.asp</li>
-			<li>XHTML™ 1.0 The Extensible HyperText Markup Language (Second Edition). (n.d.). Retrieved April 22, 2017, from https://www.w3.org/TR/xhtml1/</li>
-			<li>HTML. (n.d.). Retrieved April 23, 2017, from https://www.w3schools.com/</li>
-		</ul>
-	</article>
+    <article>
+        <h2 id="ht-ref">References</h2>
+        <ul>
+            <li>20. XHTML Style Sheet Module. (n.d.). Retrieved April 22, 2017, from
+                https://www.w3.org/TR/2002/WD-xhtml2-20020805/mod-styleSheet.html
+            </li>
+            <li>Lazaris, L. (2017, February 01). A Basic HTML5 Template For Any Project — SitePoint. Retrieved April 22,
+                2017, from https://www.sitepoint.com/a-basic-html5-template/
+            </li>
+            <li>XHTML. (2017, April 19). Retrieved April 22, 2017, from https://en.wikipedia.org/wiki/XHTML</li>
+            <li>HTML Element Reference. (n.d.). Retrieved April 22, 2017, from https://www.w3schools.com/tags/</li>
+            <li>(n.d.). Retrieved April 22, 2017, from https://www.w3schools.com/html/html_xhtml.asp</li>
+            <li>XHTML™ 1.0 The Extensible HyperText Markup Language (Second Edition). (n.d.). Retrieved April 22, 2017,
+                from https://www.w3.org/TR/xhtml1/
+            </li>
+            <li>HTML. (n.d.). Retrieved April 23, 2017, from https://www.w3schools.com/</li>
+        </ul>
+    </article>
+    code
 
 </div>
 
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

@@ -149,8 +149,8 @@
         </ul>
     </article>
     <article>
-        <h2>Browser Object Model API</h2>
-        <p>There are many methods and properties available for the DOM and to demonstrate we let's look at it in
+        <h2>The DOM (Document Object Model)</h2>
+        <p>There are many methods and properties available for the DOM and to demonstrate let's look at it in
             action</p>
         <h3>Retrieving DOM Elements</h3>
         <p>Consider the follwing snippet:</p>
@@ -192,6 +192,36 @@
             // For single values, such as an id
             var firstParagraph = document.querySelector('#first-paragraph');
         </code></pre>
+        <h3>Creating Nodes</h3>
+        <p>The DOM has multiple methods to create instances of nodes. Below are the methods used for creating
+            nodes:</p>
+        <dl>
+            <dt>createElement(tagName)</dt>
+            <dd>Used for creating tags</dd>
+            <dt>createTextNode(nodeValue)</dt>
+            <dd>This creates a text node which can then be used to add text inside an element node</dd>
+            <dt>cloneNode(deep: boolean)</dt>
+            <dd>This is for creating copies of nodes, the deep argument is boolean. If it's true it copies the entire
+                tree of the node
+            </dd>
+        </dl>
+        <p>To demonstrate we have the snippet below:</p>
+
+        <pre><code class="javascript">
+            // creates a p element
+            var p = document.createElement('p');
+            // creates a text node
+            var text = document.createTextNode('Hello!');
+            // appends the text node inside the created p element
+            p.appendChild(text);
+            document.body.appendChild(p);
+        </code></pre>
+        <p> This results with the ff:</p>
+        <pre><code class="html">
+            &#x3C;body&#x3E;
+             &#x3C;p&#x3E;Hello!&#x3C;/p&#x3E;
+            &#x3C;/body&#x3E;
+        </code></pre>
         <h3>Node Properties</h3>
         <p>HTML</p>
         <pre><code class="html">
@@ -225,6 +255,32 @@
             v.style.color = 'blue'; // Text now blue
             v.style.fontSize = '3em';
             v.style.backgroundColor = 'blue';
+        </code></pre>
+        <h2>Adding, Removing and Reordering Nodes</h2>
+        <dl>
+            <dt>appendChild(node)</dt>
+            <dd>Add the node to the last child node of where the node was used</dd>
+            <dt>inserBefore(node, reference)</dt>
+            <dd>Insert node before the reference</dd>
+            <dt>removeChild(childNode)</dt>
+            <dd>Removes specified node from its parent</dd>
+        </dl>
+        <p>Consider the following snippet</p>
+        <pre><code class="javascript">
+            var body = document.body;
+            var p = document.createElement('p');
+            p.innerText = "Hello";
+            // appends created p element to body
+            body.appendChild(p)
+
+            var firstP = document.createElement('p');
+            firstP.innerText = "First Paragraph";
+            // inserts <code>firstP</code> before <code>p</code>
+            p.parentNode.insertBefore(firstP, p);
+
+            // Removes the second paragraph with the text 'Hello'
+            p.parentNode.removeChild(p);
+
         </code></pre>
     </article>
 </div>

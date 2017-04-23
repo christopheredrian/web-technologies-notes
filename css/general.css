@@ -95,3 +95,11 @@ body {
     background-color: #E6E6FA;
     zoom: 130%
 }
+
+html, body{
+    overflow: auto;
+}
+
+dl{
+    margin-left: 5%;
+}

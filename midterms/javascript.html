@@ -53,8 +53,17 @@
         <h2 class="page-header" class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">
             Contents</h2>
         <ul>
-            <li><a href="#internet"></a></li>
-
+            <li><a href="#js">JavaScript</a></li>
+				<ul>
+					<li><a href="#ver">Versions</a></li>
+					<li><a href="#fw">Frameworks</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#dom">The DOM</a></li>
+					<li><a href="#nodes">Creating Nodes</a></li>
+					<li><a href="#es5">ECMAScript 5 Features</a></li>
+					<li><a href="#nodeprop">Node Properties</a></li>
+                </ul>
+			<li><a href="#ref">References</a></li>
         </ul>
     </nav>
     <article>
@@ -69,7 +78,7 @@
 		in most cases though, JavaScript code is executed in response to document events
 		(e.g. clicking a page element).</p>
 
-        <h3>Versions</h3>
+        <h3 id="ver">Versions</h3>
         <ul>
             <li><a href="#"></a>JavaScript 1.5</li>
             <li><a href="#"></a>Jscript 5.5</li>
@@ -78,7 +87,7 @@
             <li><a href="#"></a>ECMAScript 5 (ECMA-262 5th Edition)</li>
         </ul>
 
-        <h3>Frameworks</h3>
+        <h3 id="fw">Frameworks</h3>
         <ul>
             <li><a href="#"></a>script.aculo.us</li>
             <li><a href="#"></a>jQuery</li>
@@ -104,7 +113,7 @@
 				</code></pre>
 		</ul>
 
-        <h3>Basic Language Features</h3>
+        <h3 id="features">Basic Language Features</h3>
         <ul>
             <li>Paradigm</li>
             	<ul>
@@ -235,7 +244,7 @@
         </ul>
     </article>
     <article>
-        <h2>The DOM (Document Object Model)</h2>
+        <h2 id="dom">The DOM (Document Object Model)</h2>
         <p>There are many methods and properties available for the DOM and to demonstrate let's look at it in
             action</p>
         <h3>Retrieving DOM Elements</h3>
@@ -278,7 +287,7 @@
             // For single values, such as an id
             var firstParagraph = document.querySelector('#first-paragraph');
         </code></pre>
-        <h3>Creating Nodes</h3>
+        <h3 id="nodes">Creating Nodes</h3>
         <p>The DOM has multiple methods to create instances of nodes. Below are the methods used for creating
             nodes:</p>
         <dl>
@@ -308,7 +317,7 @@
              &#x3C;p&#x3E;Hello!&#x3C;/p&#x3E;
             &#x3C;/body&#x3E;
         </code></pre>
-        <h3>Node Properties</h3>
+        <h3 id="nodeprop">Node Properties</h3>
         <p>HTML</p>
         <pre><code class="html">
             &#x3C;p id=&#x22;para&#x22;&#x3E;Lorem upsum...&#x3C;/p&#x3E;
@@ -369,7 +378,7 @@
 
         </code></pre>
 	    
-	    	<h3>ECMAScript 5 Features</h3>
+	    	<h3 id="es5">ECMAScript 5 Features</h3>
 		<ul>
 			<li>Strict mode</li>
 				<ul>
@@ -423,6 +432,15 @@
 				</ul>
 		</ul>
     </article>
+	<article id="reference">
+		<h2 id="ref">References</h2>
+			<ul>
+				<li>ECMAScript 5. (n.d.). Retrieved April 23, 2017, from http://speakingjs.com/es5/ch25.html</li>
+				<li>JavaScript. (2017, April 21). Retrieved April 23, 2017, from https://en.wikipedia.org/wiki/JavaScript</li>
+				<li>JavaScript basics. (n.d.). Retrieved April 23, 2017, from https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics</li>
+			</ul>
+	</article>
+	
 </div>
 
 <script src="../js/jquery.min.js"></script>

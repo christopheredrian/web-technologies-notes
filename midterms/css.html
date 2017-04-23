@@ -52,9 +52,42 @@
     <nav class="well well-sm">
         <h2 class="page-header" class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">
             Contents</h2>
-        <ul>
-            <li><a href="#internet"></a></li>
-
+                <ul>
+            <li><a href="#ht-css">CSS (Cascading Style Sheets)</a>
+                <ul>
+                    <li><a href="#ver-css">CSS Versions</a></li>
+                </ul>
+            </li>
+            <li><a href="#html-ss">HTML/XHTML Style Sheets</a>
+                <ul>
+                    <li><a href="#authorstyle">Author Syle</a></li>
+					<li><a href="#userstyle">User Style</a></li>
+					<li><a href="#useragent">User Agent Style</a></li>
+                </ul>
+            </li>
+            <li><a href="#css-dec">Declarations</a>
+			<li><a href ="#st-css">CSS Statements (At-Rules)</a></li>
+			<li><a href ="#css-ss">Simple Selectors</a>
+				<ul>
+					<li><a href="#css-ts">Type Selector</a></li>
+					<li><a href="#css-us">Universal Selector</a></li>
+					<li><a href="#css-as">Attribute Selector</a></li>
+					<li><a href="#css-cs">Class Selectorv</a></li>
+					<li><a href="#css-ids">ID Selector</a></li>
+					<li><a href="#css-ps">Pseudo Selector</a></li>
+					<li><a href="#css-com">Combinators</a></li>
+					<li><a href="#css-pe">Pseudo-elements</a></li>
+				</ul>
+			<li><a href="#css-rp">Rule of Precedence</a>
+				<ul>
+					<li><a href="#boi">By origin and importance</a></li>
+					<li><a href="#bs">By specificity</a></li>
+					<li><a href="#bo">By order</a></li>
+				</ul>
+			</li>
+			<li><a href="#css-dec">CSS Declarations</a></li>
+			<li><a href="#css-frame">CSS Frameworks</a></li>
+			<li><a href="#bott">Type Selector</a></li>
         </ul>
     </nav>
     <article>
@@ -62,29 +95,30 @@
         <p>It was developed by <a href="#Lie">Håkon Wium Lie</a> and <a href="#Bos">Bert Bos</a>. It is a language
             used to specify the presentation aspects (eg. layout and formating) of structurally marked up documents.
         </p>
-        <h3>Versions:</h3>
+        <h3 class = "css-versions" id="ver-css">Versions:</h3>
         <ul>
             <li><a href="#css1">CSS 1</a></li>
             <li><a href="#css2">CSS 2</a></li>
             <li><a href="#css3">CSS 3</a></li>
         </ul>
-        <h3>HTML/XHTML Style Sheets</h3>
+        <h3 class ="html-xhtml" id="html-ss">HTML/XHTML Style Sheets</h3>
         <ul>
-            <li><a href="#authorstyle">Author Style</a></li>
+            <li id="authorstyle">Author Style</a>
             <ul>
                 <li>External Style Sheets</li>
                 <li>Embedded Styles</li>
                 <li>Inline Styles</li>
             </ul>
-            <li><a href="#userstyle">User Style</a></li>
-            <li><a href="#useragent">User Agent Style</a></li>
+			</li>
+            <li id="userstyle">User Style</a></li>
+            <li id="useragent">User Agent Style</a></li>
         </ul>
-        <h3>Declarations</h3>
+        <h3 id="css-dec">Declarations</h3>
         <ul>
             <li>normal - styles that are defined normally</li>
             <li>important - overrides normal styles which allows more emphasis to a css value</li>
         </ul>
-        <h3>CSS Statements (At-Rules)</h3>
+        <h3 id="st-css">CSS Statements (At-Rules)</h3>
         <ul>
             <li>@charset
                 <ul>
@@ -138,19 +172,19 @@
         </ul>
         <p>*conditional group rule - may be considered to be something like property values that can be categorized
             based on common syntax.</p>
-        <h3>Simple Selector</h3>
+        <h3 id = "css-ss">Simple Selector</h3>
         <ul>
-            <li>Type Selector
+            <li id="css-ts">Type Selector
                 <ul>
                     <li>selects elements of the document by node names.</li>
                 </ul>
             </li>
-            <li>Universal Selector
+            <li id="css-us">Universal Selector
                 <ul>
                     <li>uses an asterisk (*) to refer to any type of a particular element.</li>
                 </ul>
             </li>
-            <li>Attribute Selector
+            <li id="css-as">Attribute Selector
                 <ul>
                     <li>selects elements based on attributes or its values.</li>
                     <ul>
@@ -205,51 +239,57 @@
                     </ul>
                 </ul>
             </li>
-            <li>Class Selector
+            <li id="css-cs">Class Selector
                 <ul>
                     <li>selects elements that match based on class attribute.</li>
                 </ul>
             </li>
-            <li>ID Selector
+            <li id="css-ids">ID Selector
                 <ul>
                     <li>selects elements that match based on id attribute.</li>
                 </ul>
             </li>
-            <li>Pseudo Selector
+            <li id="css-ps">Pseudo Selector
                 <ul>
-                    <li>Dynamic Pseudo Class</li>
+                    <li>Dynamic Pseudo Class
                     <ul>
-                        <li>link pseudo</li>
+                        <li>link pseudo
                         <ul>
                             <li>:link - selects hyperlink elements that have href attribute.</li>
                             <li>:visited - links already visited are selected.</li>
                         </ul>
+						</li>
                     </ul>
-                    <li>User Action Pseudo Class</li>
+					</li>
+                    <li>User Action Pseudo Class
                     <ul>
                         <li>:hover - selected as mouse hovers an element.</li>
                         <li>:active - selects elements usually links as they are activated.</li>
                         <li>:focus - select as an element is focused by keyboard.</li>
                     </ul>
-                    <li>Target Pseudo-class</li>
+					</li>
+                    <li>Target Pseudo-class
                     <ul>
                         <li>:target<sup>CSS3</sup> - used with ID and matches if #value in the current URL matches ID.
                         </li>
                     </ul>
-                    <li>Language Pseudo-class</li>
+					</li>
+                    <li>Language Pseudo-class
                     <ul>
                         <li>:lang() - elements having lang attribute or are within some other elements that may have
                             included the lang attribute are selected.
                         </li>
                     </ul>
-                    <li>UI Elements States Pseudo-class</li>
+					</li>
+                    <li>UI Elements States Pseudo-class
                     <ul>
                         <li>:enable - inputs in default state enabled at are selected.</li>
                         <li>:disabled - inputs having disabled attribute are selected.</li>
                         <li>:checked - selects checked checkboxes.</li>
                         <li>:indeterminate - selects radio buttons that are neither chosen or unchosen.</li>
                     </ul>
-                    <li>Structural Pseudo Class</li>
+					</li>
+                    <li>Structural Pseudo Class
                     <ul>
                         <li>:root<sup>CSS3</sup> - selects elements at root document.</li>
                         <li>:firstchild - selects first element within its parent.</li>
@@ -264,9 +304,10 @@
                         <li>:empty - selects elements with no text.</li>
                         <li>:not() - selects elements that do not match what is specified in the parenthesis.</li>
                     </ul>
+					</li>
                 </ul>
             </li>
-            <li>Combinators
+            <li id="css-com">Combinators
                 <ul>
                     <li>Descendant Combinators (whitespace)
                         <ul>
@@ -295,7 +336,7 @@
                     </ul>
                 </ul>
             </li>
-            <li>Pseudo-elements
+            <li id="css-pe">Pseudo-elements
                 <ul>
                     <li>::first-letter<sup>CSS3</sup>, :first-letter
                         <ul>
@@ -320,9 +361,9 @@
                 </ul>
             </li>
         </ul>
-        <h3>CSS Rule Precedence</h3>
+        <h3 class="CSS-RulePre" id="css-rp">CSS Rule Precedence</h3>
         <ul>
-            <li>By origin and importance</li>
+            <li id="boi">By origin and importance
             <ul>
                 <li>user agent important declarations</li>
                 <li>user important declarations</li>
@@ -331,7 +372,8 @@
                 <li>user normal declarations</li>
                 <li>user agent normal declarations</li>
             </ul>
-            <li>By specificity</li>
+			</li>
+            <li id="bs">By specificity
             <ul>
                 <li>inline style</li>
                 <li>number of ID selectors</li>
@@ -339,35 +381,39 @@
                 <li>number of type selectors and pseudo classes</li>
                 <li>number of type selectors and pseudo-elements</li>
             </ul>
-            <li>By order - when the CSS file is read from top to bottom, a style for a particular element or class
+			</li>
+            <li id="bo">By order - when the CSS file is read from top to bottom, a style for a particular element or class
                 overrides the style before it that applies to the same element or class.
             </li>
         </ul>
-        <h3>CSS Declarations</h3>
+        <h3 id="css-dec">CSS Declarations</h3>
         <ul>
-            <li>properties</li>
+            <li id = "prop">properties
             <ul>
                 <li>shorthand properties</li>
                 <li>vendor-specific extensions</li>
             </ul>
-            <li>values</li>
+			</li>
+            <li id=val>values
             <ul>
                 <li>keywords</li>
                 <li>numbers(integers and reals in decimal notation)</li>
-                <li>dimensions</li>
+                <li>dimensions
                 <ul>
                     <li>length, angle, duration, frequency, resolution</li>
-                    <li>length units:</li>
+                    <li>length units:
                     <ul>
                         <li>font-relative: em, ex, cn, rem</li>
                         <li>viewport-percentage: vw, vh, vmin, vmax</li>
                         <li>absolute length: cm, mm, q, in, pt, pc, px</li>
                     </ul>
+					</li>
                     <li>angle units: deg, grad, rad, turn</li>
                     <li>duration units: s, ms</li>
                     <li>frequency units: h2, kh2</li>
                     <li>resolution units: dpi, dpcm, dppx</li>
                 </ul>
+				</li>
                 <li>percentage</li>
                 <li>URLs and URIs</li>
                 <li>colors</li>
@@ -375,10 +421,11 @@
                 <li>counters</li>
                 <li>functions: calc(), attr(), counter(), counters()</li>
             </ul>
+			</li>
         </ul>
     </article>
     <article>
-        <h2>CSS Frameworks</h2>
+        <h2 class="frameworks" id="css-frame">CSS Frameworks</h2>
         <p>There are a lot of css frameworks avaiable today and one of the most prominent of them all is Twitter
             Bootstrap. In using such frameworks you don't have to do any kind of programming/coding to have a default
             look and feel for your site.</p>
@@ -417,7 +464,7 @@
                 <td>BSIT</td>
             </tr>
         </table>
-        <h4>Buttons</h4>
+        <h4 calss="buttons" id="bott">Buttons</h4>
         <p>Bootstrap has its buttons class built in</p>
         <button class="btn btn-danger">class="btn btn-danger"</button>
         <button class="btn btn-info">class="btn btn-info"</button>

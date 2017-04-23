@@ -223,6 +223,38 @@
                     }
                     isGreater(3, 2); // returns true
                                 </code></pre>
+                                <li>Objects</li>
+                                <p>There are couple of ways of creating objects, but the common way is to use an object
+                                    literal</p>
+                                <pre><code class="javascript">
+                    // The best way to understand objects is by creating an object literal
+                    var buddha = {
+                        name: 'Siddharta',
+                        sex: 'Male',
+                        hometown: 'India'
+                    }
+                    // Now we have an object assigned to the variable buddha
+                    // We can access its properties by using the dot notation
+                    console.log(buddha.name); // this prints out 'Siddharta'
+                    // or
+                    console.log(buddha["name"]);
+                    // To set another property we can either do:
+                    buddha.fullName = "Siddharta Gautama";
+                    // or
+                    buddha['fullName'] = "Siddharta Gautama"
+                    // To edit a property its going to be the same
+                    buddha.fullName = "Sidhharta Gautama - The Buddha"
+
+                    // The snippet below is commonly used to get properties of objects
+                    for (var propertyName in buddha){
+                        console.log(buddha[propertyName]);
+                    }
+
+                    // To delete a property from that object we can do:
+                    delete buddha.fullName
+
+
+                                </code></pre>
                             </ul>
                         </ul>
                     </li>

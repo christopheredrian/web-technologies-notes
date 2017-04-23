@@ -78,101 +78,148 @@
 					<li><a href="#css-com">Combinators</a></li>
 					<li><a href="#css-pe">Pseudo-elements</a></li>
 				</ul>
-			<li><a href="#css-rp">Rule of Precedence</a>
-				<ul>
-					<li><a href="#boi">By origin and importance</a></li>
-					<li><a href="#bs">By specificity</a></li>
-					<li><a href="#bo">By order</a></li>
-				</ul>
-			</li>
+			<li><a href="#css-rp">Rule of Precedence</a></li>
 			<li><a href="#css-dec">CSS Declarations</a></li>
 			<li><a href="#css-frame">CSS Frameworks</a></li>
-			<li><a href="#bott">Type Selector</a></li>
+			<li><a href="#bott">Buttons</a></li>
+			<li><a href="#css-prep">CSS Preprocessors</a></li>
         </ul>
     </nav>
     <article>
         <h2 class="page-header" id="ht-css">CSS (Cascading Style Sheets)</h2>
-        <p>It was developed by <a href="#Lie">Håkon Wium Lie</a> and <a href="#Bos">Bert Bos</a>. It is a language
-            used to specify the presentation aspects (eg. layout and formating) of structurally marked up documents.
+        <p>It was developed by Håkon Wium Lie and Bert Bos. It is a language
+            used to specify the presentation aspects (eg. layout and formating) of structurally marked up documents. 
+			It is a style sheet language used for describing the presentation of a document written in a markup language. 
+			Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML,
+			the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, 
+			or on other media.
         </p>
-        <h3 class = "css-versions" id="ver-css">Versions:</h3>
-        <ul>
-            <li><a href="#css1">CSS 1</a></li>
-            <li><a href="#css2">CSS 2</a></li>
-            <li><a href="#css3">CSS 3</a></li>
-        </ul>
+        <h3 class = "css-versions" id="ver-css">CSS Versions:</h3>
+		<table class="table table-responsive table-bordered">
+                <thead>
+                <tr>
+                    <th>Version</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>CSS1</td>
+                    <td>CSS1 is a simple style sheet mechanism that allows authors and readers to attach style (e.g. fonts, colors and spacing) to HTML documents.
+					The CSS1 language is human readable and writable, and expresses style in common desktop publishing terminology.</td>
+                </tr>
+                <tr>
+                    <td>CSS2</td>
+                    <td>This specification defines Cascading Style Sheets, level 2 (CSS2). 
+					CSS2 is a style sheet language that allows authors and users to attach style 
+					(e.g., fonts, spacing, and aural cues) to structured documents (e.g., HTML documents and XML applications). 
+					By separating the presentation style of documents from the content of documents, 
+					CSS2 simplifies Web authoring and site maintenance.
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSS3</td>
+                    <td>CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. 
+					It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, 
+					as well as new layouts like multi-columns, flexible box or grid layouts. 
+					Experimental parts are vendor-prefixed and should either be avoided in production environments, 
+					or used with extreme caution as both their syntax and semantics can change in the future.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        
         <h3 class ="html-xhtml" id="html-ss">HTML/XHTML Style Sheets</h3>
         <ul>
-            <li id="authorstyle">Author Style</a>
+            <li id="authorstyle"><strong>Author Style</strong></a>
+			<p>This refers to the maker of the website who embeds all the styles of a website in CSS files or inline into the html.</p>
             <ul>
                 <li>External Style Sheets</li>
                 <li>Embedded Styles</li>
                 <li>Inline Styles</li>
             </ul>
 			</li>
-            <li id="userstyle">User Style</a></li>
-            <li id="useragent">User Agent Style</a></li>
+            <li id="userstyle"><strong>User Style</strong></a></li>
+				<p>This refers to you or the end-user viewing a website.  You can override the author's styles by defining your own styles or CSS. 
+				Typically this is done if you need to have larger font sizes, varying colors, etc. for accessibility reasons.</p>
+            <li id="useragent"><strong>User Agent Style</strong></a></li>
+			<p>This style sheet refers to your browser such as Internet Explorer,Chrome,Firefox or any other browser. It has its own default style sheet and has the lowest priority.</p>
         </ul>
         <h3 id="css-dec">Declarations</h3>
         <ul>
-            <li>normal - styles that are defined normally</li>
-            <li>important - overrides normal styles which allows more emphasis to a css value</li>
+            <li><strong>Normal</strong></li>
+			<p> These are styles that are defined normally.  They are processed in a top down methodology. 
+			So if you had a background-color:#00ff00; 
+			followed by background-color:#000000; 
+			for the same element, the black background will have precedence.
+            <li><strong>Important</strong></li>
+			<p>This overrides normal styles which allows more emphasis to a css value. 
+			So in the same example, if the style was defined as: background-color:#00ff00 !important; 
+			background-color:#000000;, the background color of the element will be yellow even though black was defined afterwards.</p>
         </ul>
         <h3 id="st-css">CSS Statements (At-Rules)</h3>
-        <ul>
-            <li>@charset
-                <ul>
-                    <li>referes to the character set that the style sheet used.</li>
-                </ul>
-            </li>
-            <li>@import
-                <ul>
-                    <li>used when css engine includes an external style sheet.</li>
-                </ul>
-            </li>
-            <li>@namespace
-                <ul>
-                    <li>lets the css engine consider its contents to be prefixed with XML namespace.</li>
-                </ul>
-            </li>
-            <li>@document
-                <ul>
-                    <li>conditional group rule that applies contents if document that uses the style sheet meets defined
-                        conditions
-                    </li>
-                </ul>
-            </li>
-            <li>@font face
-                <ul>
-                    <li>describes external font aspect.</li>
-                </ul>
-            </li>
-            <li>@keyframes
-                <ul>
-                    <li>describes css animation sequence aspect.</li>
-                </ul>
-            </li>
-            <li>@media (CSS Conditionals Level 3)
-                <ul>
-                    <li>conditional group rule at which contents are applied only if device meets media query defined
+		<table class="table table-responsive table-bordered">
+                <thead>
+                <tr>
+                    <th>CSS Statement</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>@charset</td>
+                    <td>It referes to the character set that the style sheet used.
+                    </td>
+                </tr>
+                <tr>
+                    <td>@import</td>
+                    <td>It is used when css engine includes an external style sheet.
+                    </td>
+                </tr>
+                <tr>
+                    <td>@namespace</td>
+                    <td>lets the css engine consider its contents to be prefixed with XML namespace.
+                    </td>
+                </tr>
+                <tr>
+                    <td>@document</td>
+                    <td>This is a conditional group rule that applies contents if document that uses the style sheet meets defined
                         conditions.
-                    </li>
-                </ul>
-            </li>
-            <li>@page
-                <ul>
-                    <li>describes changes in layout aspect to be applied upon document printing.</li>
-                </ul>
-            </li>
-            <li>@supports (CSS Conditionals Level 3)
-                <ul>
-                    <li>conditional group rule that applies contents if browser meets defined conditions.</li>
-                </ul>
-            </li>
-        </ul>
+                    </td>
+                </tr>
+				<tr>
+                    <td>@fontface</td>
+                    <td>It describes external font aspect.
+                    </td>
+                </tr>
+				<tr>
+                    <td>@keyframes</td>
+                    <td>It describes css animation sequence aspect.
+                    </td>
+                </tr>
+				<tr>
+                    <td>@media (CSS Conditionals Level 3)</td>
+                    <td>This is a conditional group rule at which contents are applied only if device meets media query defined
+                        conditions.
+                    </td>
+                </tr>
+				<tr>
+                    <td>@page</td>
+                    <td>This describes changes in layout aspect to be applied upon document printing.
+                    </td>
+                </tr>
+				<tr>
+                    <td>@supports (CSS Conditionals Level 3)</td>
+                    <td>This is a conditional group rule that applies contents if browser meets defined conditions.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
         <p>*conditional group rule - may be considered to be something like property values that can be categorized
             based on common syntax.</p>
-        <h3 id = "css-ss">Simple Selector</h3>
+	<h3 id = "css-ss">Simple Selector</h3>
         <ul>
             <li id="css-ts">Type Selector
                 <ul>
@@ -361,31 +408,42 @@
                 </ul>
             </li>
         </ul>
+		<section class="row">
         <h3 class="CSS-RulePre" id="css-rp">CSS Rule Precedence</h3>
-        <ul>
-            <li id="boi">By origin and importance
-            <ul>
-                <li>user agent important declarations</li>
-                <li>user important declarations</li>
-                <li>author important declarations</li>
-                <li>author normal declarations</li>
-                <li>user normal declarations</li>
-                <li>user agent normal declarations</li>
-            </ul>
-			</li>
-            <li id="bs">By specificity
-            <ul>
-                <li>inline style</li>
-                <li>number of ID selectors</li>
-                <li>number of class selectors, attribute selectors and pseudo classes</li>
-                <li>number of type selectors and pseudo classes</li>
-                <li>number of type selectors and pseudo-elements</li>
-            </ul>
-			</li>
-            <li id="bo">By order - when the CSS file is read from top to bottom, a style for a particular element or class
-                overrides the style before it that applies to the same element or class.
-            </li>
-        </ul>
+            <ul class="nav nav-tabs">
+				 <li class="active"><a data-toggle="tab" href="#boi">By origin and importance</a></li>
+                <li><a data-toggle="tab" href="#bs">By specificity</a></li>
+                <li><a data-toggle="tab" href="#bo">By order</a></li>
+			</ul>
+			<div class ="tab-content">
+			<div id="boi"  class="tab-pane fade in active">
+			<dl>
+                <dd>user agent important declarations</dd>
+                <dd>user important declarations</dd>
+                <dd>author important declarations</dd>
+                <dd>author normal declarations</dd>
+                <dd>user normal declarations</dd>
+                <dd>user agent normal declarations</dd>
+            </dl>
+			</div>
+            <div id="bs" class="tab-pane fade">
+            <dl>
+                <dd>inline style</dd>
+                <dd>number of ID selectors</dd>
+                <dd>number of class selectors, attribute selectors and pseudo classes</dd>
+                <dd>number of type selectors and pseudo classes</dd>
+                <dd>number of type selectors and pseudo-elements</dd>
+            </dl>
+			</div>
+            <div id="bo" class="tab-pane fade">
+			<dl>
+			<dd> when the CSS file is read from top to bottom, a style for a particular element or class
+                 overrides the style before it that applies to the same element or class.</dt>
+            </dd>
+			</dl>
+			</div>
+			</div>
+		</section>
         <h3 id="css-dec">CSS Declarations</h3>
         <ul>
             <li id = "prop">properties
@@ -494,7 +552,34 @@
         <p class="text-success">class="text-success"</p>
     </article>
     <article>
-        <h2>CSS Preprocessors</h2>
+        <h2 id = "css-prep">CSS Preprocessors</h2>
+		<p>CSS is designed to be a simple language. 
+		It’s intuitive to learn CSS and write it on small websites, 
+		but on larger, more complex websites, writing CSS can become very tedious. 
+		That’s where preprocessors come in. Developers wanted more options when writing their style sheets, 
+		so they created CSS preprocessors to add programming functionality.<p>
+		<table class="table table-responsive table-bordered">
+                <thead>
+                <tr>
+                    <th>Example</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Sass</td>
+                    <td>It is the most mature, stable, and powerful professional grade CSS extension language in the world. It is also known as the indented syntax. </td>
+                </tr>
+                <tr>
+                    <td>SCSS</td>
+                    <td>It is a CSS-like syntax. It is closer to CSS than Sass. That being said, 
+					Sass maintainers have also worked to make both syntaxes closer to each other by moving ! (variable sign) 
+					and = (assignment sign) from the indented syntax to $ and : from SCSS.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
     </article>
 </div>
 

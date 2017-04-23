@@ -70,7 +70,21 @@
                 	<img class="img-thumbnail img-responsive" src="../images/html.png" alt="html">
                 <li><b>CSS</b> - language used for aesthetics and presentation of a particular website which includes customization of website colors, fonts and layouts. CSS allows website presentations to adapt to different types of devices</li>
 			<img class="img-thumbnail img-responsive" src="../images/CSS.png" alt="CSS">
-                <li><b>JavaScript</b> - used for behavioral aspects of a website which may include scripts that allow users to interact with the website.</li>
+                <li><b>JavaScript</b> - used for behavioral aspects of a website which may include scripts that allow users to interact with the website.<br>
+				example:<br>
+				<button id="example1" onclick=showExample()>click to show example</button>
+				<script>
+					function showExample() {
+						msg = document.getElementById("examplearea");
+						if (msg.childNodes.length === 0){
+							msg.innerHTML = "//this is an example\n&ltscript&gt\n  function showExample() {\n    sample = document.getElementById('examplearea');\n    if (sample.childNodes.length === 0){\n    sample.innerHTML = 'example';\n    }else{\n    sample.innerHTML = ''; \n    }\n&lt/script&gt";
+						}else{
+							msg.innerHTML = "";
+						}
+					}
+				</script>
+				<pre><code id="examplearea" class="javascript"></code></pre>
+				</li>
 			<img class="img-thumbnail img-responsive" src="../images/js.jpg" alt="js">
 		    </div>
             </ul>

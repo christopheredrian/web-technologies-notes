@@ -121,31 +121,113 @@
                 <li>Identifiers are alphanumeric, _, and $ characters</li>
                 <li>Single-line (//) or block (/**/) comments</li>
             </ul>
-            <li>Type system and variable scoping rules</li>
-            <ul>
-                <li>Dynamic (aka loose or weak) typing</li>
-                <li>Global (aka top-level) or local scopes</li>
-                <li>Data types:</li>
+            <li>Type system and variable scoping rules
                 <ul>
-                    <li>Primitive types</li>
-                    <ul>
-                        <li>Numbers (decimal, hexadecimal notation)</li>
-                        <li>Booleans (true, false)</li>
-                        <li>Strings (Single or Double quote delimited)</li>
-                        <li>Undefined and Null</li>
-                    </ul>
+                    <li>Dynamic (aka loose or weak) typing</li>
+                    <li>Global (aka top-level) or local scopes</li>
+                    <li>Data types:
+                        <ul>
+                            <li>Primitive types</li>
+                            <ul>
+                                <li>Numbers (decimal, hexadecimal notation)</li>
+                                <li>Booleans (true, false)</li>
+                                <li>Strings (Single or Double quote delimited)</li>
+                                <li>Undefined and Null</li>
+                            </ul>
 
-                    <li>Composite(object)types</li>
-                    <ul>
-                        <li>Core Javascript Object</li>
-                    </ul>
-                    <ul>
-                        <li>Object, Number, Boolean, String, Date, Math, Global, RegExp, Error</li>
-                        <li>Arrays</li>
-                        <li>Functions (Functions, Argument)</li>
-                    </ul>
+                            <li>Composite(object)types</li>
+                            <ul>
+                                <li>Core Javascript Object</li>
+                            </ul>
+                            <ul>
+                                <li>Object, Number, Boolean, String, Date, Math, Global, RegExp, Error</li>
+                                <li>Arrays</li>
+                                <pre><code class="javascript">
+                    // array creation
+                    var myArr = [];
+                    var myArr = new Array();
+                    // array methods
+                    // Appends to the end of the array can contain any object or value
+                    myArr.push('test');
+                    myArr.push({name:'chris'}); // adding objects
+                    myArr.push(function(){ console.log('Hello'); }) // even functions
+                    // Removes and returns last item of array
+                    var item = myArr.pop();
+                    // Appends as first item in array
+                    myArr.unshift('first item');
+                    // Same as pop but with the first element instead of last
+                    var firstItem = myArr.shift();
+
+                    var arr = ['one', 'two', 'three'];
+                    // Returns ['one', 'two']
+                    var sliced = arr.slice(0, 2);
+
+                    // Reversed the ordering of an array
+                    arr.reverse();
+                    // Sorts an array alphanumerically
+                    arr.sort();
+                    // This also can take a callback which will be use for sorting
+                    // This sorts the array numerically
+                    arr.sort(function(a, b){
+                        return a - b;
+                    });
+
+                    // Converts an array into a string using a delimeter
+                    arr.join(','); // returns the string "one,two,three"
+
+                    /* Iterating an array */
+                    // Array and for-each
+                    for(var index in arr){
+                        console.log(arr[index]);
+                    }
+
+                    // Or the built in forEach method
+                    arr.forEach(function(value){
+                     console.log(value);
+                    });
+
+
+                        </code></pre>
+                                <li>Functions (Functions, Argument)</li>
+                                <pre><code class="javascript">
+                    // Function declaration
+                    function sayHello(){
+                        console.log('Hello!');
+                    }
+                    // alternatively
+                    var sayHello = function(){
+                        console.log('Hello!')
+                    }
+                    // Both functions can be called by invoking the name
+                    sayHello();
+
+                    // Functions can also take arguments:
+                    function sayHello(name){
+                        console.log('Hello '  + name);
+                    }
+
+                    // invoking would be like:
+                    sayHello('Cee');
+
+                    // Using the arguments array
+                    function usingOptionalArguments(){
+                        console.log(arguments[0]);
+                        console.log(arguments[1]);
+                        console.log(arguments[2]);
+                    }
+                    usingOptionalArguments('first', 'second', 'third');
+
+                    // Function with return type
+                    function isGreater(a, b){
+                        return a > b;
+                    }
+                    isGreater(3, 2); // returns true
+                                </code></pre>
+                            </ul>
+                        </ul>
+                    </li>
                 </ul>
-            </ul>
+            </li>
         </ul>
     </article>
     <article>
@@ -256,7 +338,7 @@
             v.style.fontSize = '3em';
             v.style.backgroundColor = 'blue';
         </code></pre>
-        <h2>Adding, Removing and Reordering Nodes</h2>
+        <h3>Adding, Removing and Reordering Nodes</h3>
         <dl>
             <dt>appendChild(node)</dt>
             <dd>Add the node to the last child node of where the node was used</dd>

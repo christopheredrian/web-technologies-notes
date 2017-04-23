@@ -368,6 +368,60 @@
             p.parentNode.removeChild(p);
 
         </code></pre>
+	    
+	    	<h3>ECMAScript 5 Features</h3>
+		<ul>
+			<li>Strict mode</li>
+				<ul>
+					<li>Putting the following line first in a file or a function switches 
+					on the so-called strict mode that makes JavaScript a cleaner language 
+					by forbidding some features, performing more checks, and throwing more exceptions:
+						 <pre><code class="js">
+							'use strict';				
+						</code></pre>
+						<pre><code class="js">
+							function foo() {
+							'use strict';
+							...
+							}					
+						</code></pre>
+					</li>
+				</ul>
+			<li>Accessors (Getters and Setters)</li>
+				<ul>
+					<li>Getters and setters allow you to implement the 
+					getting and setting of a property via methods.
+					For example, the following object obj contains a getter for the property foo:</li>
+					
+					<pre><code class="js">
+						> var obj = { get foo() { return 'abc' } };
+						> obj.foo
+						'abc'				
+					</code></pre>
+				</ul>
+			<li>Syntactic Changes</li>
+				<ul>
+					<li>You can use reserved words (such as new and function) 
+					after the dot operator and as unquoted property keys in object literals:</li>
+					<pre><code class="js">
+						> var obj = { new: 'abc' };
+						> obj.new
+						'abc'				
+					</code></pre>
+				</ul>
+				<ul>
+					<li>Legal trailing commas</li>
+						<ul>
+							<li>Trailing commas in object literals and array literals are legal.</li>
+						</ul>
+				</ul>
+				<ul>
+					<li>Multiline string literals</li>
+						<ul>
+							<li>String literals can span multiple lines if you escape the end of the line via a backslash.</li>
+						</ul>
+				</ul>
+		</ul>
     </article>
 </div>
 

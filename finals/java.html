@@ -1,117 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Web Notes</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css.map">-->
-    <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/github.css">
-
 </head>
+
 <body>
-<header>
-    <nav class="container navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Web Technologies Notes</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.html">PRELIMS <span class="sr-only">(current)</span></a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">MIDTERMS
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../midterms/midterms.html">Front End Development</a></li>
-                            <li><a href="../midterms/html.html">HTML</a></li>
-                            <li><a href="../midterms/css.html">CSS</a></li>
-                            <li><a href="../midterms/javascript.html">JavaScript</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown active">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">
-                            FINALS
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../finals/java.html">Java</a></li>
-                            <li><a href="../finals/php.html">Php</a></li>
-                            <li><a href="../finals/nodejs.html">Node JS</a></li>
-                            <li><a href="../finals/security.html">Security</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../about.html">ABOUT</a></li>
-                </ul>
-
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-</header>
-<!-- div For styling -->
-<div class="container">
-    <nav class="well well-sm">
-        <h2 class="page-header" class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">
-            Contents</h2>
-        <ul>
-            <li><a href="#intro">Introduction</a>
-                <ul>
-                    <li><a href="#node-js">What is java?</a></li>
-                    <li><a href="#java">Java version history</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <!-- Installation-->
-            <li><a href="#getstrt">Getting Started</a>
-                <ul>
-                    <li><a href="#hello">The <strong>java</strong> Hello World!</a>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="#serv">Servlets</a>
-                <ul>
-                    <li><a href="#session">Session</a></li>
-                    <li><a href="#Headers">Headers</a></li>
-                    <li><a href="#Headers">Redirection</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="#jsp">JSP (Java Server Page)</a>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="#jstl">JSTL (JavaServer Pages Standard Tag Library)</a>
-                <ul>
-
-                </ul>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="#el">Expression Language</a>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="#frame">Frameworks</a>
-            </li>
-        </ul>
-    </nav>
-    </div>
-
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+	<article>
+		<h2>JSP</h2>
+		<section>
+			<h3>JSP pages</h3>
+			<ul>
+				<li>are webpages that contain both static and dynamic contents.</li>
+				<li>static contents refer to page contents that are written in html, xml, etc.</li>
+				<li>dynamic contents of the page are constructed using jsp elements.</li>
+			</ul>
+		</section>
+		<section>
+			<h3>JSP page life cycle</h3>
+			<ul>
+				<li>JSP page translation and compilation - a code for writing out data into response stream is generated from translating the static data.</li>
+				<li>Classloading - classloader loads the classfile.</li>
+				<li>Instantiation - generated servlet creates object.</li>
+				<li>Initialzation - container invokes jsp method jspInit().</li>
+				<li>Request processing - container invokes jsp method _jspService(), request and response objects are passed.</li>
+				<li>Destroy - container calls jsp method jspDestroy() to remove the servlet from JSP page.</li>
+				<li>Execution - page directives are used to control executions of various JSP pages.
+					<ul>
+						<li>Buffering - automatically buffers output written to response object upon JSP page execution.</li>
+						<li>JSP page Error Handling - if specified, exception occurences causes container to forward control to error page.</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Creating JSP page</h3>
+			<ul>
+				<li>create an html file having jsp contents enclosed in &lt% %&gt </li>
+				<li>save the file with .jsp extension</li>
+				<li>example<br>
+					<code>
+						<% out.print("hello world"); %>
+					</code>
+				</li>
+				<li>Creating Static Content - simply write the content in html, xml, etc.
+				<li>Response and Page Encoding</li>
+					<ul>
+						<li>specify response encoding using contentType attribute.<br>
+							<code><%@ page contentType="text/html; charset=UTF-8" %></code>
+						</li>
+						<li>use page directive to set page source encoding.<br>
+							<code><%@ page pageEncoding="UTF-8" %></code>
+						</li>
+					</ul>
+				</li>	
+				<li>Creating Dynamic Content
+					<ul>
+						<li>Using Implicit Objects
+							<ul>
+								<li>implicit objects are web container-created objects containing request, page, session or application-related information.</li>
+							</ul>
+						</li>
+						<li>Using Application-specific Objects
+							<ul>
+								<li>objects created in java.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<section>
+				<li>Custom Tags
+					<ul>
+						<li>custom tags refer to user-defined elements encapsulating recurring tasks specified.</li>
+						<li>written using JSP language.</li>
+						<li>syntax for custom tags<br>
+							<code>
+								&#x3C;prefix:tag attribute=&#x22;value&#x22; ... attrributeName=&#x22;value&#x22; /&#x3E;
+							</code><br>
+							<code>
+								&#x3C;prefix:tag attribute=&#x22;value&#x22; ... attributeName=&#x22;value&#x22; &#x3E; &#x3C;/prefix:tag&#x3E;
+							</code>
+							<ul>
+								<li>prefix refers to tags for the library</li>
+								<li>attribute and attributeName refers to attributes that can modify tag behavior.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Running JSP page</h3>
+			<ul>
+				<li>create an html file having jsp contents enclosed in &lt% %&gt </li>
+				<li>save the file with .jsp extension</li>
+				<li>start server</li>
+				<li>copy or move the file to a folder in the server.</li>
+				<li>check if it is working properly by visiting its URL in the server using a browser.</li>
+			</ul>
+		</section>
+	</article>
 </body>
+
 </html>

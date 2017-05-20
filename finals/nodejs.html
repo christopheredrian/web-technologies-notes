@@ -28,7 +28,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">PRELIMS <span class="sr-only">(current)</span></a></li>
+                    <li><a href="index.html">PRELIMS <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">MIDTERMS
                             <span class="caret"></span></a>
@@ -39,7 +39,7 @@
                             <li><a href="../midterms/javascript.html">JavaScript</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">
                             FINALS
                             <span class="caret"></span></a>
@@ -71,22 +71,43 @@
                 </ul>
             </li>
         </ul>
-
         <ul>
-            <li><a href="#ht-xhtml">XHTML</a>
+            <!-- Installation-->
+            <li><a href="#intro">Getting Started</a>
                 <ul>
-                    <li><a href="#ht-ver">Versions</a></li>
-                    <li><a href="#ht-doccomp">Document component of XHTML</a></li>
-                    <li><a href="#ht-elem">XHTML Elements</a></li>
-                    <li><a href="#ht-ss">XHTML/HTML Style Sheet</a></li>
-                    <ul>
-                        <li><a href="#ht-aut">Author Styles</a></li>
-                        <li><a href="#ht-user">User Style</a></li>
-                        <li><a href="#ht-usea">User Agent Style</a></li>
-                    </ul>
+                    <li><a href="#requirements">Installation Requirements</a></li>
+                    <li><a href="#npm">The <strong>npm</strong> (Node package manager)</a>
+                    <li><a href="#hello">The <strong>npm</strong> Hello World!</a>
                 </ul>
             </li>
-            <li><a href="#ht-ref">References</a></li>
+        </ul>
+        <ul>
+            <li><a href="#intro">Modules</a>
+                <ul>
+
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="#intro">The <strong>http</strong> module</a>
+                <ul>
+
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="#intro">Express - A lightweight web framework for Node</a>
+                <ul>
+
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="#intro">References</a>
+                <ul>
+
+                </ul>
+            </li>
         </ul>
     </nav>
     <article>
@@ -144,7 +165,7 @@
                     commercially without charge</p>
             </li>
 
-            <h2 id="node-uses"> Who uses Node?</h2>
+            <h3 id="node-uses"> Who uses Node?</h3>
 
             <p>Even still at it's infancy Node is now being used by companies such as:</p>
             <ul>
@@ -157,8 +178,52 @@
             </ul>
 
         </ul>
+    </article>
+    <article>
+        <h2 id="requirements">Requirements</h2>
+        <p>In order to start developing using Node we need to install the node js package. As discussed above Node is
+            cross-platform it is available on Windows, Mac and Linux. You can acquire the latest version of node
+            here:</p>
+        <h3>Windows</h3>
+        <p>Node JS - <a href="https://nodejs.org">Download</a></p>
+        <h3>Mac OS</h3>
+        <p>On mac if <code>brew</code> is installed you can execute</p>
+        <pre><code>brew install node</code></pre>
+        <h3>Linux</h3>
+        <p>On linux using apt-get:</p>
+        <pre><code>sudo apt-get install nodejs</code></pre>
+        <h3>Test</h3>
+        <p>After installation you can go to your command line and confirm the node installation:</p>
+        <pre><code>$: node -v</code></pre>
+        <p>It should print your node version</p>
+        <pre><code>v6.9.1</code></pre>
 
+        <h2 id="npm">Node Package Manager (NPM)</h2>
+        <p>After the node installation, you will notice that if you type <code>npm</code> on your command line node
+            actually installed npm. NPM is the built-in package manager for node, and with npm you can install modules
+            which
+            are available on the npm website. NPM acts like the other package managers out there such as composer,
+            rubygems, and maven but for installing Node.js packages. For instance if you want to install the package
+            <code>nodemon</code> - which is a daemon which reloads the server when changes are made - you just type</p>
+        <pre><code>
+            npm install nodemon
+        </code></pre>
+        <p>This automatically generates a <code>node_modules</code> folder which then contains the installed package.
+            NPM is also a dependency management tool which means if nodemon is dependent on other modules it
+            automatically installs those modules for us
+        </p>
 
+        <h2 id="hello">Hello from Node!</h2>
+        <p>In this section we take a look on how simple it is to construct the famous hello world using node.</p>
+        <h3>app.js</h3>
+        <pre><code>console.log("Hello World!")</code></pre>
+        <h3>To run using the command line:</h3>
+        <pre><code>
+            $: node app.js
+            Hello World!
+        </code></pre>
+        <p>In the next section we talk about how to use the http module to create the same Hello World but with a web
+            server.</p>
     </article>
 
 </div>

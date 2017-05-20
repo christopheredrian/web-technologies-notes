@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4d14c05-cb7f-4d34-ac16-07352ce189b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/general.css" afterPath="$PROJECT_DIR$/css/general.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/java.html" afterPath="$PROJECT_DIR$/finals/java.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/nodejs.html" afterPath="$PROJECT_DIR$/finals/nodejs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/php.html" afterPath="$PROJECT_DIR$/finals/php.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/security.html" afterPath="$PROJECT_DIR$/finals/security.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="nodejs.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nodejs.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finals/nodejs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -55,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="php.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="php.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finals/php.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="354">
+              <caret line="629" column="56" lean-forward="false" selection-start-line="629" selection-start-column="56" selection-end-line="629" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -68,8 +64,8 @@
       <file leaf-file-name="java.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finals/java.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2116">
-              <caret line="206" column="12" lean-forward="true" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
+            <state relative-caret-position="170">
+              <caret line="105" column="42" lean-forward="false" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -79,9 +75,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>http</find>
-      <find>img</find>
-      <find>back</find>
       <find>border</find>
       <find>overflow</find>
       <find>node</find>
@@ -109,6 +102,9 @@
       <find>sails</find>
       <find>backgrou</find>
       <find>h1</find>
+      <find>framework</find>
+      <find>frameworks</find>
+      <find>database</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h3 class=&quot;page-header&quot;</replace>
@@ -132,10 +128,10 @@
         <option value="$PROJECT_DIR$/midterms/javascript.html" />
         <option value="$PROJECT_DIR$/midterms/midterms.html" />
         <option value="$PROJECT_DIR$/finals/security.html" />
-        <option value="$PROJECT_DIR$/finals/php.html" />
         <option value="$PROJECT_DIR$/finals/java.html" />
         <option value="$PROJECT_DIR$/css/general.css" />
         <option value="$PROJECT_DIR$/finals/nodejs.html" />
+        <option value="$PROJECT_DIR$/finals/php.html" />
       </list>
     </option>
   </component>
@@ -319,12 +315,12 @@
       <workItem from="1492910261805" duration="5365000" />
       <workItem from="1495250107322" duration="2116000" />
       <workItem from="1495262503527" duration="9388000" />
-      <workItem from="1495284139455" duration="3456000" />
+      <workItem from="1495284139455" duration="4224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40836000" />
+    <option name="totallyTimeSpent" value="41604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="754" extended-state="0" />
@@ -689,22 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finals/php.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finals/java.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2116">
-          <caret line="206" column="12" lean-forward="true" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/general.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -715,8 +695,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finals/nodejs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finals/java.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="105" column="42" lean-forward="false" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finals/php.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="629" column="56" lean-forward="false" selection-start-line="629" selection-start-column="56" selection-end-line="629" selection-end-column="56" />
           <folding />
         </state>
       </provider>

@@ -63,80 +63,92 @@
         <h2 class="page-header" class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">
             Contents</h2>
         <ul>
-			<li><a href="#intro">Introduction</a></li>
-				<ul>
-					<li><a href="#whatphp">What is PHP?</a></li>
-					<li><a href="#phpdo">What can PHP do?</a></li>
-				</ul>
-			<li><a href="#start">Getting Started</a></li>
-				<ul>
-					<li><a href="#hellophp">Hello Php</a></li>
-				</ul>
-			<li><a href="#Install">Installation</a></li>
-			<li><a href="#phpVariables">Super Global Variables</a></li>
-			<li><a href="#sHandling">Session Handling</a></li>
-			<li><a href="#redirect">Redirection</a></li>
-			<li><a href="#files">Including and Requiring Files</a></li>
-			<li><a href="#sHeaders">Setting Headers</a></li>
-			<li><a href="#Db">Database Connectivity</a></li>
-			<li><a href="#frameworks">Frameworks</a></li>
-				<ul>
-					<li><a href="#laravel">Laravel</a></li>
-					<li><a href="#codeIgn">CodeIgnitier</a></li>
-					<li><a href="#symfony">Symfony</a></li>
-				</ul>
-			<li><a href="#ref">References</a></li>
-		</ul>
+            <li><a href="#intro">Introduction</a></li>
+            <ul>
+                <li><a href="#whatphp">What is PHP?</a></li>
+                <li><a href="#phpdo">What can PHP do?</a></li>
+            </ul>
+            <li><a href="#start">Getting Started</a></li>
+            <ul>
+                <li><a href="#hellophp">Hello Php</a></li>
+            </ul>
+            <li><a href="#Install">Installation</a></li>
+            <li><a href="#phpVariables">Super Global Variables</a></li>
+            <li><a href="#sHandling">Session Handling</a></li>
+            <li><a href="#redirect">Redirection</a></li>
+            <li><a href="#files">Including and Requiring Files</a></li>
+            <li><a href="#sHeaders">Setting Headers</a></li>
+            <li><a href="#Db">Database Connectivity</a></li>
+            <li><a href="#frameworks">Frameworks</a></li>
+            <ul>
+                <li><a href="#laravel">Laravel</a></li>
+                <li><a href="#codeIgn">CodeIgnitier</a></li>
+                <li><a href="#symfony">Symfony</a></li>
+            </ul>
+            <li><a href="#ref">References</a></li>
+        </ul>
     </nav>
-<article>
-	<h2 id="intro">PHP (Hypertext Preprocessor)</h2>
-	<h3 id="whatphp">What is PHP?</h3>
-		<p>
-			PHP is a widely-used open source general-purpose scripting language 
-			that is especially suited for web development and can be embedded into HTML.
-			It is a server-side scripting language designed primarily for web development but also used as a general-purpose programming language. 
-			Originally created by Rasmus Lerdorf in 1994, the PHP reference implementation is now produced by The PHP Development Team. 
-			PHP originally stood for Personal Home Page, but it now stands for the recursive acronym PHP: Hypertext Preprocessor.
-		</p>
-		<p>
-			PHP runs on different operating systems, like Windows, UNIX, Linux and supports different databases like MySQL, Microsoft Access, and Oracle.
-			PHP can not only collect form data, but it can also create, read, write, delete, and close files on the server.
-		</p>
-	<h3 id="phpdo">What can PHP do?</h3>
-		<p>
-			There are three main areas where PHP scripts are used.
-		</p>
-		 <table class="table table-responsive table-bordered">
-			<tbody>
-				<tr>
-					<td>Server-side scripting</td>
-					<td>This is the most traditional and main target field for PHP. You need three things to make this work: the PHP parser (CGI or server module), 
-						a web server and a web browser. You need to run the web server, with a connected PHP installation.
-						You can access the PHP program output with a web browser, viewing the PHP page through the server. 
-						All these can run on your home machine if you are just experimenting with PHP programming.</td>
-				</tr>
-				<tr>
-					<td>Command line scripting</td>
-					<td>You can make a PHP script to run it without any server or browser.
-						You only need the PHP parser to use it this way. 
-						This type of usage is ideal for scripts regularly executed using cron (on *nix or Linux) or Task Scheduler (on Windows). 
-						These scripts can also be used for simple text processing tasks.</td>
-				</tr>
-				<tr>
-					<td>Writing desktop applications</td>
-					<td>PHP is probably not the very best language to create a desktop application with a graphical user interface,
-						but if you know PHP very well, and would like to use some advanced PHP features in your client-side applications you can also use PHP-GTK to write such programs</td>
-				</tr>
-			</tbody>
+    <article>
+        <h2 id="intro">PHP (Hypertext Preprocessor)</h2>
+        <h3 id="whatphp">What is PHP?</h3>
+        <p>
+            PHP is a widely-used open source general-purpose scripting language
+            that is especially suited for web development and can be embedded into HTML.
+            It is a server-side scripting language designed primarily for web development but also used as a
+            general-purpose programming language.
+            Originally created by Rasmus Lerdorf in 1994, the PHP reference implementation is now produced by The PHP
+            Development Team.
+            PHP originally stood for Personal Home Page, but it now stands for the recursive acronym PHP: Hypertext
+            Preprocessor.
+        </p>
+        <p>
+            PHP runs on different operating systems, like Windows, UNIX, Linux and supports different databases like
+            MySQL, Microsoft Access, and Oracle.
+            PHP can not only collect form data, but it can also create, read, write, delete, and close files on the
+            server.
+        </p>
+        <h3 id="phpdo">What can PHP do?</h3>
+        <p>
+            There are three main areas where PHP scripts are used.
+        </p>
+        <table class="table table-responsive table-bordered">
+            <tbody>
+            <tr>
+                <td>Server-side scripting</td>
+                <td>This is the most traditional and main target field for PHP. You need three things to make this work:
+                    the PHP parser (CGI or server module),
+                    a web server and a web browser. You need to run the web server, with a connected PHP installation.
+                    You can access the PHP program output with a web browser, viewing the PHP page through the server.
+                    All these can run on your home machine if you are just experimenting with PHP programming.
+                </td>
+            </tr>
+            <tr>
+                <td>Command line scripting</td>
+                <td>You can make a PHP script to run it without any server or browser.
+                    You only need the PHP parser to use it this way.
+                    This type of usage is ideal for scripts regularly executed using cron (on *nix or Linux) or Task
+                    Scheduler (on Windows).
+                    These scripts can also be used for simple text processing tasks.
+                </td>
+            </tr>
+            <tr>
+                <td>Writing desktop applications</td>
+                <td>PHP is probably not the very best language to create a desktop application with a graphical user
+                    interface,
+                    but if you know PHP very well, and would like to use some advanced PHP features in your client-side
+                    applications you can also use PHP-GTK to write such programs
+                </td>
+            </tr>
+            </tbody>
         </table>
-</article>
-<article>
-	<h2 id="start">Getting Started with PHP</h2>
-	<h3 id="hellophp">Hello Php</h3>
-		<p>
-			Introductory Sample:
-		</p>
-		<pre><code class="php">
+    </article>
+    <article>
+        <h2 id="start">Getting Started with PHP</h2>
+        <h3 id="hellophp">Hello Php</h3>
+        <p>
+            Introductory Sample:
+        </p>
+        <pre><code class="php">
 		&#x3C;!DOCTYPE HTML&#x3E;
 &#x9;&#x9;&#x9;&#x3C;html&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;head&#x3E;
@@ -151,22 +163,24 @@
 &#x9;&#x9;&#x9;&#x9;&#x3C;/body&#x3E;
 &#x9;&#x9;&#x9;&#x3C;/html&#x3E;
 		</code></pre>
-		<p>Instead of lots of commands to output HTML (as seen in C or Perl), 
-		PHP pages contain HTML with embedded code that does "something" (in this case, output "Hi, I'm a PHP script!").
-		</p>
-</article>
-<article>
-	<h2 id ="Install">Installation</h2>
-</article>
-<article>
-	<h2 id="phpVariables">Super Global Variables</h2>
-	<ul>
-		<li>$GLOBALS
-		<p>This is a PHP super global variable which is used to access global variables from anywhere in the PHP script (also from within functions or methods).</p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+        <p>Instead of lots of commands to output HTML (as seen in C or Perl),
+            PHP pages contain HTML with embedded code that does "something" (in this case, output "Hi, I'm a PHP
+            script!").
+        </p>
+    </article>
+    <article>
+        <h2 id="Install">Installation</h2>
+    </article>
+    <article>
+        <h2 id="phpVariables">Super Global Variables</h2>
+        <ul>
+            <li>$GLOBALS
+                <p>This is a PHP super global variable which is used to access global variables from anywhere in the PHP
+                    script (also from within functions or methods).</p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;?php 
 	$x = 75; 
 	$y = 25;
@@ -179,13 +193,15 @@
 	echo $z; 
 	?&#x3E;
 		</code></pre>
-		</li>
-		<li>$_SERVER
-		<p>This is a PHP super global variable which holds information about headers, paths, and script locations.<p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+            </li>
+            <li>$_SERVER
+                <p>This is a PHP super global variable which holds information about headers, paths, and script
+                    locations.
+                <p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;?php 
 	echo $_SERVER[&#x27;PHP_SELF&#x27;];
 	echo &#x22;&#x3C;br&#x3E;&#x22;;
@@ -200,13 +216,13 @@
 	echo $_SERVER[&#x27;SCRIPT_NAME&#x27;];
 	?&#x3E;
 		</code></pre>
-		</li>
-		<li>$_GET
-		<p>This can also be used to collect form data after submitting an HTML form with method="get".</p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+            </li>
+            <li>$_GET
+                <p>This can also be used to collect form data after submitting an HTML form with method="get".</p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 &#x9;&#x3C;html&#x3E;
 &#x9;&#x3C;body&#x3E;
 
@@ -215,13 +231,14 @@
 &#x9;&#x3C;/body&#x3E;
 &#x9;&#x3C;/html&#x3E;
 		</code></pre>
-		</li>
-		<li>$_POST
-		<p>This is widely used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.</p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+            </li>
+            <li>$_POST
+                <p>This is widely used to collect form data after submitting an HTML form with method="post". $_POST is
+                    also widely used to pass variables.</p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;html&#x3E;
 	&#x3C;body&#x3E;
 
@@ -245,13 +262,13 @@
 	&#x3C;/body&#x3E;
 	&#x3C;/html&#x3E;
 		</code></pre>
-		</li>
-		<li>$_REQUEST
-		<p>This is used to collect data after submitting an HTML form</p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+            </li>
+            <li>$_REQUEST
+                <p>This is used to collect data after submitting an HTML form</p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;html&#x3E;
 	&#x3C;body&#x3E;
 
@@ -275,15 +292,15 @@
 	&#x3C;/body&#x3E;
 	&#x3C;/html&#x3E;
 		</code></pre>
-		</li>
-		<li>
-		$_FILES
-		<p>An associative array of items uploaded to the current script via the HTTP POST method. 
-			The structure of this array is outlined in the POST method uploads section.</p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+            </li>
+            <li>
+                $_FILES
+                <p>An associative array of items uploaded to the current script via the HTTP POST method.
+                    The structure of this array is outlined in the POST method uploads section.</p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;?php
 	$target_dir = &#x22;uploads/&#x22;;
 	$target_file = $target_dir . basename($_FILES[&#x22;fileToUpload&#x22;][&#x22;name&#x22;]);
@@ -302,15 +319,17 @@
 	}
 	?&#x3E;
 		</code></pre>
-		</li>
-		<li>
-		$_COOKIE
-		<p>PHP transparently supports HTTP cookies. 
-			Cookies are a mechanism for storing data in the remote browser and thus tracking or identifying return users. <p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+            </li>
+            <li>
+                $_COOKIE
+                <p>PHP transparently supports HTTP cookies.
+                    Cookies are a mechanism for storing data in the remote browser and thus tracking or identifying
+                    return users.
+                <p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;?php
 	$cookie_name = &#x22;user&#x22;;
 	$cookie_value = &#x22;Alex Porter&#x22;;
@@ -331,16 +350,17 @@
 	&#x3C;/body&#x3E;
 	&#x3C;/html&#x3E;
 		</code></pre>
-		</li>
-		<li>
-		$_SESSION
-		<p>Sessions are a simple way to store data for individual users against a unique session ID. 
-			This can be used to persist state information between page requests. 
-			Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve existing session data.</p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+            </li>
+            <li>
+                $_SESSION
+                <p>Sessions are a simple way to store data for individual users against a unique session ID.
+                    This can be used to persist state information between page requests.
+                    Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve
+                    existing session data.</p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;?php
 	// Start the session
 	session_start();
@@ -359,33 +379,39 @@
 	&#x3C;/body&#x3E;
 	&#x3C;/html&#x3E;
 		</code></pre>
-		</li>
-		<li>
-		$_ENV
-		<p>These variables are imported into PHP's global namespace from the environment under which the PHP parser is running.
-			Many are provided by the shell under which PHP is running and different systems are likely running different kinds of shells, 
-			a definitive list is impossible.</p>
-		<p>
-			Sample Code:
-		</p>
-		<pre><code class="php">
+            </li>
+            <li>
+                $_ENV
+                <p>These variables are imported into PHP's global namespace from the environment under which the PHP
+                    parser is running.
+                    Many are provided by the shell under which PHP is running and different systems are likely running
+                    different kinds of shells,
+                    a definitive list is impossible.</p>
+                <p>
+                    Sample Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;?php
 	echo &#x27;My username is &#x27; .$_ENV[&#x22;USER&#x22;] . &#x27;!&#x27;;
 	?&#x3E;
 		</code></pre>
-		</li>
-	</ul>
-</article>
-<article>
-	<h2 id="sHandling">Session Handling in PHP</h2>
-		<p>To demontrate the Session Handling in Php here is a simple Log in(login.php) and profile(profile.php) system.</p>
-		<p>To access profile.php, user must log in first and log-in name  will be used until log out or browser close (session terminate when browser closed).</p>
-		<p>To handle session, you must first start it and store some value to any session variable. You can create any amount of session variable you wish. 
-			To validate whether Session is active or not, we use isset() function and finally to destroy it we use unset() function.</p>
-		<ul>
-			<li>Creating the login.php
-			<p>Code:</p>
-			<pre><code class="php">
+            </li>
+        </ul>
+    </article>
+    <article>
+        <h2 id="sHandling">Session Handling in PHP</h2>
+        <p>To demontrate the Session Handling in Php here is a simple Log in(login.php) and profile(profile.php)
+            system.</p>
+        <p>To access profile.php, user must log in first and log-in name will be used until log out or browser close
+            (session terminate when browser closed).</p>
+        <p>To handle session, you must first start it and store some value to any session variable. You can create any
+            amount of session variable you wish.
+            To validate whether Session is active or not, we use isset() function and finally to destroy it we use
+            unset() function.</p>
+        <ul>
+            <li>Creating the login.php
+                <p>Code:</p>
+                <pre><code class="php">
 	&#x3C;?php
 	if(isset($_POST[&#x27;user_name&#x27;]))
 	{
@@ -407,12 +433,12 @@
 		&#x3C;/body&#x3E;
 	&#x3C;/html&#x3E;
 			</code></pre>
-			</li>
-			<li>After submitting the form, we store the name of user in session and in next page we use the same name.
-				<p>
-				Code:
-				</p>
-			<pre><code class="php">
+            </li>
+            <li>After submitting the form, we store the name of user in session and in next page we use the same name.
+                <p>
+                    Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;?php
 		session_start();
 		if(!isset($_SESSION[&#x27;name&#x27;]))
@@ -429,16 +455,17 @@
 			&#x3C;h3&#x3E;&#x3C;a href=&#x22;logout.php&#x22;&#x3E;Click here to log out&#x3C;/a&#x3E;&#x3C;/h3&#x3E;
 	&#x3C;/html&#x3E;
 			</code></pre>
-			<p>
-			In this code, first we are checking whether the SESSION is set or not. 
-			If not then we will redirect the user to main page, else we will store the name of user into variable and displaying it in HTML code.
-			</p>
-			</li>
-			<li>Lastly, we let user log out from system.
-			<p>
-			Code:
-			</p>
-			<pre><code class="php">
+                <p>
+                    In this code, first we are checking whether the SESSION is set or not.
+                    If not then we will redirect the user to main page, else we will store the name of user into
+                    variable and displaying it in HTML code.
+                </p>
+            </li>
+            <li>Lastly, we let user log out from system.
+                <p>
+                    Code:
+                </p>
+                <pre><code class="php">
 	&#x3C;?php
 		if(isset($_SESSION[&#x27;name&#x27;]))
 		{
@@ -447,13 +474,13 @@
 		echo &#x27;&#x3C;h1&#x3E;You have been successfully logout&#x3C;/h1&#x3E;&#x27;;
 	?&#x3E;
 			</code></pre>
-			</li>
-		</ul>
-</article>
-<article>
-	<h2 id="redirect">Redirection in Php</h2>
-		<h4>PHP Code Syntax for Redirection: </h4>
-			<pre><code class="php">
+            </li>
+        </ul>
+    </article>
+    <article>
+        <h2 id="redirect">Redirection in Php</h2>
+        <h4>PHP Code Syntax for Redirection: </h4>
+        <pre><code class="php">
 		&#x3C;?php
 		/* Redirect browser */
 		header(&#x22;Location: http://theos.in/&#x22;);
@@ -462,8 +489,8 @@
 		exit;
 		?&#x3E;
 			</code></pre>
-		<h4>PHP Redirect with HTTP Status Code:</h4>
-		<pre><code class="php">
+        <h4>PHP Redirect with HTTP Status Code:</h4>
+        <pre><code class="php">
 function movePage($num,$url){
 	static $http = array (
        100 => "HTTP/1.1 100 Continue",
@@ -512,14 +539,16 @@ function movePage($num,$url){
 }
 			</code></pre>
 
-</article>
-	<article>
-    <h2>Including and Requiring Files</h2>
-    
-    <h3>Include</h3>
-    <p>The include (or require) statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement. Including files is very useful when you want to include the same PHP, HTML, or text on multiple pages of a website.</p>
-    
-    <pre><code class="php">
+    </article>
+    <article>
+        <h2>Including and Requiring Files</h2>
+
+        <h3>Include</h3>
+        <p>The include (or require) statement takes all the text/code/markup that exists in the specified file and
+            copies it into the file that uses the include statement. Including files is very useful when you want to
+            include the same PHP, HTML, or text on multiple pages of a website.</p>
+
+        <pre><code class="php">
     &#x3C;html&#x3E;
         &#x3C;body&#x3E;
             &#x3C;div class="menu"&#x3E;
@@ -529,9 +558,9 @@ function movePage($num,$url){
         &#x3C;/body&#x3E;
     &#x3C;/html&#x3E;
     </code></pre>
-    
-    <h3>Require</h3>
-    <pre><code class="php">
+
+        <h3>Require</h3>
+        <pre><code class="php">
     &#x3C;html&#x3E;
         &#x3C;body&#x3E;
             &#x3C;h1&#x3E;Welcome to my home page!&#x3C;/h1&#x3E;
@@ -540,36 +569,98 @@ function movePage($num,$url){
             ?&#x3E;
         &#x3C;/body&#x3E;
     &#x3C;/html&#x3E;
-    </code></pre>    
-</article>
+    </code></pre>
+    </article>
+    <article>
+        <h2 id="Db">Database Connectivity</h2>
+        <p>In Php database conectivity is fairly easy and straight forward. As compared to other programming language
+            such as Java, the lines of code of the database connectivity in Php is fairly shorter. There are two ways to
+            connect in a database either use the database function-specific access or use the PDO (PHP Data Objects)
+            which is database agnostic. I'll illustrate using PDO since it is database agnostic - meaning it can be use
+            in any database</p>
+        <h3>Database Connection via PDO</h3>
+        <pre><code>
+    &#x3C;?php
+    $servername = &#x22;localhost&#x22;;
+    $username = &#x22;root&#x22;;
+    $password = &#x22;&#x22;;
+    $dbname = &#x22;webtek-database-finals&#x22;;
 
-<article>
-	<h2 id="frameworks">Frameworks</h2>
-		 <table class="table table-responsive table-bordered">
-	    <tbody>
+    try {
+        // Instatstiate connection
+        $conn = new PDO(&#x22;mysql:host=$servername;dbname=$dbname&#x22;, $username, $password);
+        // set the PDO error mode to exception
+        $conn-&#x3E;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        // Bind the parameters
+        $stmt = $conn-&#x3E;prepare(&#x22;INSERT INTO registration (firstname, lastname, username)
+        VALUES (:firstname, :lastname, :username)&#x22;);
+        $stmt-&#x3E;bindParam(&#x27;:firstname&#x27;, $firstname);
+        $stmt-&#x3E;bindParam(&#x27;:lastname&#x27;, $lastname);
+        $stmt-&#x3E;bindParam(&#x27;:username&#x27;, username);
+
+        // insert a row
+        $firstname = &#x22;Chris&#x22;;
+        $lastname = &#x22;Espiritu&#x22;;
+        $username = &#x22;cee&#x22;;
+        $stmt-&#x3E;execute();
+
+        // insert another row
+        $firstname = &#x22;Maureen&#x22;;
+        $lastname = &#x22;Calpito&#x22;;
+        $username = &#x22;mcalpito&#x22;;
+        $stmt-&#x3E;execute();
+
+        // insert another row
+        $firstname = &#x22;Chris&#x22;;
+        $lastname = &#x22;Santos&#x22;;
+        $username = &#x22;crissantos&#x22;;
+        $stmt-&#x3E;execute();
+
+        echo &#x22;New records created successfully&#x22;;
+        }
+    catch(PDOException $e)
+    {
+    echo &#x22;Error: &#x22; . $e-&#x3E;getMessage();
+    }
+    $conn = null;
+    ?&#x3E;
+        </code></pre>
+        <p>There are many ways to connect to any database in Php, arguably the best way is to use PDO since it does
+            not depend on vendor-specific implementation</p>
+    </article>
+    <article>
+        <h2 id="frameworks">Frameworks</h2>
+        <table class="table table-responsive table-bordered">
+            <tbody>
             <tr id="laravel">
                 <td>Laravel</td>
-                <td>Laravel is a free, open-source PHP web framework intended for the development of web applications following the model–view–controller (MVC) 
-					architectural pattern. Some of the features of Laravel are a modular packaging system with a dedicated dependency manager, 
-					different ways for accessing relational databases, utilities that aid in application deployment and maintenance, 
-					and its orientation toward syntactic sugar.
-            </td>
+                <td>Laravel is a free, open-source PHP web framework intended for the development of web applications
+                    following the model–view–controller (MVC)
+                    architectural pattern. Some of the features of Laravel are a modular packaging system with a
+                    dedicated dependency manager,
+                    different ways for accessing relational databases, utilities that aid in application deployment and
+                    maintenance,
+                    and its orientation toward syntactic sugar.
+                </td>
             <tr id="codeIgn">
                 <td>CodeIgniter</td>
-                <td>CodeIgniter is an open-source software rapid development web framework, for use in building dynamic web sites with PHP. 
-					It is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to
-					create full-featured web applications.
+                <td>CodeIgniter is an open-source software rapid development web framework, for use in building dynamic
+                    web sites with PHP.
+                    It is a powerful PHP framework with a very small footprint, built for developers who need a simple
+                    and elegant toolkit to
+                    create full-featured web applications.
                 </td>
             </tr>
             <tr id="symfony">
                 <td>Symfony</td>
-                <td>Symfony is a PHP web application framework and a set of reusable PHP components/libraries. 
-				Symfony is an internationally recognized, stable development environment. 
+                <td>Symfony is a PHP web application framework and a set of reusable PHP components/libraries.
+                    Symfony is an internationally recognized, stable development environment.
                 </td>
             </tr>
             </tbody>
         </table>
-</article>
+    </article>
 </div>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>

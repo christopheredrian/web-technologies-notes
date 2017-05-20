@@ -157,7 +157,35 @@
 </article>
 <article>
 	<h2 id ="Install">Installation</h2>
-</article>
+    <ul>
+        <li>Download the latest PHP 5 ZIP package from www.php.net/downloads.php</li>
+        <li>Extract the file: PHP can be installed anywhere on your system, but you will need to change the paths referenced in the following steps</li>
+        <li>Configure php.ini: Copy C:php php.ini-recommended to C:php php.ini. There are several lines you will need to change in a text editor.
+            <ul>Define the extension directory: extension_dir = "C:phpext"
+                    <li>extension=php_curl.dll</li>
+                    <li>extension=php_gd2.dll</li>
+                    <li>extension=php_mbstring.dll</li>
+                   <li>extension=php_mysql.dll</li>
+                    <li>extension=php_mysqli.dll</li>
+                    <li>extension=php_pdo.dll</li>
+                    <li>extension=php_pdo_mysql.dll</li>
+                    <li>extension=php_xmlrpc.dll</li>
+            </ul>
+        </li>
+        <li>Add C:php to the path environment variable</li>
+        <li>Configure PHP as an Apache module</li>
+            <ul>Add index.php as a default file name: DirectoryIndex index.php index.html
+          
+            At the bottom of the file, add the following lines
+                <li> LoadModule php5_module "c:/php/php5apache2_2.dll"</li>
+                <li> AddType application/x-httpd-php .php</li>
+                <li>PHPIniDir "C:/php"</li>
+           
+            </ul>
+        <li> Save the configuration file and test it from the command line (Start > Run > cmd)</li>
+            
+    </ul>
+</article> 
 <article>
 	<h2 id="phpVariables">Super Global Variables</h2>
 	<ul>

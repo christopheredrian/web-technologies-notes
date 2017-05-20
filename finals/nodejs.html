@@ -82,9 +82,10 @@
             </li>
         </ul>
         <ul>
-            <li><a href="#intro">Modules</a>
+            <li><a href="#modules">Modules</a>
                 <ul>
-
+                    <li><a href="#mod-incl">Including modules</a></li>
+                    <li><a href="#mod-built">Node Built-ins</a></li>
                 </ul>
             </li>
         </ul>
@@ -224,6 +225,74 @@
         </code></pre>
         <p>In the next section we talk about how to use the http module to create the same Hello World but with a web
             server.</p>
+    </article>
+    <article>
+        <h2 id="modules">Modules</h2>
+        <p>The Node core API is a small fish in comparison to the more mature programming languages out there such as
+            Java, Php, Ruby and .Net, but here comes modules for the resuce. A module in node is simply a fancy way of
+            saying libraries
+            which just contains a set of functions or objects that you can include in your application. The beauty of
+            this is that there are modules for almost anything that you want to do in Node these days, because of Node's
+            openness. There are the built-in modules, modules created by the ecosystem and lastly modules that can
+            be created by us - the developers.</p>
+        <h2 id="mod-incl">Including modules</h2>
+        <p>We are accustomed using Java in our university and we do inclusion of files using the <code>import</code>
+            statement.
+            In node there is this equivalent function called <code>require</code>, which is used to "require" other
+            modules or files</p>
+        <h3>Including built-in or installed modules via npm</h3>
+        <pre><code class="js">
+    // This includes the file system module
+    var fs = require('fs')
+    // requiring the express module
+    var express = require('express');
+        </code></pre>
+        <h2 id="mod-built">Node.js Built-in modules</h2>
+        <p>There are a lot of built-in modules in node below are the most common one's. The full list can be viewed <a
+                href="https://nodejs.org/en/docs/">here</a></p>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>assert</th>
+                <td>Module for asserting tests</td>
+
+            </tr>
+            <tr>
+                <th>crypto</th>
+                <td>Module for handling OpenSSL encryption</td>
+            </tr>
+            <tr>
+                <th>fs</th>
+                <td>File system - reading and writing files</td>
+            </tr>
+            <tr>
+                <th>http</th>
+                <td>Module for creating a HTTP server</td>
+            </tr>
+            <tr>
+                <th>https</th>
+                <td>Module for creating a HTTPS server</td>
+            </tr>
+            <tr>
+                <th>net</th>
+                <td>Module for creating network servers and clients</td>
+            </tr>
+            <tr>
+                <th>querystring</th>
+                <td>Module for handling URL query strings</td>
+            </tr>
+            <tr>
+                <th>url</th>
+                <td>Module for parsing URL a string</td>
+            </tr>
+            <tr>
+                <th>util</th>
+                <td>Utility functions</td>
+            </tr>
+            <tr>
+                <th>zlib</th>
+                <td>Module for compressing/decompressing files</td>
+            </tr>
+        </table>
     </article>
 
 </div>

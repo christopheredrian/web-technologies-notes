@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4d14c05-cb7f-4d34-ac16-07352ce189b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/nodejs.html" afterPath="$PROJECT_DIR$/finals/nodejs.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,8 +45,8 @@
       <file leaf-file-name="nodejs.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finals/nodejs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="325">
+              <caret line="87" column="68" lean-forward="false" selection-start-line="87" selection-start-column="68" selection-end-line="87" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -57,7 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>brand</find>
       <find>class</find>
       <find>method-ca</find>
       <find>li</find>
@@ -87,6 +85,7 @@
       <find>class=&quot;css</find>
       <find>Contents</find>
       <find>h2</find>
+      <find>gett</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h3 class=&quot;page-header&quot;</replace>
@@ -279,15 +278,15 @@
       <workItem from="1492824353226" duration="4228000" />
       <workItem from="1492910261805" duration="5365000" />
       <workItem from="1495250107322" duration="2116000" />
-      <workItem from="1495262503527" duration="1409000" />
+      <workItem from="1495262503527" duration="3224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29401000" />
+    <option name="totallyTimeSpent" value="31216000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17410715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -696,8 +695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finals/nodejs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state relative-caret-position="325">
+          <caret line="87" column="68" lean-forward="false" selection-start-line="87" selection-start-column="68" selection-end-line="87" selection-end-column="68" />
           <folding />
         </state>
       </provider>

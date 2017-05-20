@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4d14c05-cb7f-4d34-ac16-07352ce189b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/java.html" afterPath="$PROJECT_DIR$/finals/java.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/php.html" afterPath="$PROJECT_DIR$/finals/php.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/security.html" afterPath="$PROJECT_DIR$/finals/security.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,21 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="php.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="php.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finals/php.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-425">
-              <caret line="30" column="94" lean-forward="false" selection-start-line="30" selection-start-column="94" selection-end-line="30" selection-end-column="94" />
+            <state relative-caret-position="544">
+              <caret line="746" column="0" lean-forward="false" selection-start-line="746" selection-start-column="0" selection-end-line="746" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="java.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="java.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finals/java.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="378" column="47" lean-forward="false" selection-start-line="378" selection-start-column="47" selection-end-line="378" selection-end-column="47" />
+            <state relative-caret-position="3141">
+              <caret line="378" column="47" lean-forward="true" selection-start-line="378" selection-start-column="47" selection-end-line="378" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -133,8 +131,8 @@
         <option value="$PROJECT_DIR$/css/general.css" />
         <option value="$PROJECT_DIR$/finals/nodejs.html" />
         <option value="$PROJECT_DIR$/finals/security.html" />
-        <option value="$PROJECT_DIR$/finals/php.html" />
         <option value="$PROJECT_DIR$/finals/java.html" />
+        <option value="$PROJECT_DIR$/finals/php.html" />
       </list>
     </option>
   </component>
@@ -318,12 +316,12 @@
       <workItem from="1492910261805" duration="5365000" />
       <workItem from="1495250107322" duration="2116000" />
       <workItem from="1495262503527" duration="9388000" />
-      <workItem from="1495284139455" duration="5323000" />
+      <workItem from="1495284139455" duration="5438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42703000" />
+    <option name="totallyTimeSpent" value="42818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="754" extended-state="0" />
@@ -706,18 +704,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finals/php.html">
+    <entry file="file://$PROJECT_DIR$/finals/java.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="30" column="94" lean-forward="false" selection-start-line="30" selection-start-column="94" selection-end-line="30" selection-end-column="94" />
+        <state relative-caret-position="3141">
+          <caret line="378" column="47" lean-forward="true" selection-start-line="378" selection-start-column="47" selection-end-line="378" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finals/java.html">
+    <entry file="file://$PROJECT_DIR$/finals/php.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="378" column="47" lean-forward="false" selection-start-line="378" selection-start-column="47" selection-end-line="378" selection-end-column="47" />
+        <state relative-caret-position="544">
+          <caret line="746" column="0" lean-forward="false" selection-start-line="746" selection-start-column="0" selection-end-line="746" selection-end-column="0" />
           <folding />
         </state>
       </provider>

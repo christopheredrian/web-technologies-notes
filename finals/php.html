@@ -513,6 +513,36 @@ function movePage($num,$url){
 			</code></pre>
 
 </article>
+	<article>
+    <h2>Including and Requiring Files</h2>
+    
+    <h3>Include</h3>
+    <p>The include (or require) statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement. Including files is very useful when you want to include the same PHP, HTML, or text on multiple pages of a website.</p>
+    
+    <pre><code class="php">
+    &#x3C;html&#x3E;
+        &#x3C;body&#x3E;
+            &#x3C;div class="menu"&#x3E;
+            &#x3C;?php include 'menu.php';?&#x3E;
+            &#x3C;/div&#x3E;
+                &#x3C;h1&#x3E;Welcome to my home page!&#x3C;/h1&#x3E;
+        &#x3C;/body&#x3E;
+    &#x3C;/html&#x3E;
+    </code></pre>
+    
+    <h3>Require</h3>
+    <pre><code class="php">
+    &#x3C;html&#x3E;
+        &#x3C;body&#x3E;
+            &#x3C;h1&#x3E;Welcome to my home page!&#x3C;/h1&#x3E;
+            &#x3C;?php require 'noFileExists.php';
+            echo "I have a $color $car.";
+            ?&#x3E;
+        &#x3C;/body&#x3E;
+    &#x3C;/html&#x3E;
+    </code></pre>    
+</article>
+
 <article>
 	<h2 id="frameworks">Frameworks</h2>
 		 <table class="table table-responsive table-bordered">

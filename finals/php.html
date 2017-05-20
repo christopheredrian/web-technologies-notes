@@ -137,7 +137,7 @@
 			Introductory Sample:
 		</p>
 		<pre><code class="php">
-			&#x3C;!DOCTYPE HTML&#x3E;
+		&#x3C;!DOCTYPE HTML&#x3E;
 &#x9;&#x9;&#x9;&#x3C;html&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x3C;head&#x3E;
 &#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;title&#x3E;Example&#x3C;/title&#x3E;
@@ -214,6 +214,164 @@
 
 	&#x3C;/body&#x3E;
 	&#x3C;/html&#x3E;
+		</code></pre>
+		</li>
+		<li>$_POST
+		<p>This is widely used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.</p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;html&#x3E;
+	&#x3C;body&#x3E;
+
+	&#x3C;form method=&#x22;post&#x22; action=&#x22;&#x3C;?php echo $_SERVER[&#x27;PHP_SELF&#x27;];?&#x3E;&#x22;&#x3E;
+	Name: &#x3C;input type=&#x22;text&#x22; name=&#x22;fname&#x22;&#x3E;
+	&#x3C;input type=&#x22;submit&#x22;&#x3E;
+	&#x3C;/form&#x3E;
+
+	&#x3C;?php
+	if ($_SERVER[&#x22;REQUEST_METHOD&#x22;] == &#x22;POST&#x22;) {
+		// collect value of input field
+		$name = $_POST[&#x27;fname&#x27;];
+		if (empty($name)) {
+			echo &#x22;Name is empty&#x22;;
+		} else {
+			echo $name;
+		}
+	}
+	?&#x3E;
+
+	&#x3C;/body&#x3E;
+	&#x3C;/html&#x3E;
+		</code></pre>
+		</li>
+		<li>$_REQUEST
+		<p>This is used to collect data after submitting an HTML form</p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;html&#x3E;
+	&#x3C;body&#x3E;
+
+	&#x3C;form method=&#x22;post&#x22; action=&#x22;&#x3C;?php echo $_SERVER[&#x27;PHP_SELF&#x27;];?&#x3E;&#x22;&#x3E;
+	Name: &#x3C;input type=&#x22;text&#x22; name=&#x22;fname&#x22;&#x3E;
+	&#x3C;input type=&#x22;submit&#x22;&#x3E;
+	&#x3C;/form&#x3E;
+
+	&#x3C;?php
+	if ($_SERVER[&#x22;REQUEST_METHOD&#x22;] == &#x22;POST&#x22;) {
+		// collect value of input field
+		$name = $_REQUEST[&#x27;fname&#x27;];
+		if (empty($name)) {
+			echo &#x22;Name is empty&#x22;;
+		} else {
+			echo $name;
+		}
+	}
+	?&#x3E;
+
+	&#x3C;/body&#x3E;
+	&#x3C;/html&#x3E;
+		</code></pre>
+		</li>
+		<li>
+		$_FILES
+		<p>An associative array of items uploaded to the current script via the HTTP POST method. 
+			The structure of this array is outlined in the POST method uploads section.</p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;?php
+	$target_dir = &#x22;uploads/&#x22;;
+	$target_file = $target_dir . basename($_FILES[&#x22;fileToUpload&#x22;][&#x22;name&#x22;]);
+	$uploadOk = 1;
+	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+	// Check if image file is a actual image or fake image
+	if(isset($_POST[&#x22;submit&#x22;])) {
+		$check = getimagesize($_FILES[&#x22;fileToUpload&#x22;][&#x22;tmp_name&#x22;]);
+	if($check !== false) {
+			echo &#x22;File is an image - &#x22; . $check[&#x22;mime&#x22;] . &#x22;.&#x22;;
+			$uploadOk = 1;
+		} else {
+			echo &#x22;File is not an image.&#x22;;
+			$uploadOk = 0;
+		}
+	}
+	?&#x3E;
+		</code></pre>
+		</li>
+		<li>
+		$_COOKIE
+		<p>PHP transparently supports HTTP cookies. 
+			Cookies are a mechanism for storing data in the remote browser and thus tracking or identifying return users. <p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;?php
+	$cookie_name = &#x22;user&#x22;;
+	$cookie_value = &#x22;Alex Porter&#x22;;
+	setcookie($cookie_name, $cookie_value, time() + (86400 * 30), &#x22;/&#x22;);
+	?&#x3E;
+	&#x3C;html&#x3E;
+	&#x3C;body&#x3E;
+
+	&#x3C;?php
+	if(!isset($_COOKIE[$cookie_name])) {
+		echo &#x22;Cookie named &#x27;&#x22; . $cookie_name . &#x22;&#x27; is not set!&#x22;;
+	} else {
+		echo &#x22;Cookie &#x27;&#x22; . $cookie_name . &#x22;&#x27; is set!&#x3C;br&#x3E;&#x22;;
+		echo &#x22;Value is: &#x22; . $_COOKIE[$cookie_name];
+	}
+	?&#x3E;
+
+	&#x3C;/body&#x3E;
+	&#x3C;/html&#x3E;
+		</code></pre>
+		</li>
+		<li>
+		$_SESSION
+		<p>Sessions are a simple way to store data for individual users against a unique session ID. 
+			This can be used to persist state information between page requests. 
+			Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve existing session data.</p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;?php
+	// Start the session
+	session_start();
+	?&#x3E;
+	&#x3C;!DOCTYPE html&#x3E;
+	&#x3C;html&#x3E;
+	&#x3C;body&#x3E;
+
+	&#x3C;?php
+	// Set session variables
+	$_SESSION[&#x22;favcolor&#x22;] = &#x22;green&#x22;;
+	$_SESSION[&#x22;favanimal&#x22;] = &#x22;cat&#x22;;
+	echo &#x22;Session variables are set.&#x22;;
+	?&#x3E;
+
+	&#x3C;/body&#x3E;
+	&#x3C;/html&#x3E;
+		</code></pre>
+		</li>
+		<li>
+		$_ENV
+		<p>These variables are imported into PHP's global namespace from the environment under which the PHP parser is running.
+			Many are provided by the shell under which PHP is running and different systems are likely running different kinds of shells, 
+			a definitive list is impossible.</p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;?php
+	echo &#x27;My username is &#x27; .$_ENV[&#x22;USER&#x22;] . &#x27;!&#x27;;
+	?&#x3E;
 		</code></pre>
 		</li>
 	</ul>

@@ -207,6 +207,122 @@
 			</ul>
 		</section>
 	</article>
+	<article>
+		<h2>JavaServer Pages Standard Tag Library (JSTL)</h2>
+		<section>
+			<h3>Definition</h3>
+			<ul>
+				<li>JavaServer Pages Standard Tag Library contains useful JSP tags for common JSP application functionalities.</li>
+				<li>JSTL supports common structural tasks such as conditions and iterations as well as XML document manipulation, tag internationalization, and tags for SQL.</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Classification of tags</h3>
+			<ul>
+				<li>Core Tags
+					<ul>
+						<li>group of JSTL tags most commonly used</li>
+						<li>tag descriptions
+							<ul>
+								<li>&ltc:out&gt - displays an expression's result.</li>
+								<li>&ltc:set&gt - sets expression evaluation result.</li>
+								<li>&ltc:remove&gt - removes a variable.</li>
+								<li>&ltc:catch&gt - catches throws.</li>
+								<li>&ltc:if&gt - conditional tag that simply evaluates if specified condition is true.</li>
+								<li>&ltc:choose&gt - similar to switch in java.</li>
+								<li>&ltc:when&gt - similar to case in java switch statement.</li>
+								<li>&ltc:otherwise&gt - works somehow similar to else for choose tag.</li>
+								<li>&ltc:import&gt - includes contents from specified URL.</li>
+								<li>&ltc:forEach&gt - common iteration used for jstl.</li>
+								<li>&ltc:forTokens&gt - iterates over strings called tokens which are separated by delimiters.</li>
+								<li>&ltc:param&gt - adds parameters to import tag.</li>
+								<li>&ltc:redirect&gt - redirects to URL specified.</li>
+								<li>&ltc:url&gt - creates URL.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Formatting Tags
+					<ul>
+						<li>group of JSTL tags for formatting text displays and some variables.</li>
+						<li>tag descriptions
+							<ul>
+								<li>&ltfmt:formatNumber&gt - formats number to specified format.</li>
+								<li>&ltfmt:parseNumber&gt - parses string specified as numbers.</li>
+								<li>&ltfmt:formatDate&gt - formats date specified.</li>
+								<li>&ltfmt:parseDate&gt - parses date using specified pattern.</li>
+								<li>&ltfmt:setLocale&gt - stores given locale.</li>
+								<li>&ltfmt:timeZone&gt - specify timezone for time formatting.</li>
+								<li>&ltfmt:setTimeZone&gt - stores gien timezone.</li>
+								<li>&ltfmt:message&gt - displays internationalized message.</li>
+								<li>&ltfmt:requestEncoding&gt - sets encoding of request character.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>SQL Tags
+					<ul>
+						<li>group of JSTL tags for SQL.</li>
+						<li>tag descriptions
+							<ul>
+								<li>&ltsql:setDataSource&gt - creates data source.</li>
+								<li>&ltsql:query&gt - executes query specified.</li>
+								<li>&ltsql:update&gt - update tables in database.</li>
+								<li>&ltsql:param&gt - sets SQL statement parameters.</li>
+								<li>&ltsql:dateParam&gt - sets specified date value in an SQL parameter.</li>
+								<li>&ltsql:transaction&gt - nested database action which can be executed as a single transaction.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>XML tages
+					<ul>
+						<li>group of JSTL tags for manipulating XML documents.</li>
+						<li>tags
+							<ul>
+								<li>&ltx:out&gt</li>
+								<li>&ltx:parse&gt</li>
+								<li>&ltx:set&gt</li>
+								<li>&ltx:if&gt</li>
+								<li>&ltx:forEach&gt</li>
+								<li>&ltx:choose&gt</li>
+								<li>&ltx:when&gt</li>
+								<li>&ltx:otherwise&gt</li>
+								<li>&ltx:transform&gt</li>
+								<li>&ltx:param&gt</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<h3>JSTL Functions</h3>
+			<ul>
+				<li>common JSTL functions.</li>
+				<li>function descriptions
+					<ul>
+						<li>fn:contaoins() - check if contains specified string.</li>
+						<li>fn:containseIgnoreCase() - check if contains specified string regardless of case.</li>
+						<li>fn:endsWith() - checks if ends with specified suffix.</li>
+						<li>fn:escapeXml() - escapes characters that can be misinterpreted as xml markup</li>
+						<li>fn:indexOf() - returns index of first occurence of string specified</li>
+						<li>fn:join() - joins array elements into a single string</li>
+						<li>fn:length() - returns number of items in an array or characters in a string</li>
+						<li>fn:replace() - returns string result from replacing a string using specified string</li>
+						<li>fn:split() - splits string to array of substrings using delimiter specified</li>
+						<li>fn:startsWith() - tests if inputs starts with specified prefix.</li>
+						<li>fn:substring() - returns substring of a string</li>
+						<li>fn:substringAfter() - returns string following a specific substring</li>
+						<li>fn:substringBefore - returns string before specified substring</li>
+						<li>fn:toLowerCase() - converts string to lower case</li>
+						<li>fn:toUpperCase() - converts substring to lower case</li>
+						<li>fn:trim - remove white spaces from string.</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	
+		
+	</article>
 </body>
 
 </html>

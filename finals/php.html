@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Notes</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css.map">-->
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/github.css">
+
+</head>
+<body>
+<header>
+    <nav class="container navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Web Technologies Notes</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">PRELIMS <span class="sr-only"></span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">MIDTERMS
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../midterms/midterms.html">Front End Development</a></li>
+                            <li><a href="../midterms/html.html">HTML</a></li>
+                            <li><a href="../midterms/css.html">CSS</a></li>
+                            <li><a href="../midterms/javascript.html">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">
+                            FINALS
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../finals/java.html">Java</a></li>
+                            <li><a href="../finals/php.html">Php</a></li>
+                            <li><a href="../finals/nodejs.html">Node JS</a></li>
+                            <li><a href="../finals/security.html">Security</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html">ABOUT</a></li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+<!-- div For styling -->
+<div class="container">
+    <nav class="well well-sm">
+        <h2 class="page-header" class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">
+            Contents</h2>
+        <ul>
+			<li><a href="#intro">Introduction</a></li>
+				<ul>
+					<li><a href="#whatphp">What is PHP?</a></li>
+					<li><a href="#phpdo">What can PHP do?</a></li>
+				</ul>
+			<li><a href="#start">Getting Started</a></li>
+				<ul>
+					<li><a href="#hellophp">Hello Php</a></li>
+				</ul>
+			<li><a href="#Install">Installation</a></li>
+			<li><a href="#phpVariables">Super Global Variables</a></li>
+			<li><a href="#sHandling">Session Handling</a></li>
+			<li><a href="#redirect">Redirection</a></li>
+			<li><a href="#files">Including and Requiring Files</a></li>
+			<li><a href="#sHeaders">Setting Headers</a></li>
+			<li><a href="#Db">Database Connectivity</a></li>
+			<li><a href="#frameworks">Frameworks</a></li>
+				<ul>
+					<li><a href="#laravel">Laravel</a></li>
+					<li><a href="#codel">CodeIgnitier</a></li>
+					<li><a href="#symphony">Symphony</a></li>
+				</ul>
+			<li><a href="#ref">References</a></li>
+		</ul>
+    </nav>
+<article>
+	<h2 id="intro">PHP (Hypertext Preprocessor)</h2>
+	<h3 id="whatphp">What is PHP?</h3>
+		<p>
+			PHP is a widely-used open source general-purpose scripting language 
+			that is especially suited for web development and can be embedded into HTML.
+			It is a server-side scripting language designed primarily for web development but also used as a general-purpose programming language. 
+			Originally created by Rasmus Lerdorf in 1994, the PHP reference implementation is now produced by The PHP Development Team. 
+			PHP originally stood for Personal Home Page, but it now stands for the recursive acronym PHP: Hypertext Preprocessor.
+		</p>
+		<p>
+			PHP runs on different operating systems, like Windows, UNIX, Linux and supports different databases like MySQL, Microsoft Access, and Oracle.
+			PHP can not only collect form data, but it can also create, read, write, delete, and close files on the server.
+		</p>
+	<h3 id="phpdo">What can PHP do?</h3>
+		<p>
+			There are three main areas where PHP scripts are used.
+		</p>
+		 <table class="table table-responsive table-bordered">
+			<tbody>
+				<tr>
+					<td>Server-side scripting</td>
+					<td>This is the most traditional and main target field for PHP. You need three things to make this work: the PHP parser (CGI or server module), 
+						a web server and a web browser. You need to run the web server, with a connected PHP installation.
+						You can access the PHP program output with a web browser, viewing the PHP page through the server. 
+						All these can run on your home machine if you are just experimenting with PHP programming.</td>
+				</tr>
+				<tr>
+					<td>Command line scripting</td>
+					<td>You can make a PHP script to run it without any server or browser.
+						You only need the PHP parser to use it this way. 
+						This type of usage is ideal for scripts regularly executed using cron (on *nix or Linux) or Task Scheduler (on Windows). 
+						These scripts can also be used for simple text processing tasks.</td>
+				</tr>
+				<tr>
+					<td>Writing desktop applications</td>
+					<td>PHP is probably not the very best language to create a desktop application with a graphical user interface,
+						but if you know PHP very well, and would like to use some advanced PHP features in your client-side applications you can also use PHP-GTK to write such programs</td>
+				</tr>
+			</tbody>
+        </table>
+</article>
+<article>
+	<h2 id="start">Getting Started with PHP</h2>
+	<h3 id="hellophp">Hello Php</h3>
+		<p>
+			Introductory Sample:
+		</p>
+		<pre><code class="php">
+			&#x3C;!DOCTYPE HTML&#x3E;
+&#x9;&#x9;&#x9;&#x3C;html&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;head&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;title&#x3E;Example&#x3C;/title&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;/head&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;body&#x3E;
+
+&#x9;&#x9;&#x9;&#x9;&#x3C;?php
+&#x9;&#x9;&#x9;&#x9;&#x9;echo &#x22;Hi, I&#x27;m a PHP script!&#x22;;
+&#x9;&#x9;&#x9;&#x9;?&#x3E;
+
+&#x9;&#x9;&#x9;&#x9;&#x3C;/body&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/html&#x3E;
+		</code></pre>
+		<p>Instead of lots of commands to output HTML (as seen in C or Perl), 
+		PHP pages contain HTML with embedded code that does "something" (in this case, output "Hi, I'm a PHP script!").
+		</p>
+</article>
+<article>
+	<h2 id ="Install">Installation</h2>
+</article>
+<article>
+	<h2 id="phpVariables">Super Global Variables</h2>
+	<ul>
+		<li>$GLOBALS
+		<p>This is a PHP super global variable which is used to access global variables from anywhere in the PHP script (also from within functions or methods).</p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;?php 
+	$x = 75; 
+	$y = 25;
+ 
+	function addition() { 
+		$GLOBALS[&#x27;z&#x27;] = $GLOBALS[&#x27;x&#x27;] + $GLOBALS[&#x27;y&#x27;]; 
+	}
+ 
+	addition(); 
+	echo $z; 
+	?&#x3E;
+		</code></pre>
+		</li>
+		<li>$_SERVER
+		<p>This is a PHP super global variable which holds information about headers, paths, and script locations.<p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;?php 
+	echo $_SERVER[&#x27;PHP_SELF&#x27;];
+	echo &#x22;&#x3C;br&#x3E;&#x22;;
+	echo $_SERVER[&#x27;SERVER_NAME&#x27;];
+	echo &#x22;&#x3C;br&#x3E;&#x22;;
+	echo $_SERVER[&#x27;HTTP_HOST&#x27;];
+	echo &#x22;&#x3C;br&#x3E;&#x22;;
+	echo $_SERVER[&#x27;HTTP_REFERER&#x27;];
+	echo &#x22;&#x3C;br&#x3E;&#x22;;
+	echo $_SERVER[&#x27;HTTP_USER_AGENT&#x27;];
+	echo &#x22;&#x3C;br&#x3E;&#x22;;
+	echo $_SERVER[&#x27;SCRIPT_NAME&#x27;];
+	?&#x3E;
+		</code></pre>
+		</li>
+		<li>$_GET
+		<p>This can also be used to collect form data after submitting an HTML form with method="get".</p>
+		<p>
+			Sample Code:
+		</p>
+		<pre><code class="php">
+	&#x3C;html&#x3E;
+	&#x3C;body&#x3E;
+
+	&#x3C;a href=&#x22;test_get.php?subject=PHP&#x26;web=W3schools.com&#x22;&#x3E;Test $GET&#x3C;/a&#x3E;
+
+	&#x3C;/body&#x3E;
+	&#x3C;/html&#x3E;
+		</code></pre>
+		</li>
+	</ul>
+</article>
+
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

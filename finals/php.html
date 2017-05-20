@@ -163,6 +163,7 @@
 &#x9;&#x9;&#x9;&#x9;&#x3C;/body&#x3E;
 &#x9;&#x9;&#x9;&#x3C;/html&#x3E;
 		</code></pre>
+
         <p>Instead of lots of commands to output HTML (as seen in C or Perl),
             PHP pages contain HTML with embedded code that does "something" (in this case, output "Hi, I'm a PHP
             script!").
@@ -170,6 +171,37 @@
     </article>
     <article>
         <h2 id="Install">Installation</h2>
+        <ul>
+            <li>Download the latest PHP 5 ZIP package from www.php.net/downloads.php</li>
+            <li>Extract the file: PHP can be installed anywhere on your system, but you will need to change the paths
+                referenced in the following steps
+            </li>
+            <li>Configure php.ini: Copy C:php php.ini-recommended to C:php php.ini. There are several lines you will
+                need to change in a text editor.
+                <ul>Define the extension directory: extension_dir = "C:phpext"
+                    <li>extension=php_curl.dll</li>
+                    <li>extension=php_gd2.dll</li>
+                    <li>extension=php_mbstring.dll</li>
+                    <li>extension=php_mysql.dll</li>
+                    <li>extension=php_mysqli.dll</li>
+                    <li>extension=php_pdo.dll</li>
+                    <li>extension=php_pdo_mysql.dll</li>
+                    <li>extension=php_xmlrpc.dll</li>
+                </ul>
+            </li>
+            <li>Add C:php to the path environment variable</li>
+            <li>Configure PHP as an Apache module</li>
+            <ul>Add index.php as a default file name: DirectoryIndex index.php index.html
+
+                At the bottom of the file, add the following lines
+                <li> LoadModule php5_module "c:/php/php5apache2_2.dll"</li>
+                <li> AddType application/x-httpd-php .php</li>
+                <li>PHPIniDir "C:/php"</li>
+
+            </ul>
+            <li> Save the configuration file and test it from the command line (Start > Run > cmd)</li>
+
+        </ul>
     </article>
     <article>
         <h2 id="phpVariables">Super Global Variables</h2>
@@ -181,7 +213,7 @@
                     Sample Code:
                 </p>
                 <pre><code class="php">
-	&#x3C;?php 
+	&#x3C;?php
 	$x = 75; 
 	$y = 25;
  
@@ -539,9 +571,22 @@ function movePage($num,$url){
 }
 			</code></pre>
 
+
     </article>
     <article>
-        <h2>Including and Requiring Files</h2>
+        <h2 id="sHeaders">Setting Header PHP </h2>
+        <pre><code class="php">
+	&#x3C;?php
+		// Date in the past
+			header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+			header("Cache-Control: no-cache");
+			header("Pragma: no-cache");
+	
+	?&#x3E;
+	</code></pre>
+    </article>
+    <article>
+        <h2 id="files">Including and Requiring Files</h2>
 
         <h3>Include</h3>
         <p>The include (or require) statement takes all the text/code/markup that exists in the specified file and
@@ -578,6 +623,16 @@ function movePage($num,$url){
             connect in a database either use the database function-specific access or use the PDO (PHP Data Objects)
             which is database agnostic. I'll illustrate using PDO since it is database agnostic - meaning it can be use
             in any database</p>
+        <h3>Database Connection via mysqli </h3>
+        <pre><code class="php">
+	&#x3C;?php
+	  $con = mysqli_connect("localhost","root","password","webtek-database-finals");
+	 if (mysqli_connect_errno())
+	    {
+	    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	    }
+         ?&#x3E;
+	</code></pre>
         <h3>Database Connection via PDO</h3>
         <pre><code>
     &#x3C;?php
@@ -587,45 +642,47 @@ function movePage($num,$url){
     $dbname = &#x22;webtek-database-finals&#x22;;
 
     try {
-        // Instatstiate connection
-        $conn = new PDO(&#x22;mysql:host=$servername;dbname=$dbname&#x22;, $username, $password);
-        // set the PDO error mode to exception
-        $conn-&#x3E;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+    // Instatstiate connection
+    $conn = new PDO(&#x22;mysql:host=$servername;dbname=$dbname&#x22;, $username, $password);
+    // set the PDO error mode to exception
+    $conn-&#x3E;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         // Bind the parameters
-        $stmt = $conn-&#x3E;prepare(&#x22;INSERT INTO registration (firstname, lastname, username)
-        VALUES (:firstname, :lastname, :username)&#x22;);
-        $stmt-&#x3E;bindParam(&#x27;:firstname&#x27;, $firstname);
-        $stmt-&#x3E;bindParam(&#x27;:lastname&#x27;, $lastname);
-        $stmt-&#x3E;bindParam(&#x27;:username&#x27;, username);
+    $stmt = $conn-&#x3E;prepare(&#x22;INSERT INTO registration (firstname, lastname, username)
+    VALUES (:firstname, :lastname, :username)&#x22;);
+    $stmt-&#x3E;bindParam(&#x27;:firstname&#x27;, $firstname);
+    $stmt-&#x3E;bindParam(&#x27;:lastname&#x27;, $lastname);
+    $stmt-&#x3E;bindParam(&#x27;:username&#x27;, username);
 
-        // insert a row
-        $firstname = &#x22;Chris&#x22;;
-        $lastname = &#x22;Espiritu&#x22;;
-        $username = &#x22;cee&#x22;;
-        $stmt-&#x3E;execute();
+    // insert a row
+    $firstname = &#x22;Chris&#x22;;
+    $lastname = &#x22;Espiritu&#x22;;
+    $username = &#x22;cee&#x22;;
+    $stmt-&#x3E;execute();
 
-        // insert another row
-        $firstname = &#x22;Maureen&#x22;;
-        $lastname = &#x22;Calpito&#x22;;
-        $username = &#x22;mcalpito&#x22;;
-        $stmt-&#x3E;execute();
+    // insert another row
+    $firstname = &#x22;Maureen&#x22;;
+    $lastname = &#x22;Calpito&#x22;;
+    $username = &#x22;mcalpito&#x22;;
+    $stmt-&#x3E;execute();
 
-        // insert another row
-        $firstname = &#x22;Chris&#x22;;
-        $lastname = &#x22;Santos&#x22;;
-        $username = &#x22;crissantos&#x22;;
-        $stmt-&#x3E;execute();
+    // insert another row
+    $firstname = &#x22;Chris&#x22;;
+    $lastname = &#x22;Santos&#x22;;
+    $username = &#x22;crissantos&#x22;;
+    $stmt-&#x3E;execute();
 
-        echo &#x22;New records created successfully&#x22;;
-        }
+    echo &#x22;New records created successfully&#x22;;
+    }
     catch(PDOException $e)
     {
     echo &#x22;Error: &#x22; . $e-&#x3E;getMessage();
     }
     $conn = null;
     ?&#x3E;
+    </code></pre>
         </code></pre>
+
+
         <p>There are many ways to connect to any database in Php, arguably the best way is to use PDO since it does
             not depend on vendor-specific implementation</p>
     </article>
@@ -660,6 +717,15 @@ function movePage($num,$url){
             </tr>
             </tbody>
         </table>
+
+    </article>
+    <article>
+        <h2 id="ref">Reference</h2>
+        <li>(n.d.). Retrieved May 20, 2017, from https://www.w3schools.com/php/func_http_header.asp</li>
+        <li>(n.d.). Retrieved May 20, 2017, from https://www.w3schools.com/php/func_mysqli_connect.asp</li>
+        <li>Buckler, C. (2015, December 02). How to Install PHP on Windows — SitePoint. Retrieved May 20, 2017, from
+            https://www.sitepoint.com/how-to-install-php-on-windows/
+        </li>
     </article>
 </div>
 <script src="../js/jquery.min.js"></script>

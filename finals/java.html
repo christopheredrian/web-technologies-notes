@@ -320,8 +320,31 @@
 				</li>
 			</ul>
 		</section>
-	
-		
+	</article>
+	<article>
+		<h2>Expression Language</h2>
+		<section>
+			<ul>
+				<li>Expression Language (EL) - enables communiation between presentation and application layer</li>
+				<li>Immediate and Deferred Evaluation
+					<ul>
+						<li>Immediate Evaluation - read-only-valued expressions that use ${} are immediately evaluated.<br>
+						example: <br>
+							<code>&#x3C;fmt:formatNumber value=&#x22;${sample.count.number}&#x22;/&#x3E;</code>
+						</li>
+					</ul>
+				</li>
+				<li>Immediate and Deferred Evaluation
+					<ul>
+						<li>Deferred Evaluation - expressions that use #{expr} can be evaluated at later phases of the page.<br>
+						example: <br>
+							<code>&#x3C;h:inputText id=&#x22;name&#x22; value=&#x22;#{customer.name}&#x22; /&#x3E;</code>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+		</section>
 	</article>
 </body>
 

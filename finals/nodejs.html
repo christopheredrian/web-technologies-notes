@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Notes</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css.map">-->
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/github.css">
+
+</head>
+<body>
+<header>
+    <nav class="container navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Web Technologies Notes</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">PRELIMS <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">MIDTERMS
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../midterms/midterms.html">Front End Development</a></li>
+                            <li><a href="../midterms/html.html">HTML</a></li>
+                            <li><a href="../midterms/css.html">CSS</a></li>
+                            <li><a href="../midterms/javascript.html">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">
+                            FINALS
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../finals/java.html">Java</a></li>
+                            <li><a href="../finals/php.html">Php</a></li>
+                            <li><a href="../finals/nodejs.html">Node JS</a></li>
+                            <li><a href="../finals/security.html">Security</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about.html">ABOUT</a></li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+<!-- div For styling -->
+<div class="container">
+    <nav class="well well-sm">
+        <h2 class="page-header" class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">
+            Contents</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a>
+                <ul>
+                    <li><a href="#node-js">What is Node?</a></li>
+                    <li><a href="#node-features">Features</a></li>
+                    <li><a href="#node-uses">Who uses node?</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li><a href="#ht-xhtml">XHTML</a>
+                <ul>
+                    <li><a href="#ht-ver">Versions</a></li>
+                    <li><a href="#ht-doccomp">Document component of XHTML</a></li>
+                    <li><a href="#ht-elem">XHTML Elements</a></li>
+                    <li><a href="#ht-ss">XHTML/HTML Style Sheet</a></li>
+                    <ul>
+                        <li><a href="#ht-aut">Author Styles</a></li>
+                        <li><a href="#ht-user">User Style</a></li>
+                        <li><a href="#ht-usea">User Agent Style</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li><a href="#ht-ref">References</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h2 id="intro">Introduction</h2>
+        <h3 id="node-js">Node JS</h3>
+        <p>Node.js is an open source server framework which is built on top of the JavaScript V8 engine mostly used for
+            web development - specially for network intensive single page apps, it is free, cross-platform and
+            uses one of the most popular programming language - JavaScript
+        </p>
+        <h3 id="node-features">Features</h3>
+        <p>The following are the most popular feature why Node JS is used:</p>
+        <ul>
+            <li><strong>Asynchronous and Event Driven</strong>
+                <p>With the advent of the web there needs to be some kind of way to execute tasks upon receiving them,
+                    in
+                    the past this is done sychornously, meaning you need to wait for a certain code to finish before you
+                    can
+                    execute another task, though this can be mitigated by using Threads in some languages, a more
+                    powerful
+                    approach that Node is built upon is that all of its library API was built asychronous first and an
+                    event
+                    driven mechanism. Meaning for instance in reading a file you don't need to wait for that block of
+                    code
+                    to
+                    finish before moving through the next one.
+                </p>
+            </li>
+            <pre><code class="javascript">
+           var fs = require('fs');
+            fs.readFile(function(err, data){
+                console.log('data');
+            });
+            console.log('This will be executed first, depending on the size of the file');
+        </code></pre>
+            <li><strong>Its Fast!</strong>
+                <p>As noted above Node js is built on top of the V8 and there is no question that the V8 engine is one
+                    of
+                    the
+                    best JavaScript engine out there in terms of speed
+                </p>
+            </li>
+            <li><strong>Single Threading</strong>
+                <p>Node uses a single threaded model with event looping. Meaning there are no threads in Node, it
+                    accomplishes
+                    tasks -again - in an event driven fashion in a asychronous way. In a way this model can serve a much
+                    larger request pool
+                    than the traditional Threaded model such as being used on Java or Apache (Php) servers</p>
+                <p>More information can be found on <a
+                        href="http://stackoverflow.com/questions/17959663/why-is-node-js-single-threaded">this</a>
+                    stackoverflow thread
+                </p>
+            </li>
+            <li><strong>License</strong>
+                <p>Node.js is published under an MIT license which means it is free and open source and can be used
+                    commercially without charge</p>
+            </li>
+
+            <h2 id="node-uses"> Who uses Node?</h2>
+
+            <p>Even still at it's infancy Node is now being used by companies such as:</p>
+            <ul>
+                <li>Netflix</li>
+                <li>New York times</li>
+                <li>Paypal</li>
+                <li>Yahoo</li>
+                <li>LinkedIn</li>
+                <li>Uber</li>
+            </ul>
+
+        </ul>
+
+
+    </article>
+
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -541,6 +541,26 @@ function movePage($num,$url){
         &#x3C;/body&#x3E;
     &#x3C;/html&#x3E;
     </code></pre>    
+    <h3>PHP Database Connectivity </h3>
+	<pre><code class ="php">
+	&#x3C;?php
+	  $con = mysqli_connect("localhost","my_user","my_password","my_db");
+	 if (mysqli_connect_errno())
+	    {
+	    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	    }
+         ?&#x3E;
+	</code></pre> 
+	<h3>Setting Header PHP </h3>
+	<pre><code class ="php">
+	&#x3C;?php
+		// Date in the past
+			header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+			header("Cache-Control: no-cache");
+			header("Pragma: no-cache");
+	
+	?&#x3E;
+	</code></pre> 
 </article>
 
 <article>

@@ -82,8 +82,8 @@
 			<li><a href="#frameworks">Frameworks</a></li>
 				<ul>
 					<li><a href="#laravel">Laravel</a></li>
-					<li><a href="#codel">CodeIgnitier</a></li>
-					<li><a href="#symphony">Symphony</a></li>
+					<li><a href="#codeIgn">CodeIgnitier</a></li>
+					<li><a href="#symfony">Symfony</a></li>
 				</ul>
 			<li><a href="#ref">References</a></li>
 		</ul>
@@ -511,8 +511,64 @@ function movePage($num,$url){
 }
 }
 			</code></pre>
+
 </article>
+	<article>
+    <h2>Including and Requiring Files</h2>
+    
+    <h3>Include</h3>
+    <p>The include (or require) statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement. Including files is very useful when you want to include the same PHP, HTML, or text on multiple pages of a website.</p>
+    
+    <pre><code class="php">
+    &#x3C;html&#x3E;
+        &#x3C;body&#x3E;
+            &#x3C;div class="menu"&#x3E;
+            &#x3C;?php include 'menu.php';?&#x3E;
+            &#x3C;/div&#x3E;
+                &#x3C;h1&#x3E;Welcome to my home page!&#x3C;/h1&#x3E;
+        &#x3C;/body&#x3E;
+    &#x3C;/html&#x3E;
+    </code></pre>
+    
+    <h3>Require</h3>
+    <pre><code class="php">
+    &#x3C;html&#x3E;
+        &#x3C;body&#x3E;
+            &#x3C;h1&#x3E;Welcome to my home page!&#x3C;/h1&#x3E;
+            &#x3C;?php require 'noFileExists.php';
+            echo "I have a $color $car.";
+            ?&#x3E;
+        &#x3C;/body&#x3E;
+    &#x3C;/html&#x3E;
+    </code></pre>    
+</article>
+
 <article>
+	<h2 id="frameworks">Frameworks</h2>
+		 <table class="table table-responsive table-bordered">
+	    <tbody>
+            <tr id="laravel">
+                <td>Laravel</td>
+                <td>Laravel is a free, open-source PHP web framework intended for the development of web applications following the model–view–controller (MVC) 
+					architectural pattern. Some of the features of Laravel are a modular packaging system with a dedicated dependency manager, 
+					different ways for accessing relational databases, utilities that aid in application deployment and maintenance, 
+					and its orientation toward syntactic sugar.
+            </td>
+            <tr id="codeIgn">
+                <td>CodeIgniter</td>
+                <td>CodeIgniter is an open-source software rapid development web framework, for use in building dynamic web sites with PHP. 
+					It is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to
+					create full-featured web applications.
+                </td>
+            </tr>
+            <tr id="symfony">
+                <td>Symfony</td>
+                <td>Symfony is a PHP web application framework and a set of reusable PHP components/libraries. 
+				Symfony is an internationally recognized, stable development environment. 
+                </td>
+            </tr>
+            </tbody>
+        </table>
 </article>
 </div>
 <script src="../js/jquery.min.js"></script>

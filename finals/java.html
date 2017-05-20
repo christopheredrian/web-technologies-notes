@@ -504,6 +504,7 @@ public class ModHelloWorld extends HttpServlet{
 		<h2>Expression Language</h2>
 		<section>
 			<ul>
+				<li>uses ${ }</li>
 				<li>Expression Language (EL) - enables communiation between presentation and application layer</li>
 				<li>Immediate and Deferred Evaluation
 					<ul>
@@ -519,6 +520,19 @@ public class ModHelloWorld extends HttpServlet{
 						example: <br>
 							<code>&#x3C;h:sampleText id=&#x22;sample&#x22; value=&#x22;#{sample.example}&#x22; /&#x3E;</code>
 						</li>
+					</ul>
+				</li>
+				<li>Implicit EL objects
+					<ul>
+						<li>pageContext</li>
+						<li>pageScope</li>
+						<li>requestScope</li>
+						<li>sessionScope</li>
+						<li>applicationScope</li>
+						<li>param, paramValues</li>
+						<li>header, headevalues</li>
+						<li>cookie</li>
+						<li>initparam</li>
 					</ul>
 				</li>
 			</ul>

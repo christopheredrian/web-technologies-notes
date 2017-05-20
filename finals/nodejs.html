@@ -28,7 +28,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">PRELIMS <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../index.html">PRELIMS <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="midterms/midterms.html">MIDTERMS
                             <span class="caret"></span></a>
@@ -59,6 +59,7 @@
 </header>
 <!-- div For styling -->
 <div class="container">
+    <h1 class="page-header">Node.js</h1>
     <nav class="well well-sm">
         <h2 class="page-header" class="page-header" style="border-bottom: 1px solid lightgrey; padding-bottom: 2%; ">
             Contents</h2>
@@ -90,21 +91,29 @@
             </li>
         </ul>
         <ul>
-            <li><a href="#intro">The <strong>http</strong> module</a>
+            <li><a href="#the-http">The <strong>http</strong> module</a>
                 <ul>
 
                 </ul>
             </li>
         </ul>
         <ul>
-            <li><a href="#intro">Express - A lightweight web framework for Node</a>
+            <li><a href="#express">Express - A lightweight web framework for Node</a>
                 <ul>
 
                 </ul>
             </li>
         </ul>
         <ul>
-            <li><a href="#intro">References</a>
+            <li><a href="#database">Database Access</a>
+                <ul>
+                    <li><a href="#mongodb">MongoDB via the <strong>mongodb</strong> module</a></li>
+                    <li><a href="#mysql">MySQL via the <strong>mysql</strong> module</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="#intro">Aside from Express we have - Sails and Meteor too!</a>
                 <ul>
 
                 </ul>
@@ -294,7 +303,183 @@
             </tr>
         </table>
     </article>
+    <article>
+        <h2 id="the-http">The <strong>http</strong> module</h2>
+        <p>The http module is a built-in module that you can use to create a simple HTTP web server. To include this
+            module you do:</p>
+        <pre><code>var http = require('http');</code></pre>
+        <p>The <strong>http</strong> module has plenty of methods, but for the basics let's use the <code>createServer()
+            and the <code>listen()</code> methods</code></p>
+        <pre><code>
+    // require the built in http module
+    var http = require('http');
 
+    //create the server
+    var myServer = http.createServer(function (req, res) {
+      // To write headers
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      // Get the req parameters using the req variable
+      res.write(req.url);
+      res.write('Hello World from Express!'); //write a response to the client
+      res.end(); //end the response
+    });
+    myServer.listen(3000); // Have the port listen to port 3000
+        </code></pre>
+        <p>If we run our browser to port 3000 we see this</p>
+        <img class="img-responsive img-thumbnail" src="../images/http-hello.png" alt="">
+        <p>This is just a simple way to demonstrate how Node can be a web server and at the same time a web framework.
+            In the next section we go through Express which is arguably the most popular web framework for Node</p>
+    </article>
+    <article>
+        <h2 id="express">Express JS</h2>
+        <p>In the previous section it was discussed that Node has it's own module for creating web sites, but it can
+            get a little messy when it comes to complicated sites. The solution is to use a Web Framework to abstract
+            and have it a little bit easy to make web applications</p>
+        <p><strong>Express</strong> is built on top of node so every functionality of Node can be used in an express
+            app,
+            the basics can be as followed:
+        </p>
+        <h3>First install express on your app</h3>
+        <pre><code>npm install express</code></pre>
+        <h3>Then on our app.js</h3>
+        <pre><code>
+    // Require express
+    var express = require('express')
+    var app = express() // instanstiate the app
+
+    app.get('/', function (req, res) {
+      res.send('Hello World from Express!')
+    })
+    // Let the app listen to port 3000
+    app.listen(3000, function () {
+      console.log('Example app listening on port 3000!')
+    })
+        </code></pre>
+        <p>As we can see above this is quite similar to the http module, except for the <code>.get</code> portion. Now
+            we
+            have the http methods built into express so we don't need to manually do it ourselves using the http module.
+            Now
+            for instance we wanted a post request on a given url we can just do this</p>
+        <pre><code>
+    app.post('/submit', function (req, res) {
+      // do code
+    })
+    </code></pre>
+        <p>But offcourse we need to get the request parameters from the post request. In the past versions of express
+            there
+            is a built in module to do this - <code>body-parser</code>. But to modularize the modules they separated
+            this
+            into a module. We need to install this to parse the parameters</p>
+        <pre><code>npm install body-parser</code></pre>
+        <p>Now consider the following html code</p>
+        <pre><code>
+    &#x3C;form method=&#x22;post&#x22; action=&#x22;/submit&#x22;&#x3E;
+     &#x3C;input type=&#x22;text&#x22; name=&#x22;username&#x22;&#x3E;
+     &#x3C;input type=&#x22;password&#x22; name=&#x22;password&#x22;&#x3E;
+    &#x3C;/form&#x3E;
+    </code></pre>
+        <p>Now in the server we use the installed body-parser</p>
+        <pre><code>
+    var bodyParser = require('body-parser')
+    app.use( bodyParser.json() );       // to support JSON-encoded bodies
+    app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+      extended: true
+    }));
+    app.post('/submit', function (req, res) {
+        // To retrieve the parameters
+        var username = req.body.username;
+        var password = req.body.password;
+        // ... do something with the variables
+    })
+    </code></pre>
+        <p>As we can see there are a lot of things that are simple to do when using a framework such as express. There
+            is so
+            much more to this especially using the more advanced modules available in the NPM. This is just the top of
+            the
+            iceberg of what can be accomplished using Express.</p>
+    </article>
+    <article>
+        <h2 id="database">Database Connectivity</h2>
+
+        <h3 id="mongodb">MongoDB using the mongodb module</h3>
+        <p>Like coffee and creamer Mongodb and Node are meant for each other. Node uses JavaScript, JavaScript uses
+            JSON (JavaScript Object Notation) and MongDB although not the same, uses similar functions, syntax and
+            approaches in connecting to the database</p>
+        <h4>First we need to install the required module</h4>
+        <pre><code>npm install mongodb</code></pre>
+        <p>Assuming that your mongodb server is running and we have the following credentials and database, we can do
+            the following to get all the records</p>
+        <pre><code>
+    // Require mongo and assert(Optional)
+    var MongoClient = require('mongodb').MongoClient
+      , assert = require('assert');
+
+    // Connection URL
+    var url = 'mongodb://localhost:27017/webtek-database-finals';
+    // Connect to the server
+    MongoClient.connect(url, function(err, db) {
+      assert.equal(null, err);
+      console.log("Connected correctly to server");
+      var findDocuments = function(db, callback) {
+
+      // Get the documents collection
+      var collection = db.collection('registration');
+
+      // Find some documents
+      collection.find({}).toArray(function(err, docs) {
+        assert.equal(err, null);
+        console.log("Registration records");
+        // print like a minitature DOM
+        console.dir(docs);
+      });
+    }
+      db.close();
+    });
+
+        </code></pre>
+        <p>This is how we connect and retrieve from a MongoDB database. It may look like a mess at first because of the
+            callbacks but this is a fairly JavaScript issue and not a Monog one. The following are resources that we
+            can use for further reading:</p>
+        <ul>
+            <li><a href="https://www.mongodb.com/">MongoDB Documentation</a></li>
+            <li><a href="https://www.npmjs.com/package/mongodb">The mongodb module</a></li>
+        </ul>
+        <h3 id="mysql">MySQL using the mysql module</h3>
+        <p>Although not use as much easier and used with Node, we attest to the fact that MySQL is still arguably one of
+            the most used database with all the databases. In node we can connect it to a mysql server using the
+            lightweight, 100% JavaScript module - <code>mysql</code></p>
+        <h4>First let's install the required module</h4>
+        <pre><code>npm install mysql</code></pre>
+        <p>After installation, with the assumption that we have a mysql server running and with the credentials below we
+            can use it as follows:</p>
+        <pre><code>
+    // require the module
+    var mysql      = require('mysql');
+
+    // create the connection parameters
+    var connection = mysql.createConnection({
+      host     : 'localhost',
+      user     : 'root',
+      password : '',
+      database : 'webtek-database-finals'
+    });
+
+    connection.connect();
+
+    connection.query('SELECT * FROM registration', function (error, results, fields) {
+      if (error) throw error;
+      // The results are converted in a familiar JSON format
+      console.log('The database results: ', results);
+      // So if we want the first of the results
+      console.log("The first result: " + results[0].fname);
+    });
+    // close the connection
+    connection.end();
+        </code></pre>
+        <p>As you can see it is fairly easy and straightforward to integrate node with a mysql database. For more
+            information in the use of MySQL we can consult the documentation <a href="https://github.com/mysqljs/mysql">here</a>
+        </p>
+    </article>
 </div>
 
 <script src="../js/jquery.min.js"></script>

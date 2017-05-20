@@ -541,8 +541,20 @@ function movePage($num,$url){
 			</code></pre>
 
 </article>
-	<article>
-    <h2>Including and Requiring Files</h2>
+<article>
+	<h2 id="sHeaders">Setting Header PHP </h2>
+	<pre><code class ="php">
+	&#x3C;?php
+		// Date in the past
+			header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+			header("Cache-Control: no-cache");
+			header("Pragma: no-cache");
+	
+	?&#x3E;
+	</code></pre> 
+</article>
+<article>
+    <h2 id="files">Including and Requiring Files</h2>
     
     <h3>Include</h3>
     <p>The include (or require) statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement. Including files is very useful when you want to include the same PHP, HTML, or text on multiple pages of a website.</p>
@@ -569,7 +581,7 @@ function movePage($num,$url){
         &#x3C;/body&#x3E;
     &#x3C;/html&#x3E;
     </code></pre>    
-    <h3>PHP Database Connectivity </h3>
+    <h2 id="Db">PHP Database Connectivity </h2>
 	<pre><code class ="php">
 	&#x3C;?php
 	  $con = mysqli_connect("localhost","my_user","my_password","my_db");
@@ -578,16 +590,6 @@ function movePage($num,$url){
 	    echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	    }
          ?&#x3E;
-	</code></pre> 
-	<h3>Setting Header PHP </h3>
-	<pre><code class ="php">
-	&#x3C;?php
-		// Date in the past
-			header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-			header("Cache-Control: no-cache");
-			header("Pragma: no-cache");
-	
-	?&#x3E;
 	</code></pre> 
 </article>
 
@@ -618,6 +620,12 @@ function movePage($num,$url){
             </tbody>
         </table>
 </article>
+<article>
+<h2 id="ref">Reference</h2>
+    <li>(n.d.). Retrieved May 20, 2017, from https://www.w3schools.com/php/func_http_header.asp</li>
+    <li>(n.d.). Retrieved May 20, 2017, from https://www.w3schools.com/php/func_mysqli_connect.asp</li>
+    <li>Buckler, C. (2015, December 02). How to Install PHP on Windows — SitePoint. Retrieved May 20, 2017, from https://www.sitepoint.com/how-to-install-php-on-windows/</li>
+</article>    
 </div>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>

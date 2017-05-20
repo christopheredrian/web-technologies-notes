@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4d14c05-cb7f-4d34-ac16-07352ce189b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/php.html" afterPath="$PROJECT_DIR$/finals/php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finals/java.html" afterPath="$PROJECT_DIR$/finals/java.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,22 +53,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="php.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="php.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finals/php.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="746" column="0" lean-forward="false" selection-start-line="746" selection-start-column="0" selection-end-line="746" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="726" column="43" lean-forward="false" selection-start-line="726" selection-start-column="43" selection-end-line="726" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="java.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="java.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finals/java.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3141">
-              <caret line="378" column="47" lean-forward="true" selection-start-line="378" selection-start-column="47" selection-end-line="378" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="400" column="34" lean-forward="true" selection-start-line="400" selection-start-column="34" selection-end-line="400" selection-end-column="34" />
+              <folding>
+                <element signature="e#11312#11316#0" expanded="true" />
+                <element signature="e#11320#11324#0" expanded="true" />
+                <element signature="e#11324#11328#0" expanded="true" />
+                <element signature="e#11332#11336#0" expanded="true" />
+                <element signature="e#11336#11340#0" expanded="true" />
+                <element signature="e#11345#11349#0" expanded="true" />
+                <element signature="e#11361#11365#0" expanded="true" />
+                <element signature="e#11371#11375#0" expanded="true" />
+                <element signature="e#11375#11379#0" expanded="true" />
+                <element signature="e#11384#11388#0" expanded="true" />
+                <element signature="e#11388#11392#0" expanded="true" />
+                <element signature="e#11396#11400#0" expanded="true" />
+                <element signature="e#11432#11436#0" expanded="true" />
+                <element signature="e#11528#11532#0" expanded="true" />
+                <element signature="e#11535#11539#0" expanded="true" />
+                <element signature="e#11571#11575#0" expanded="true" />
+                <element signature="e#11580#11584#0" expanded="true" />
+                <element signature="e#11584#11588#0" expanded="true" />
+                <element signature="e#11593#11597#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,8 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>a</find>
-      <find>array</find>
       <find>pre</find>
       <find>xmp</find>
       <find>script</find>
@@ -106,6 +125,8 @@
       <find>expression lang</find>
       <find>code</find>
       <find>===</find>
+      <find>uses $</find>
+      <find>Hello World</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h3 class=&quot;page-header&quot;</replace>
@@ -131,8 +152,8 @@
         <option value="$PROJECT_DIR$/css/general.css" />
         <option value="$PROJECT_DIR$/finals/nodejs.html" />
         <option value="$PROJECT_DIR$/finals/security.html" />
-        <option value="$PROJECT_DIR$/finals/java.html" />
         <option value="$PROJECT_DIR$/finals/php.html" />
+        <option value="$PROJECT_DIR$/finals/java.html" />
       </list>
     </option>
   </component>
@@ -316,12 +337,12 @@
       <workItem from="1492910261805" duration="5365000" />
       <workItem from="1495250107322" duration="2116000" />
       <workItem from="1495262503527" duration="9388000" />
-      <workItem from="1495284139455" duration="5438000" />
+      <workItem from="1495284139455" duration="6797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42818000" />
+    <option name="totallyTimeSpent" value="44177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="754" extended-state="0" />
@@ -704,19 +725,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finals/java.html">
+    <entry file="file://$PROJECT_DIR$/finals/php.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3141">
-          <caret line="378" column="47" lean-forward="true" selection-start-line="378" selection-start-column="47" selection-end-line="378" selection-end-column="47" />
+        <state relative-caret-position="204">
+          <caret line="726" column="43" lean-forward="false" selection-start-line="726" selection-start-column="43" selection-end-line="726" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finals/php.html">
+    <entry file="file://$PROJECT_DIR$/finals/java.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="746" column="0" lean-forward="false" selection-start-line="746" selection-start-column="0" selection-end-line="746" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="400" column="34" lean-forward="true" selection-start-line="400" selection-start-column="34" selection-end-line="400" selection-end-column="34" />
+          <folding>
+            <element signature="e#11312#11316#0" expanded="true" />
+            <element signature="e#11320#11324#0" expanded="true" />
+            <element signature="e#11324#11328#0" expanded="true" />
+            <element signature="e#11332#11336#0" expanded="true" />
+            <element signature="e#11336#11340#0" expanded="true" />
+            <element signature="e#11345#11349#0" expanded="true" />
+            <element signature="e#11361#11365#0" expanded="true" />
+            <element signature="e#11371#11375#0" expanded="true" />
+            <element signature="e#11375#11379#0" expanded="true" />
+            <element signature="e#11384#11388#0" expanded="true" />
+            <element signature="e#11388#11392#0" expanded="true" />
+            <element signature="e#11396#11400#0" expanded="true" />
+            <element signature="e#11432#11436#0" expanded="true" />
+            <element signature="e#11528#11532#0" expanded="true" />
+            <element signature="e#11535#11539#0" expanded="true" />
+            <element signature="e#11571#11575#0" expanded="true" />
+            <element signature="e#11580#11584#0" expanded="true" />
+            <element signature="e#11584#11588#0" expanded="true" />
+            <element signature="e#11593#11597#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
